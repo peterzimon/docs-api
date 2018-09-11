@@ -1,10 +1,15 @@
 ---
-title: "Overview Handlebars Themes"
+title: "Helpers"
 cover: "https://unsplash.it/400/300/?random?BoldMage"
-path: "/overview/"
+next: "/helpers/"
 tags:
     - api
+    - handlebars
+    - themes
+    - helpers
 ---
+
+# This is a first heading
 
 ## This is the second heading
 
@@ -20,6 +25,16 @@ makeArray() {
     return foo
 }
 ```
+
+This is a danger box
+
+[[danger]]
+| content
+
+This is an info box with an optional title
+
+[[info | This is a info box!]]
+| You should take care
 
 ### This is the third heading
 
