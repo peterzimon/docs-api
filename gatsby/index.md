@@ -6,7 +6,6 @@ tags:
     - api
     - gatsby
 ---
-# This is a first heading
 
 ## This is the second heading
 
