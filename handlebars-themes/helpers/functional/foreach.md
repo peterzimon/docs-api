@@ -75,7 +75,6 @@ Passing `{{#foreach}}` a `limit` attribute, will tell it stop after a certain nu
 
 ```html
 {{#foreach posts limit="3"}}
-{{! will stop after 3, no matter how many posts there are...}}
 <a href="{{url}}">{{name}}</a>
 {{/foreach}}
 ```
@@ -88,7 +87,6 @@ Passing  `{{#foreach}}` a `from` or `to` attribute will change the items which a
 
 ```html
 {{#foreach posts from="2" to="5"}}
-{{! will start at the 2nd post, and stop at the 5th, outputting 3 posts, providing the posts per page setting is at least 5}}
 <a href="{{url}}">{{name}}</a>
 {{/foreach}}
 ```
