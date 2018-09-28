@@ -1,6 +1,6 @@
 ---
 title: "pagination"
-tags:
+keywords:
     - api
     - handlebars
     - themes
@@ -15,7 +15,7 @@ Usage: `{{pagination}}`
 
 You can override the HTML output by the pagination helper by placing a file called `pagination.hbs` inside of `content/themes/your-theme/partials`. Details of the default template are below.
 
-The data used to output the `{{pagination}}` helper is generated based on the post list that is being output (index, tag posts, author posts etc) and always exists at the top level of the data structure. 
+The data used to output the `{{pagination}}` helper is generated based on the post list that is being output (index, tag posts, author posts etc) and always exists at the top level of the data structure.
 
 ## Pagination Attributes
 
@@ -26,9 +26,9 @@ The data used to output the `{{pagination}}` helper is generated based on the po
 * **total** - the number of posts available
 * **limit** - the number of posts per page
 
-## Default Template 
+## Default Template
 
-The [default template](https://github.com/TryGhost/Ghost/blob/master/core/server/helpers/tpl/pagination.hbs) output by Ghost is shown below. You can override this by placing a file called `pagination.hbs` in the partials directory of your theme. 
+The [default template](https://github.com/TryGhost/Ghost/blob/master/core/server/helpers/tpl/pagination.hbs) output by Ghost is shown below. You can override this by placing a file called `pagination.hbs` in the partials directory of your theme.
 
 ```html
 <nav class="pagination" role="navigation">

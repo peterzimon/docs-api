@@ -1,6 +1,6 @@
 ---
 title: "Tag"
-tags:
+keywords:
     - api
     - handlebars
     - themes
@@ -20,11 +20,11 @@ The default URL for tag pages is `/tag/:slug/`. The `tag` context is also set on
 
 ## Templates
 
-The default template for a tag page is `index.hbs`. 
+The default template for a tag page is `index.hbs`.
 
-You can optionally include a `tag.hbs` file in your theme which will be used for tag pages instead. 
+You can optionally include a `tag.hbs` file in your theme which will be used for tag pages instead.
 
-Additionally, you can provide a custom template for a specific tag. If there is a `tag-:slug.hbs` file with the `:slug` matching the tag's slug this will be used instead. 
+Additionally, you can provide a custom template for a specific tag. If there is a `tag-:slug.hbs` file with the `:slug` matching the tag's slug this will be used instead.
 
 For example, if you have a tag 'photo' with the url `/tag/photo/`, adding a template called `tag-photo.hbs` will cause that template to be used for the photo tag instead of `tag.hbs`, or `index.hbs`.
 
@@ -32,15 +32,15 @@ These templates exist in a hierarchy. Ghost looks for a template which matches t
 
 ## Data
 
-When in the `tag` context, a template gets access to 3 objects: the [tag object](/docs/author-context#tag-object-attributes) which matches the route, an array of [post objects](/docs/post-context#post-object-attributes) and a [pagination object](/docs/pagination#pagination-attributes). As with all contexts, all of the `@blog` global data is also available. 
+When in the `tag` context, a template gets access to 3 objects: the [tag object](/docs/author-context#tag-object-attributes) which matches the route, an array of [post objects](/docs/post-context#post-object-attributes) and a [pagination object](/docs/pagination#pagination-attributes). As with all contexts, all of the `@blog` global data is also available.
 
 ### Tag object
 
-When outputting the tag attributes, you can use a block expression (`{{#tag}}{{/tag}}`) to drop into the tag scope and access all of the attributes. 
+When outputting the tag attributes, you can use a block expression (`{{#tag}}{{/tag}}`) to drop into the tag scope and access all of the attributes.
 
 #### Tag object attributes
 
-- **id** - the incremental ID of the tag  
+- **id** - the incremental ID of the tag
 - **name** - the name of the tag
 - **description** - a description of the tag
 - **feature_image** - the cover image associated with the tag  ([img_url helper](doc:img_url))
@@ -60,7 +60,7 @@ The [pagination object](/docs/pagination#pagination-attributes) provided is the 
 
 The `{{#tag}}{{/tag}}` block expression is useful for accessing all of the author attributes. Once inside the tag you can access the attributes and use helpers like [{{img_url}}](doc:img_url) and [{{url}}](doc:url) to output the tag's details.
 
-Using `{{#foreach 'posts'}}{{/foreach}}` is the best way to loop through the list of posts and output each one. 
+Using `{{#foreach 'posts'}}{{/foreach}}` is the best way to loop through the list of posts and output each one.
 
 If your theme does have a `tag.hbs` and `author.hbs` file all outputting similar post lists to `index.hbs` you may wish to use a partial to define your post list item, e.g. `{{> "loop"}}`. There's an example showing this in detail below.
 
@@ -77,7 +77,7 @@ The [{{pagination}}](doc:pagination) helper is the best way to output pagination
     {{/if}}
   </header>
 
-  <section class="author-profile">   
+  <section class="author-profile">
   	<h1>{{name}}</h1>
     {{#if description}}
       <h2>{{description}}</h2>
@@ -91,6 +91,6 @@ The [{{pagination}}](doc:pagination) helper is the best way to output pagination
 </main>
 
 <!-- Previous/next page links - displayed on every page -->
-{{pagination}}    
+{{pagination}}
 
 ```

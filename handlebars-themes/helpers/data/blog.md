@@ -1,6 +1,6 @@
 ---
 title: "@blog"
-tags:
+keywords:
     - api
     - handlebars
     - themes
@@ -16,7 +16,7 @@ The `@blog` property provides access to [global data](/docs/handlebars#section-g
 - `{{@blog.cover_image}}` – the blog cover image from the settings page
 - `{{@blog.twitter}}` – the twitter username from the settings page (see [twitter_url](doc:twitter_url))
 - `{{@blog.facebook}}` – the facebook username / page name from the settings page (see [facebook_url](doc:facebook_url))
-- `{{@blog.navigation}}` – the navigation information configured on the settings/navigation page (see [navigation](doc:navigation)) 
+- `{{@blog.navigation}}` – the navigation information configured on the settings/navigation page (see [navigation](doc:navigation))
 - `{{@blog.timezone}}` – the timezone as configured in settings
 
 ### Example Code

@@ -1,6 +1,6 @@
 ---
 title: "encode"
-tags:
+keywords:
     - api
     - handlebars
     - themes

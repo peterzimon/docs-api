@@ -1,6 +1,6 @@
 ---
 title: "foreach"
-tags:
+keywords:
     - api
     - handlebars
     - themes
@@ -36,7 +36,7 @@ The main use of the `{{#foreach}}` helper in Ghost is iterating over the posts t
 
 When inside a `{{#foreach}}` block, you have access to a set of data variables about the current iteration. These are:
 
-- **@index** (number) - the 0-based index of the current iteration 
+- **@index** (number) - the 0-based index of the current iteration
 - **@number** (number) - the 1-based index of the current iteration
 - **@key** (string) - if iterating over an object, rather than an array, this contains the object key
 - **@first** (boolean) - true if this is the first iteration of the collection

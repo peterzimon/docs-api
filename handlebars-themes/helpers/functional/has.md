@@ -1,19 +1,19 @@
 ---
 title: "has"
-tags:
+keywords:
     - api
     - handlebars
     - themes
     - helpers
 ---
 
-Usage: `{{#has tag="value1,value2" author="value"}}` 
+Usage: `{{#has tag="value1,value2" author="value"}}`
  `{{#has slug=../slug}}` `{{#has number="nth:3"}}`
  `{{#has any="twitter, facebook"}}`  `{{#has all="twitter, facebook"}}`
 
 ## Description
 
-`{{#has}}` - is like `{{#if}}` but with the ability to do more than test a boolean. It allows theme developers to ask questions about the current context and provide more flexibility for creating different layouts. 
+`{{#has}}` - is like `{{#if}}` but with the ability to do more than test a boolean. It allows theme developers to ask questions about the current context and provide more flexibility for creating different layouts.
 
 Like all block helpers, `{{#has}}` supports adding an `{{else}}` block or using `^` instead of `#` for negation - this means that the `{{#has}}` and `{{else}}` blocks are reversed if you use `{{^has}}` and `{{else}}` instead. In addition, it is possible to do `{{else has ...}}`, to chain together multiple options like a switch statement.
 
@@ -33,7 +33,7 @@ The `{{#has}}` helper can be combined with internal tags, to display different i
 
 ## Usage
 
-The `{{#has}}` helper currently supports 4 different types of "questions", with more coming soon. 
+The `{{#has}}` helper currently supports 4 different types of "questions", with more coming soon.
 
 - Post has [tag or author](/docs/has#section-post-tag-or-author)
 - Context has [slug or id](/docs/has#section-slug-or-id)
@@ -60,7 +60,7 @@ E.g. You can look for a post with a slug of "welcome" OR a tag of "getting start
 {{#has author="Joanna Bloggs"}}{{/has}}
 ```
 
-Specifically when inside the context of a post, you can use the `{{#has}}` helper to find out if the post has a particular tag or author. Both the `tag` and `author` attributes take a comma separated list. If you pass multiple values separated by a comma, these will be treated as an OR. 
+Specifically when inside the context of a post, you can use the `{{#has}}` helper to find out if the post has a particular tag or author. Both the `tag` and `author` attributes take a comma separated list. If you pass multiple values separated by a comma, these will be treated as an OR.
 
 ```html
 {{#has tag="General, News"}}
@@ -94,7 +94,7 @@ This functionality can be helpful when designing a theme. You can change the beh
 {{#has id=post.id}}{{/has}}
 ```
 
-If you're in the context of an object that has a slug (e.g. post, author, tag and navigation items) you can use the `{{#has}}` helper to do an exact match. Similarly for all objects that have an ID. 
+If you're in the context of an object that has a slug (e.g. post, author, tag and navigation items) you can use the `{{#has}}` helper to do an exact match. Similarly for all objects that have an ID.
 
 You can either pass the `{{#has}}` helper a string wrapped in quotes, or a path to a data value from else where in the template data. For example, the following code does an exact match on the string "welcome". If the post's slug is the same, the code inside the has helper will execute.
 
@@ -128,7 +128,7 @@ Similarly, the `all` comparison will return true only when **all** of the proper
 {{#has all="@labs.subscribers,@labs.publicAPI"}}
 ```
 
-### Foreach loop number or index 
+### Foreach loop number or index
 
 ```html
 {{#has number="3"}}{{/has}} // A single number
@@ -146,7 +146,7 @@ The `{{#has}}` helper will let you check which number/index of the iteration you
   {{#has number="nth:3"}}
      {{> "widget"}}
   {{/has}}
-  
+
   {{> "post-card"}}
 {{/foreach}}
 ```
@@ -165,7 +165,7 @@ To determine if a post has a particular tag:
 {{/post}}
 ```
 
-You can also supply a comma-separated list of tags, which is the equivalent of an OR query, asking if a post has any one of the given tags:
+You can also supply a comma-separated list of tags, which is the equivalent of an OR query, asking if a post has any one of the given keywords:
 
 ```html
 {{#has tag="photo, video, audio"}}

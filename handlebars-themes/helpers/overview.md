@@ -1,6 +1,6 @@
 ---
 title: "Helpers"
-tags:
+keywords:
     - api
     - handlebars
     - themes
@@ -46,7 +46,7 @@ Block helpers require both an opening and closing tag like `{{#has}}{{/has}}`. A
 These helpers make use of Promises (asynchronous operations) as part of their work behind the scenes. This can cause limitations, and there is a known issue with Async helpers not working when they are nested.
 
 [{{get}}](doc:get), [{{next_post}}](doc:prev_next_post), [{{prev_post}}](doc:prev_next_post),
-[{{ghost_head}}](doc:ghost_head), [{{ghost_foot}}](doc:ghost_foot), 
+[{{ghost_head}}](doc:ghost_head), [{{ghost_foot}}](doc:ghost_foot),
 [{{amp_ghost_head}}](doc:amp_ghost_head), [{{amp_content}}](doc:amp_content)
 
 ### Query

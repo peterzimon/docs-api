@@ -1,6 +1,6 @@
 ---
 title: "is"
-tags:
+keywords:
     - api
     - handlebars
     - themes

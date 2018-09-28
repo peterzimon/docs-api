@@ -1,6 +1,6 @@
 ---
 title: "Post"
-tags:
+keywords:
     - api
     - handlebars
     - themes
@@ -32,13 +32,13 @@ These templates exist in a hierarchy. Ghost looks for a template which matches t
 
 ## Data
 
-The `post` context provides access to the post object which matches the route. As with all contexts, all of the `@blog` global data is also available. 
+The `post` context provides access to the post object which matches the route. As with all contexts, all of the `@blog` global data is also available.
 
 When outputting the post, you can use a block expression (`{{#post}}{{/post}}`) to drop into the post scope and access all of the attributes. See a full list of attributes below:
 
 ### Post object attributes
 
-- **id** - the Object ID of the post  
+- **id** - the Object ID of the post
 - **comment_id** - The old, pre-1.0 incremental id of a post if present, or else the new Object ID ( [special attributes: comment id](/docs/post-context#section-comment-id))
 - **title** - the title of your blog post ([title helper](doc:title))
 - **slug** - slugified version of the title (used in urls and also useful for class names)
@@ -46,7 +46,7 @@ When outputting the post, you can use a block expression (`{{#post}}{{/post}}`) 
 - **content** - the content of the post ([content helper](content))
 - **url** - the web address for the post page (see [url helper](doc:url) and [special attributes](/docs/post-context#section-special-attributes))
 - **feature_image** - the cover image associated with the post  ([img_url helper](doc:img_url))
-- **featured** - indicates a featured post. Defaults to `false`  
+- **featured** - indicates a featured post. Defaults to `false`
 - **page** `true` if the post is a page. Defaults to `false`
 - **meta_title** - custom meta title for the post ([meta_title helper](doc:meta_title))
 - **meta_description**  Custom meta description for the post ([meta_description helper](doc:meta_description) )
@@ -68,20 +68,20 @@ Using the `{{#post}}{{/post}}` block expression is the key trick to having a hap
 ```html
 <!-- Everything inside the #post tags pulls data from the post -->
 {{#post}}
-              
+
 <article class="{{post_class}}">
   <header class="post-header">
     <h1 class="post-title">{{title}}</h1>
     <section class="post-meta">
       <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">
         {{date format="DD MMMM YYYY"}}
-      </time> 
+      </time>
       {{tags prefix=" on "}}
-    </section>  
+    </section>
   </header>
   <section class="post-content">
     {{content}}
-  </section>     
+  </section>
 </article>
 
 {{/post}}
@@ -90,7 +90,7 @@ Using the `{{#post}}{{/post}}` block expression is the key trick to having a hap
 
 ## Special attributes
 
-The post model is the most complex model in Ghost, and it has a couple of special attributes, which are calculated by the API rather than come direct from the DB. 
+The post model is the most complex model in Ghost, and it has a couple of special attributes, which are calculated by the API rather than come direct from the DB.
 
 ### URL
 
@@ -110,8 +110,8 @@ Example: The Disqus config in Ghost should look like this, with the code **insid
 {{#post}}
 <script>
   var disqus_config = function () {
-    this.page.url = '{{url absolute=true}}'; 
-    this.page.identifier = '{{comment_id}}'; 
+    this.page.url = '{{url absolute=true}}';
+    this.page.identifier = '{{comment_id}}';
   };
 </script>
 {{/post}}

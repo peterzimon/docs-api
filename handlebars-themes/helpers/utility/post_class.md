@@ -1,6 +1,6 @@
 ---
 title: "post_class"
-tags:
+keywords:
     - api
     - handlebars
     - themes
@@ -26,7 +26,7 @@ A post which is not featured or a page, but has the tags `photo` and `panoramic`
 
 A featured post with a tag of `photo` would get `post tag-photo featured`.
 
-A featured page with a tag of `photo` and `panoramic` would get `post tag-photo tag-panoramic featured page`. 
+A featured page with a tag of `photo` and `panoramic` would get `post tag-photo tag-panoramic featured page`.
 
 Setting a post as featured or as a page can be done from the [post settings menu](https://help.ghost.org/hc/en-us/articles/223237728-Post-Settings-Overview#set-post-as-featured).
 

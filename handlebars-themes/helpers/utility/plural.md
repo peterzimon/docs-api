@@ -1,6 +1,6 @@
 ---
 title: "plural"
-tags:
+keywords:
     - api
     - handlebars
     - themes
@@ -15,7 +15,7 @@ Usage: `{{plural value empty="" singular="" plural=""}}`
 
 The most common use case for the plural helper is outputting information about how many posts there are in total in a collection. For example, themes have access to `pagination.total` on the homepage, a tag page or an author page.
 
-You can override the default text, [see translate the plural helper](/docs/i18n#section-plural-helper). 
+You can override the default text, [see translate the plural helper](/docs/i18n#section-plural-helper).
 
 ### Examples
 

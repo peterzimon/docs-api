@@ -1,6 +1,6 @@
 ---
 title: "if"
-tags:
+keywords:
     - api
     - handlebars
     - themes
@@ -21,7 +21,7 @@ Like all block helpers, `{{#if}}` supports adding an `{{else}}` block or using `
 
 #### Evaluation rules
 
-The if helper takes a single value, and evaluates whether it is true or false. Any passed in value which is equivalent to `false`, `0`, `undefined`, `null`, `""` (an empty string) or `[]` (an empty array) is considered false, and any other value is considered true. 
+The if helper takes a single value, and evaluates whether it is true or false. Any passed in value which is equivalent to `false`, `0`, `undefined`, `null`, `""` (an empty string) or `[]` (an empty array) is considered false, and any other value is considered true.
 
  - Any boolean value, like the featured flag on a post, will evaluate to true or false as you expect.
  - Any string value will be true, as long as it is not null or empty

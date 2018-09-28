@@ -1,6 +1,6 @@
 ---
 title: "ghost_head"
-tags:
+keywords:
     - api
     - handlebars
     - themes

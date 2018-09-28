@@ -1,6 +1,6 @@
 ---
 title: "url"
-tags:
+keywords:
     - api
     - handlebars
     - themes

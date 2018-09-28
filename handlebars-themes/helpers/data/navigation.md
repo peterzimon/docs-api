@@ -1,6 +1,6 @@
 ---
 title: "navigation"
-tags:
+keywords:
     - api
     - handlebars
     - themes

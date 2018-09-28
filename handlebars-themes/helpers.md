@@ -1,8 +1,16 @@
 ---
 title: "Helpers"
-cover: "https://unsplash.it/400/300/?random?BoldMage"
-next: "/helpers/"
-tags:
+date: "2018-10-01 15:00:00"
+path: "/api/v2/helpers/index/"
+meta_title: "Ghost handlebars helpers"
+meta_description: "Check out these handlebars helpers"
+image: "https://unsplash.it/400/300/?random?BoldMage"
+next:
+    url:  "/api/v2/helpers/overview"
+    title: "Helpers overview"
+    description: "An overview of existing helpers..."
+sidebar: "handlebars"
+keywords:
     - api
     - handlebars
     - themes

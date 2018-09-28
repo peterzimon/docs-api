@@ -1,6 +1,7 @@
 ---
 title: "The Index"
-tags:
+path: "/api/v2/handlebars-themes/index/"
+keywords:
     - api
     - handlebars
     - themes
@@ -26,7 +27,7 @@ Note that the `index.hbs` template is also used to output the tag and author con
 
 ## Data
 
-The `index` context provides templates with access to an array of [post objects](/docs/post-context#section-post-object-attributes) and a [pagination object](/docs/pagination#section-pagination-attributes). As with all contexts, all of the `@blog` global data is also available. 
+The `index` context provides templates with access to an array of [post objects](/docs/post-context#section-post-object-attributes) and a [pagination object](/docs/pagination#section-pagination-attributes). As with all contexts, all of the `@blog` global data is also available.
 
 The number of posts provided will depend on the `post per page` setting which you can configure [in your package.json](/docs/packagejson#section--config-posts_per_page-). The provided array will provide the correct posts for the current page number, with the posts ordered chronologically, newest first. Therefore on the home page, the theme will have access to the first 6 posts by default. On /page/2/ the theme will have access to posts 7-12.
 
@@ -36,7 +37,7 @@ The [pagination object](/docs/pagination#section-pagination-attributes) provided
 
 ## Helpers
 
-Using `{{#foreach 'posts'}}{{/foreach}}` is the best way to loop through your posts and output each one. 
+Using `{{#foreach 'posts'}}{{/foreach}}` is the best way to loop through your posts and output each one.
 
 If your theme does have a `tag.hbs` and `author.hbs` file all outputting similar post lists you may wish to use a partial to define your post list item, e.g. `{{> "loop"}}`. There's an example showing this in detail below.
 
@@ -47,7 +48,7 @@ The [{{pagination}}](doc:pagination) helper is the best way to output pagination
 ```html
 <header>
   <h1 class="page-title">{{@blog.title}}</h1>
-  <h2 class="page-description">{{@blog.description}}</h2>    
+  <h2 class="page-description">{{@blog.description}}</h2>
 </header>
 
 <main role="main">

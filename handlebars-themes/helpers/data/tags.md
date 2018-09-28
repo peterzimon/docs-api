@@ -1,6 +1,6 @@
 ---
 title: "tags"
-tags:
+keywords:
     - api
     - handlebars
     - themes
@@ -15,7 +15,7 @@ Usage: `{{tags}}` or `{{#foreach tags}}{{/foreach}}` in `tag.hbs` you can use `{
 
 The `{{tags}}` helper does not output internal tags. This can be changed by passing a different value to the `visibility` attribute.
 
-You can use the [translation helper](/docs/t) for the `prefix` and `suffix` attribute, [see translate the tags helper](/docs/i18n#section-usage-of-subexpressions-and-translations). 
+You can use the [translation helper](/docs/t) for the `prefix` and `suffix` attribute, [see translate the tags helper](/docs/i18n#section-usage-of-subexpressions-and-translations).
 
 ### Example code
 
@@ -55,7 +55,7 @@ If you want to output a fixed number of tags, you can add a `limit` to the helpe
 {{tags limit="1"}}
 ```
 
-If you want to output a specific range of tags, you can use `from` and `to` either together or on their own. Using `to` will override the `limit` attribute. 
+If you want to output a specific range of tags, you can use `from` and `to` either together or on their own. Using `to` will override the `limit` attribute.
 
 E.g. using from="2" would output all tags, but starting from the second tag:
 
@@ -65,7 +65,7 @@ E.g. using from="2" would output all tags, but starting from the second tag:
 
 E.g. setting both from and to to `1` would do the same as limit="1"
 
-`{{tags from="1" to="1"}}` is the same as `{{tags limit="1"}}` 
+`{{tags from="1" to="1"}}` is the same as `{{tags limit="1"}}`
 
 
 ## The `visibility` attribute
@@ -89,11 +89,11 @@ If you want to output your tags completely differently, you can fully customise 
     {{#foreach tags}}
       <li>
         <a href="{{url}}" title="{{name}}" class="tag tag-{{id}} {{slug}}">{{name}}</a>
-      </li>  
+      </li>
     {{/foreach}}
     </ul>
   {{/if}}
-{{/post}}  
+{{/post}}
 ```
 
 ### List of Attributes

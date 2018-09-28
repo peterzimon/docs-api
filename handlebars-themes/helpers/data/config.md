@@ -1,6 +1,6 @@
 ---
 title: "@config"
-tags:
+keywords:
     - api
     - handlebars
     - themes
@@ -13,7 +13,7 @@ Specifically `@config` will pass through the special theme config that is added 
 
 At the moment, there is only one property which will be passed through:
 
-*   `{{@config.posts_per_page}}` – the number of posts per page 
+*   `{{@config.posts_per_page}}` – the number of posts per page
 
 ### Example Code
 
@@ -49,7 +49,7 @@ Config values can be provided by adding a `config` block to package.json
 }
 ```
 
-Inside of the config block, there is currently a single supported property - `posts_per_page`. 
+Inside of the config block, there is currently a single supported property - `posts_per_page`.
 
 ```html
 {

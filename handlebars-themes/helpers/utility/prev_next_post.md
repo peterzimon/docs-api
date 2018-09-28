@@ -1,6 +1,6 @@
 ---
 title: "prev_post & next_post"
-tags:
+keywords:
     - api
     - handlebars
     - themes
@@ -13,7 +13,7 @@ Usage: `{{#prev_post}}{{title}}{{/prev_post}}` -  `{{#next_post}}{{title}}{{/nex
 
 When in the scope of a post, you can call the next or previous post helper, which performs a query against the API to fetch the next or previous post in accordance with the chronological order of the blog.
 
-Inside of the opening and closing tags of the `{{#next_post}}{{/next_post}}` or `{{#prev_post}}{{/prev-post}}` helper, the normal helpers for [outputting posts](/docs/post) will work, but will output the details of the post that was fetched from the API, rather than the original post. 
+Inside of the opening and closing tags of the `{{#next_post}}{{/next_post}}` or `{{#prev_post}}{{/prev-post}}` helper, the normal helpers for [outputting posts](/docs/post) will work, but will output the details of the post that was fetched from the API, rather than the original post.
 
 ```html
 {{#post}}

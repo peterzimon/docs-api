@@ -1,6 +1,6 @@
 ---
 title: "excerpt"
-tags:
+keywords:
     - api
     - handlebars
     - themes

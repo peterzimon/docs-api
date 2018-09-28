@@ -1,6 +1,6 @@
 ---
 title: "lang"
-tags:
+keywords:
     - api
     - handlebars
     - themes

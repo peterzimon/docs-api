@@ -1,6 +1,6 @@
 ---
 title: "ghost_foot"
-tags:
+keywords:
     - api
     - handlebars
     - themes

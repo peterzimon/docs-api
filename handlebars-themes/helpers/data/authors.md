@@ -1,6 +1,6 @@
 ---
 title: "authors"
-tags:
+keywords:
     - api
     - handlebars
     - themes
@@ -13,7 +13,7 @@ Usage: `{{authors}}`
 
 `{{authors}}` is a formatting helper for outputting a linked list of authors for a particular post. It defaults to a comma-separated list (without list markup) but can be customised to use different separators, and the linking can be disabled. The authors are output in the order they appear on the post, these can be reordered by dragging and dropping.
 
-You can use the [translation helper](/docs/t) for the `prefix` and `suffix` attribute, [see translate the authors helper](/docs/i18n#section-translate-the-prefix-attribute-of-the-tags-or-authors-helper). 
+You can use the [translation helper](/docs/t) for the `prefix` and `suffix` attribute, [see translate the authors helper](/docs/i18n#section-translate-the-prefix-attribute-of-the-tags-or-authors-helper).
 
 ### Example code
 
@@ -53,7 +53,7 @@ If you want to output a fixed number of authors, you can add a `limit` to the he
 {{authors limit="1"}}
 ```
 
-If you want to output a specific range of authors, you can use `from` and `to` either together or on their own. Using `to` will override the `limit` attribute. 
+If you want to output a specific range of authors, you can use `from` and `to` either together or on their own. Using `to` will override the `limit` attribute.
 
 E.g. using from="2" would output all authors, but starting from the second author:
 
@@ -63,12 +63,12 @@ E.g. using from="2" would output all authors, but starting from the second autho
 
 E.g. setting both from and to to `1` would do the same as limit="1"
 
-`{{authors from="1" to="1"}}` is the same as `{{authors limit="1"}}` 
+`{{authors from="1" to="1"}}` is the same as `{{authors limit="1"}}`
 
 
 ## The `visibility` attribute
 
-As of Ghost 0.9 posts, tags and users all have a concept of `visibility`, which defaults to `public`. 
+As of Ghost 0.9 posts, tags and users all have a concept of `visibility`, which defaults to `public`.
 
 By default the `visibility` attribute is set to the string "public". This can be overridden to pass any other value, and if there is no matching value for `visibility` nothing will be output. You can also pass a comma-separated list of values, or the value "all" to output all items.
 
@@ -87,7 +87,7 @@ If you want to output your authors completely differently, you can fully customi
     {{#foreach authors}}
       <li>
         <a href="{{url}}" title="{{name}}" class="author author-{{id}} {{slug}}">{{name}}</a>
-      </li>  
+      </li>
     {{/foreach}}
     </ul>
   {{/if}}

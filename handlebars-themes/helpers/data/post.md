@@ -1,6 +1,6 @@
 ---
 title: "post"
-tags:
+keywords:
     - api
     - handlebars
     - themes
@@ -13,7 +13,7 @@ Usage:  `{{#post}}{{/post}}` or `{{#foreach posts}}{{/foreach}}`
 
 When on a single post template such as [post.hbs](/docs/structure#post-hbs) or [page.hbs](/docs/structure#page-hbs), outputting the details of your posts can be done with a [block expression](/docs/handlebars#block-expressions-scopes-).
 
-The block expression `{{#post}}{{/post}}` isn't strictly a 'helper'. You can do this with any object in a template to access the nested attributes e.g. you can also use `{{#primary_author}}{{/primary_author}}` inside of the post block to get to the primary author's name and other attributes. 
+The block expression `{{#post}}{{/post}}` isn't strictly a 'helper'. You can do this with any object in a template to access the nested attributes e.g. you can also use `{{#primary_author}}{{/primary_author}}` inside of the post block to get to the primary author's name and other attributes.
 
 When inside a post list such as [index.hbs](/docs/structure#index-hbs) or [tag.hbs](/docs/structure#index-hbs) where there is more than one post, it is common to use the [{{#foreach post}}{{/foreach}} helper](doc:foreach) to iterate through the list.
 

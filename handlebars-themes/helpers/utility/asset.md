@@ -1,6 +1,6 @@
 ---
 title: "asset"
-tags:
+keywords:
     - api
     - handlebars
     - themes

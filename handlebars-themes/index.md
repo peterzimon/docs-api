@@ -1,11 +1,19 @@
 ---
-title: "Overview Handlebars Themes"
-cover: "https://unsplash.it/400/300/?random?BoldMage"
-next: "/"
-tags:
+title: "Helpers index"
+date: "2018-10-01 15:00:00"
+meta_title: "Ghost handlebars helpers"
+meta_description: "Check out these handlebars helpers"
+image: "https://unsplash.it/400/300/?random?BoldMage"
+next:
+    url:  "/api/v2/helpers/helpers"
+    title: "Helpers overview"
+    description: "An overview of existing helpers..."
+sidebar: "handlebars"
+keywords:
     - api
     - handlebars
     - themes
+    - helpers
 ---
 
 ## This is the second heading

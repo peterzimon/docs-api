@@ -1,6 +1,6 @@
 ---
 title: "content"
-tags:
+keywords:
     - api
     - handlebars
     - themes

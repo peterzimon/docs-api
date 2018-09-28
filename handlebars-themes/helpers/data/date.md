@@ -1,6 +1,6 @@
 ---
 title: "date"
-tags:
+keywords:
     - api
     - handlebars
     - themes
@@ -39,19 +39,19 @@ If you call `{{date}}` without telling it which date to display, it will default
 
 ```html
 <main role="main">
-  {{#foreach posts}}  
+  {{#foreach posts}}
     <h2><a href="{{url}}">{{title}}</a></h2>
-  
+
    <p>{{excerpt words="26"}}</p>
-  
+
     {{!-- Here `published_at` is set, so this will show the article date --}}
     <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
   {{/foreach}}
-</main>  
+</main>
 <footer>
   {{!-- Here there is no `published_at` so this will show the current year --}}
   <p class="small">&copy; {{date format="YYYY"}}</p>
-</footer>  
+</footer>
 
 
 ```

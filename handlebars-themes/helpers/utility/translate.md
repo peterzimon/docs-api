@@ -1,6 +1,6 @@
 ---
 title: "translate"
-tags:
+keywords:
     - api
     - handlebars
     - themes
@@ -11,7 +11,7 @@ Usage: `{{t}}`
 
 ### Description
 
-`{{t}}` is a helper to output text in your blog language. 
+`{{t}}` is a helper to output text in your blog language.
 
 ### Example Code
 

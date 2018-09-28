@@ -1,6 +1,6 @@
 ---
 title: "Author"
-tags:
+keywords:
     - api
     - handlebars
     - themes
@@ -20,11 +20,11 @@ The default URL for author pages is `/author/:slug/`. The `author` context is al
 
 ## Templates
 
-The default template for an author page is `index.hbs`. 
+The default template for an author page is `index.hbs`.
 
-You can optionally include an `author.hbs` file in your theme which will be used for author pages instead. 
+You can optionally include an `author.hbs` file in your theme which will be used for author pages instead.
 
-Additionally, you can provide a custom template for a specific author. If there is a `author-:slug.hbs` file with the `:slug` matching the user's slug this will be used instead. 
+Additionally, you can provide a custom template for a specific author. If there is a `author-:slug.hbs` file with the `:slug` matching the user's slug this will be used instead.
 
 For example, if you have an author 'John' with the url `/author/john/`, adding a template called `author-john.hbs` will cause that template to be used for John's list of posts instead of `author.hbs`, or `index.hbs`.
 
@@ -32,7 +32,7 @@ These templates exist in a hierarchy. Ghost looks for a template which matches t
 
 ## Data
 
-When in the `author` context, a template gets access to 3 objects: the [author object](/docs/author-context#author-object-attributes) which matches the route, an array of [post objects](/docs/post-context#post-object-attributes) and a [pagination object](/docs/pagination#pagination-attributes). As with all contexts, all of the `@blog` global data is also available. 
+When in the `author` context, a template gets access to 3 objects: the [author object](/docs/author-context#author-object-attributes) which matches the route, an array of [post objects](/docs/post-context#post-object-attributes) and a [pagination object](/docs/pagination#pagination-attributes). As with all contexts, all of the `@blog` global data is also available.
 
 ### Author object
 
@@ -40,7 +40,7 @@ When outputting the author attributes, you can use a block expression (`{{#autho
 
 ### Author object attributes
 
-- **id** - the incremental ID of the author  
+- **id** - the incremental ID of the author
 - **name** - the name of the author
 - **bio** - the bio of the author
 - **location** - the author's location
@@ -63,7 +63,7 @@ The [pagination object](/docs/pagination#pagination-attributes) provided is the 
 
 The `{{#author}}{{/author}}` block expression is useful for accessing all of the author attributes. Once inside the author you can access the attributes and use helpers like [{{img_url}}](doc:img_url) and [{{url}}](doc:url) to output the author's details.
 
-Using `{{#foreach 'posts'}}{{/foreach}}` is the best way to loop through your posts and output each one. 
+Using `{{#foreach 'posts'}}{{/foreach}}` is the best way to loop through your posts and output each one.
 
 If your theme does have a `tag.hbs` and `author.hbs` file all outputting similar post lists to `index.hbs` you may wish to use a partial to define your post list item, e.g. `{{> "loop"}}`. There's an example showing this in detail below.
 
@@ -80,10 +80,10 @@ The [{{pagination}}](doc:pagination) helper is the best way to output pagination
     {/if}}
   </header>
 
-  <section class="author-profile">   
+  <section class="author-profile">
   	<h1 class="author-title">{{name}}</h1>
     {{#if bio}}<h2 class="author-bio">{{bio}}</h2>{{/if}}
-    
+
     <div class="author-meta">
       {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}
      </div>
@@ -96,6 +96,6 @@ The [{{pagination}}](doc:pagination) helper is the best way to output pagination
 </main>
 
 <!-- Previous/next page links - displayed on every page -->
-{{pagination}}  
+{{pagination}}
 
 ```

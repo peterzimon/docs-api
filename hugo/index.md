@@ -1,8 +1,7 @@
 ---
 title: "Hugo"
 cover: "https://unsplash.it/400/300/?random?BoldMage"
-next: "/"
-tags:
+keywords:
     - api
     - hugo
 ---
