@@ -5,6 +5,7 @@ keywords:
     - handlebars
     - themes
     - helpers
+sidebar: "handlebars"
 ---
 
 Usage: `{{#has tag="value1,value2" author="value"}}`
