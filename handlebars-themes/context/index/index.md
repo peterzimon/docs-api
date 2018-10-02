@@ -1,11 +1,11 @@
 ---
-title: "The Index"
-path: "/api/v2/handlebars-themes/index/"
+title: "Index"
 keywords:
     - api
     - handlebars
     - themes
     - helpers
+sidebar: "handlebars"
 ---
 
 
