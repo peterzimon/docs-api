@@ -1,19 +1,15 @@
 ---
-title: "Helpers index"
-date: "2018-10-01 15:00:00"
-meta_title: "Ghost handlebars helpers"
-meta_description: "Check out these handlebars helpers"
+title: "Ghost Handlebars Themes"
+date: "2018-10-01"
+meta_title: "Ghost handlebars themes"
+meta_description: "Check out these handlebars themes"
 image: "https://unsplash.it/400/300/?random?BoldMage"
-next:
-    url:  "/api/v2/helpers/helpers"
-    title: "Helpers overview"
-    description: "An overview of existing helpers..."
-sidebar: "handlebars"
 keywords:
     - api
     - handlebars
     - themes
     - helpers
+sidebar: "handlebars"
 ---
 
 ## This is the second heading
