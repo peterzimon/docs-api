@@ -5,6 +5,7 @@ keywords:
     - handlebars
     - themes
     - helpers
+sidebar: "handlebars"
 ---
 
 Usage: `{{body_class}}`

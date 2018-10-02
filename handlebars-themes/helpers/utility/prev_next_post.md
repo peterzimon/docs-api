@@ -5,6 +5,7 @@ keywords:
     - handlebars
     - themes
     - helpers
+sidebar: "handlebars"
 ---
 
 Usage: `{{#prev_post}}{{title}}{{/prev_post}}` -  `{{#next_post}}{{title}}{{/next_post}}`

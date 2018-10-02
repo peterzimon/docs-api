@@ -5,6 +5,7 @@ keywords:
     - handlebars
     - themes
     - helpers
+sidebar: "handlebars"
 ---
 
 The `@labs` variable provides access to [global data](/docs/handlebars#section-global-data) properties, which are available anywhere in your theme.
