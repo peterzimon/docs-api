@@ -5,6 +5,7 @@ keywords:
     - handlebars
     - themes
     - helpers
+sidebar: "handlebars"
 ---
 
 Usage: `{{tags}}` or `{{#foreach tags}}{{/foreach}}` in `tag.hbs` you can use `{{#tag}}{{/tag}}` to access tag properties

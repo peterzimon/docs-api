@@ -5,6 +5,7 @@ keywords:
     - handlebars
     - themes
     - helpers
+sidebar: "handlebars"
 ---
 
 Usage:  `{{#post}}{{/post}}` or `{{#foreach posts}}{{/foreach}}`

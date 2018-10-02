@@ -5,6 +5,7 @@ keywords:
     - handlebars
     - themes
     - helpers
+sidebar: "handlebars"
 ---
 
 Usage: `{{twitter_url}}` or `{{twitter_url @blog.twitter}}` or `{{twitter_url "myfavouritepage"}}`

@@ -5,6 +5,7 @@ keywords:
     - handlebars
     - themes
     - helpers
+sidebar: "handlebars"
 ---
 
 Usage: `{{facebook_url}}` or `{{facebook_url @blog.facebook}}` or `{{facebook_url "myfavouritepage"}}`
