@@ -1,5 +1,6 @@
 ---
 title: "Data Helpers"
+path: "/api/v2/helpers/data/index/"
 keywords:
     - api
     - handlebars
