@@ -1,6 +1,6 @@
 ---
 title: "Hugo"
-cover: "https://unsplash.it/400/300/?random?BoldMage"
+image: "https://unsplash.it/400/300/?random?BoldMage"
 keywords:
     - api
     - hugo
