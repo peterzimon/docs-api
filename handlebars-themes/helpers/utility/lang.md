@@ -12,7 +12,7 @@ Usage: `{{lang}}`
 
 ### Description
 
-`{{lang}}` is a helper to output the configured blog language.
+`{{lang}}` is a helper to output the configured site language.
 
 ### Example Code
 

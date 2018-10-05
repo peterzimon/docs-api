@@ -13,7 +13,7 @@ Use: `{{#is "post"}}{{/is}}` to detect this context
 
 ## Description
 
-Whenever you're viewing a single blog post, you're in the `post` context. The `post` context is not set on static pages, which uses the [page context](doc:page-context) instead.
+Whenever you're viewing a single site post, you're in the `post` context. The `post` context is not set on static pages, which uses the [page context](doc:page-context) instead.
 
 ## Routes
 
@@ -41,7 +41,7 @@ When outputting the post, you can use a block expression (`{{#post}}{{/post}}`) 
 
 - **id** - the Object ID of the post
 - **comment_id** - The old, pre-1.0 incremental id of a post if present, or else the new Object ID ( [special attributes: comment id](/docs/post-context#section-comment-id))
-- **title** - the title of your blog post ([title helper](doc:title))
+- **title** - the title of your site post ([title helper](doc:title))
 - **slug** - slugified version of the title (used in urls and also useful for class names)
 - **excerpt** - a short preview of your post content ([excerpt helper](doc:excerpt))
 - **content** - the content of the post ([content helper](content))
@@ -95,7 +95,7 @@ The post model is the most complex model in Ghost, and it has a couple of specia
 
 ### URL
 
-URL is a calculated, created based on the blog's permalink setting and the post's other properties. It exists as a data attribute, but should always be output using the special [{{url}} helper](doc:url) rather than referenced as a data attribute.
+URL is a calculated, created based on the site's permalink setting and the post's other properties. It exists as a data attribute, but should always be output using the special [{{url}} helper](doc:url) rather than referenced as a data attribute.
 
 That means always open a context and use `{{url}}` explicitly, and is the same for _all_ resources, but especially important because post has a data attribute present. So, **always** do `{{#post}}{{url}}{{/post}}` **never** do `{{post.url}}`.
 
@@ -103,7 +103,7 @@ That means always open a context and use `{{url}}` explicitly, and is the same f
 
 Comment ID is a special attribute provided purely for compatibility reasons. In Ghost 1.0, there was a major change, which converted post IDs from being incremental IDs to being a longer 24 character ID. However, post IDs were used as identifiers in some cases, most notably when embedding Disqus comments.
 
-For those blogs, when the IDs changed after 1.0, Disqus was no longer able to associate comments with old posts correctly. Therefore we added `{{comment_id}}` to solve that problem. We recommend always using `{{comment_id}}` as your disqus identifier, or in any other scenario where IDs are used to identify content to 3rd parties.
+For those sites, when the IDs changed after 1.0, Disqus was no longer able to associate comments with old posts correctly. Therefore we added `{{comment_id}}` to solve that problem. We recommend always using `{{comment_id}}` as your disqus identifier, or in any other scenario where IDs are used to identify content to 3rd parties.
 
 Example: The Disqus config in Ghost should look like this, with the code **inside** a `{{#post}}{{/post}}` block.
 

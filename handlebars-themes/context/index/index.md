@@ -13,11 +13,11 @@ Use: {{#is "index"}}{{/is}} to detect this context.
 
 ## Description
 
-`index` is the name for the main post list in your Ghost blog, the `index` context includes the home page and subsequent pages of the main post list. The `index` context is always paired with either the `home` context when on the first page of your blog, or the `paged` context when on subsequent pages.
+`index` is the name for the main post list in your Ghost site, the `index` context includes the home page and subsequent pages of the main post list. The `index` context is always paired with either the `home` context when on the first page of your site, or the `paged` context when on subsequent pages.
 
 ## Routes
 
-The index context is present on both the root URL of the blog, e.g. `/` and also on subsequent pages of the post list, which live at `/page/:num/`. All routes are now customisable with [Dynamic Routing](https://docs.ghost.org/v2/docs/dynamic-routing).
+The index context is present on both the root URL of the site, e.g. `/` and also on subsequent pages of the post list, which live at `/page/:num/`. All routes are now customisable with [Dynamic Routing](https://docs.ghost.org/v2/docs/dynamic-routing).
 
 ## Templates
 
@@ -79,7 +79,7 @@ The [{{pagination}}](doc:pagination) helper is the best way to output pagination
 
 ## Home
 
-`home` is a special context which refers to page 1 of the index. If `home` is set, `index` is always set as well. `home` can be used to detect that this is specifically the first page of the blog and not one of the subsequent pages.
+`home` is a special context which refers to page 1 of the index. If `home` is set, `index` is always set as well. `home` can be used to detect that this is specifically the first page of the site and not one of the subsequent pages.
 
 Use: `{{#is "home"}}{{/is}}` to detect this context.
 

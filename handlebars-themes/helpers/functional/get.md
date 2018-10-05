@@ -18,7 +18,7 @@ In its most basic form it can perform a 'browse' query to create a block of data
 
 It can also be used to perform a 'read' query that fetches one specific **author**, **post** or **tag** if the relevant *resource field* - E.g. **id** or **slug** is provided as an attribute.
 
-**Please note**: This is a powerful tool, that has the potential to be overused and cause problems on a blog.
+**Please note**: This is a powerful tool, that has the potential to be overused and cause problems on a site.
 
 ### Simple Examples
 

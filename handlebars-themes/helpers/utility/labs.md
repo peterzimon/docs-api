@@ -10,7 +10,7 @@ sidebar: "handlebars"
 
 The `@labs` variable provides access to [global data](/docs/handlebars#section-global-data) properties, which are available anywhere in your theme.
 
-For each feature listed with a checkbox in the `settings/labs/` section of a blog, the `@labs` global will provide a boolean flag which tells the theme developer whether or not the feature is enabled.
+For each feature listed with a checkbox in the `settings/labs/` section of a site, the `@labs` global will provide a boolean flag which tells the theme developer whether or not the feature is enabled.
 
 As of Ghost 1.0.0, there are two features which can be detected:
 
