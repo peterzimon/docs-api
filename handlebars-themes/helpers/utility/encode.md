@@ -1,5 +1,9 @@
 ---
 title: "encode"
+path: /api/v2/handlebars-themes/helpers/utility/encode/
+date: "2018-10-01"
+meta_title: "Ghost Handlebars Theme Helpers: encode"
+meta_description: "Encode strings for a URL with this handlebars helper. Read more about Ghost themes! 👻"
 keywords:
     - api
     - handlebars

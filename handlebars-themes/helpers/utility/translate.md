@@ -1,5 +1,9 @@
 ---
 title: "translate"
+path: /api/v2/handlebars-themes/helpers/utility/translate/
+date: "2018-10-01"
+meta_title: "Ghost Handlebars Theme Helpers: translate"
+meta_description: "The {{t}} helper outputs text in your publication's language. Read more about Ghost themes! 👻"
 keywords:
     - api
     - handlebars

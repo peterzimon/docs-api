@@ -1,5 +1,9 @@
 ---
 title: "@blog"
+path: /api/v2/handlebars-themes/helpers/data/blog/
+date: "2018-10-01"
+meta_title: "Ghost Handlebars Theme Helpers: @blog"
+meta_description: "The @blog property provides access to global data properties, which are available anywhere in your Ghost theme. Read more 👉"
 keywords:
     - api
     - handlebars

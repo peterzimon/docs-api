@@ -1,5 +1,9 @@
 ---
 title: "pagination"
+path: /api/v2/handlebars-themes/helpers/utility/pagination/
+date: "2018-10-01"
+meta_title: "Ghost Handlebars Theme Helpers: pagination"
+meta_description: "Use the pagination handlebars helper to work with paginated posts in Ghost. Read more about Ghost themes! 👻"
 keywords:
     - api
     - handlebars

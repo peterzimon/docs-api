@@ -1,5 +1,9 @@
 ---
 title: "post"
+path: /api/v2/handlebars-themes/helpers/data/post/
+date: "2018-10-01"
+meta_title: "Ghost Handlebars Theme Helpers: post"
+meta_description: "A single handlebars block expression is used to fetch the details of a post from Ghost admin. Read more about Ghost themes!"
 keywords:
     - api
     - handlebars

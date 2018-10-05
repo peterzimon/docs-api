@@ -1,5 +1,9 @@
 ---
 title: "Page"
+path: /api/v2/handlebars-themes/context/page/
+date: "2018-10-01"
+meta_title: "Page Context: Ghost Themes"
+meta_description: "The page context is used in Ghost themes to render pages in a publication. Learn more about contexts and building custom theme!"
 keywords:
     - api
     - handlebars
@@ -54,7 +58,7 @@ When outputting the page, you can use a block expression (`{{#post}}{{/post}}`) 
 - **created_at:** - date and time when the page was created  ([date helper](doc:date))
 -  **author** - full details of the page's author (see [author](doc:author) for details)
 - **tags** - a list of tags associated with the page (see [tags](doc:tags) for details)
--
+
 ## Helpers
 
 Using the `{{#post}}{{/post}}` block expression is the key trick to having a happy time theming your static page. Once inside of the page, you can use any of these useful helpers (and many more) to output your page's data:

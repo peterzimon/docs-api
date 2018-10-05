@@ -1,5 +1,9 @@
 ---
 title: "post_class"
+path: /api/v2/handlebars-themes/helpers/utility/post_class/
+date: "2018-10-01"
+meta_title: "Ghost Handlebars Theme Helpers: post_class"
+meta_description: "Target specific posts in a Ghost publication with styles using the post_class handlebars helper. Read more about Ghost themes! 👻"
 keywords:
     - api
     - handlebars
@@ -12,7 +16,7 @@ Usage: `{{post_class}}`
 
 ### Description
 
-`{{post_class}}` – outputs classes intended for your post container, useful for targeting posts with styles.
+`{{post_class}}` outputs classes intended for your post container, useful for targeting posts with styles.
 
 The classes are as follows:
 

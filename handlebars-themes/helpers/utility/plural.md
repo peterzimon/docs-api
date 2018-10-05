@@ -1,5 +1,9 @@
 ---
 title: "plural"
+path: /api/v2/handlebars-themes/helpers/utility/plural/
+date: "2018-10-01"
+meta_title: "Ghost Handlebars Theme Helpers: plural"
+meta_description: "Output how many posts exist in a collection in your Ghost publication using the plural handlebars helper. Read more about Ghost themes! 👻"
 keywords:
     - api
     - handlebars

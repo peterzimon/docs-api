@@ -1,5 +1,9 @@
 ---
 title: "lang"
+path: /api/v2/handlebars-themes/helpers/utility/lang/
+date: "2018-10-01"
+meta_title: "Ghost Handlebars Theme Helpers: lang"
+meta_description: "Use the {{lang}} helpers to output specified languages in a Ghost publication. Read more about Ghost themes! 👻"
 keywords:
     - api
     - handlebars

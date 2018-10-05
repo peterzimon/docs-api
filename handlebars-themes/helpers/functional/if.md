@@ -1,5 +1,9 @@
 ---
 title: "if"
+path: /api/v2/handlebars-themes/helpers/functional/if/
+date: "2018-10-01"
+meta_title: "Ghost Handlebars Theme Helpers: if"
+meta_description: "#if allows theme developers to test very simple conditionals and execute different templates - read more about Ghost theme develpment!"
 keywords:
     - api
     - handlebars

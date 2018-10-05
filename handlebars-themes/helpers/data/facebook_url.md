@@ -1,5 +1,9 @@
 ---
 title: "facebook_url"
+path: /api/v2/handlebars-themes/helpers/data/facebook/
+date: "2018-10-01"
+meta_title: "Ghost Handlebars Theme Helpers: facebook"
+meta_description: "Connect your Ghost theme with your Facebook account. Read more about building custom Ghost themes! 👻!"
 keywords:
     - api
     - handlebars

@@ -1,5 +1,9 @@
 ---
 title: "Tag"
+path: /api/v2/handlebars-themes/context/tag/
+date: "2018-10-01"
+meta_title: "Tag Context: Ghost Themes"
+meta_description: "The tag context is used in Ghost themes to render lists of posts with the same tag in a publication. Learn more about contexts and building custom theme!"
 keywords:
     - api
     - handlebars

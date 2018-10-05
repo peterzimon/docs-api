@@ -1,5 +1,9 @@
 ---
 title: "content"
+path: /api/v2/handlebars-themes/helpers/data/content/
+date: "2018-10-01"
+meta_title: "Ghost Handlebars Theme Helpers: content"
+meta_description: "This simple helper makes sure that your HTML gets output correctly. Read more about working with Ghost themes! 👻"
 keywords:
     - api
     - handlebars

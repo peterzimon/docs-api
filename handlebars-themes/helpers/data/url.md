@@ -1,5 +1,9 @@
 ---
 title: "url"
+path: /api/v2/handlebars-themes/helpers/data/url/
+date: "2018-10-01"
+meta_title: "Ghost Handlebars Theme Helpers: url"
+meta_description: "The handlebars helper for url outputs the relative url for a post. Read more about developing Ghost themes!"
 keywords:
     - api
     - handlebars

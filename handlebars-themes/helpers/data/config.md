@@ -1,5 +1,9 @@
 ---
 title: "@config"
+path: /api/v2/handlebars-themes/helpers/data/config/
+date: "2018-10-01"
+meta_title: "Ghost Handlebars Theme Helpers: @config"
+meta_description: "The @config property provides access to global data properties, which are available anywhere in your theme. Read more about Ghost themes ⚡️"
 keywords:
     - api
     - handlebars

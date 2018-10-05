@@ -1,5 +1,9 @@
 ---
 title: "prev_post & next_post"
+path: /api/v2/handlebars-themes/helpers/utility/prev_next_post/
+date: "2018-10-01"
+meta_title: "Ghost Handlebars Theme Helpers: prev_post & next_post"
+meta_description: "Create chronological post links on your Ghost publication with some simple handlebars helpers. Read more about Ghost themes! 👻"
 keywords:
     - api
     - handlebars

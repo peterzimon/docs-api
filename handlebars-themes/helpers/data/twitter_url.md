@@ -1,5 +1,9 @@
 ---
 title: "twitter_url"
+path: /api/v2/handlebars-themes/helpers/data/twitter/
+date: "2018-10-01"
+meta_title: "Ghost Handlebars Theme Helpers: Twitter"
+meta_description: "Connect your Ghost theme with your Twitter account. Read more about building custom Ghost themes! 👻"
 keywords:
     - api
     - handlebars
