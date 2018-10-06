@@ -10,6 +10,10 @@ keywords:
     - themes
     - helpers
 sidebar: "handlebars"
+next:
+    url: "/setup/ghost-pro/"
+    title: "Setup Ghost(Pro)"
+    description: "Setup Ghost(Pro)"
 ---
 
 ## This is the second heading

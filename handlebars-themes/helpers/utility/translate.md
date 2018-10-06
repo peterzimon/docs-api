@@ -12,7 +12,7 @@ Usage: `{{t}}`
 
 ### Description
 
-`{{t}}` is a helper to output text in your blog language.
+`{{t}}` is a helper to output text in your site language.
 
 ### Example Code
 

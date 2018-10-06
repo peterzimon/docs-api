@@ -52,5 +52,5 @@ The following contexts are supported:
 * **page** - true for any static page
 * **tag** - true for any page of the tag list
 * **author** - true for any page of the author list
-* **paged** - true if this is page 2, page 3 of a list, but not on the first page.
-* **private** - true if this is the private page shown for password protected blogs
+* **paged** - true if this is page 2, page 3 of a list, but not on the first page
+* **private** - true if this is the private page shown for password protected sites

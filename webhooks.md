@@ -1,10 +1,7 @@
 ---
-title: "Gatsby"
-image: "https://unsplash.it/400/300/?random?BoldMage"
+title: "Webhooks"
 keywords:
-    - api
-    - gatsby
-sidebar: gatsby
+    - webhooks
 ---
 
 ## This is the second heading

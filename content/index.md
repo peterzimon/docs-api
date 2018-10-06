@@ -1,10 +1,8 @@
 ---
-title: "Gatsby"
-image: "https://unsplash.it/400/300/?random?BoldMage"
+title: "Content API"
 keywords:
     - api
-    - gatsby
-sidebar: gatsby
+sidebar: content-api
 ---
 
 ## This is the second heading
