@@ -1,5 +1,9 @@
 ---
 title: "has"
+path: /api/v2/handlebars-themes/helpers/functional/has/
+date: "2018-10-01"
+meta_title: "Ghost Handlebars Theme Helpers: has"
+meta_description: "#has allows theme developers to ask questions about the current context and provides more flexibility ⚡️ Read more about custom Ghost themes!"
 keywords:
     - api
     - handlebars
@@ -14,7 +18,7 @@ Usage: `{{#has tag="value1,value2" author="value"}}`
 
 ## Description
 
-`{{#has}}` - is like `{{#if}}` but with the ability to do more than test a boolean. It allows theme developers to ask questions about the current context and provide more flexibility for creating different layouts.
+`{{#has}}` is like `{{#if}}` but with the ability to do more than test a boolean. It allows theme developers to ask questions about the current context and provide more flexibility for creating different layouts.
 
 Like all block helpers, `{{#has}}` supports adding an `{{else}}` block or using `^` instead of `#` for negation - this means that the `{{#has}}` and `{{else}}` blocks are reversed if you use `{{^has}}` and `{{else}}` instead. In addition, it is possible to do `{{else has ...}}`, to chain together multiple options like a switch statement.
 

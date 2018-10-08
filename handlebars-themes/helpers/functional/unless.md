@@ -1,5 +1,9 @@
 ---
 title: "unless"
+path: /api/v2/handlebars-themes/helpers/functional/unless/
+date: "2018-10-01"
+meta_title: "Ghost Handlebars Theme Helpers: unless"
+meta_description: "Test negative conditionals with the #unless handlebars helper. Read more about building custom Ghost themes! 👻"
 keywords:
     - api
     - handlebars

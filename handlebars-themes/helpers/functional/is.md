@@ -1,5 +1,9 @@
 ---
 title: "is"
+path: /api/v2/handlebars-themes/helpers/functional/is/
+date: "2018-10-01"
+meta_title: "Ghost Handlebars Theme Helpers: is"
+meta_description: "The #is helper allows theme developers to check the context of the current route. Read more about custom Ghost themes! 👻"
 keywords:
     - api
     - handlebars

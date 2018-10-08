@@ -1,5 +1,9 @@
 ---
 title: "Index"
+path: /api/v2/handlebars-themes/context/index/
+date: "2018-10-01"
+meta_title: "Index Context: Ghost Themes"
+meta_description: "The index context is used in Ghost themes to render lists of posts in a publication. Learn more about contexts and building custom theme 👻"
 keywords:
     - api
     - handlebars
@@ -17,7 +21,7 @@ Use: {{#is "index"}}{{/is}} to detect this context.
 
 ## Routes
 
-The index context is present on both the root URL of the site, e.g. `/` and also on subsequent pages of the post list, which live at `/page/:num/`. All routes are now customisable with [Dynamic Routing](https://docs.ghost.org/v2/docs/dynamic-routing).
+The index context is present on both the root URL of the site, e.g. `/` and also on subsequent pages of the post list, which live at `/page/:num/`. All routes are customisable with [Dynamic Routing](https://docs.ghost.org/v2/docs/dynamic-routing).
 
 ## Templates
 

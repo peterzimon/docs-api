@@ -1,5 +1,9 @@
 ---
 title: "Post"
+path: /api/v2/handlebars-themes/context/post/
+date: "2018-10-01"
+meta_title: "Post Context: Ghost Themes"
+meta_description: "The post context is used in Ghost themes to render posts in a publication. Learn more about contexts and building custom theme!"
 keywords:
     - api
     - handlebars

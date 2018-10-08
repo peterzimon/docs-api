@@ -1,5 +1,7 @@
 ---
 title: "Author"
+meta_title: "Handlebars Themes – Ghost"
+meta_description: "Our handlebars theme templating framework works with the Ghost API to build flexible publishing websites. Start building your custom theme here!"
 keywords:
     - api
     - handlebars

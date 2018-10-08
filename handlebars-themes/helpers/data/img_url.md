@@ -1,5 +1,9 @@
 ---
 title: "img_url"
+path: /api/v2/handlebars-themes/helpers/data/img_url/
+date: "2018-10-01"
+meta_title: "Ghost Handlebars Theme Helpers: img_url"
+meta_description: "Calculate image URLs efficiently with the img_url handlebars helper. Read more about Ghost themes!"
 keywords:
     - api
     - handlebars

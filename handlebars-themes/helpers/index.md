@@ -1,5 +1,9 @@
 ---
 title: "Helpers"
+path: /api/v2/handlebars-themes/helpers/
+date: "2018-10-01"
+meta_title: "Handlebars Helpers"
+meta_description: "Ghost has a number of built in helpers which give you the tools to build a custom publication theme 🛠 Start building your theme here!"
 keywords:
     - api
     - handlebars
