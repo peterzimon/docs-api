@@ -1,6 +1,5 @@
 ---
 title: "Page"
-path: /api/v2/handlebars-themes/context/page/
 date: "2018-10-01"
 meta_title: "Page Context: Ghost Themes"
 meta_description: "The page context is used in Ghost themes to render pages in a publication. Learn more about contexts and building custom theme!"
