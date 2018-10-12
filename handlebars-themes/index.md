@@ -1,6 +1,6 @@
 ---
 title: "Ghost Handlebars Themes"
-path: /api/v2/handlebars-themes/
+path: /api/handlebars-themes/
 date: "2018-10-01"
 meta_title: "Handlebars Themes"
 meta_description: "Our handlebars theme templating framework works with the Ghost API to build flexible publishing websites. Start building your custom theme here!"
@@ -77,7 +77,7 @@ Ghost templates are constructed from HTML and handlebars helpers. There are a fe
 
 In order for a Ghost theme to work, you must make use of the required helpers: `{{asset}}`, `{{body_class}}`, `{{post_class}}`, `{{ghost_head}}`, `{{ghost_foot}}`.
 
-See the [full list of helpers](https://docs.ghost.org//api/v2/handlebars-themes/helpers/)  for more detailed information about specific Handlebars helpers.
+See the [full list of helpers](https://docs.ghost.org//api/handlebars-themes/helpers/)  for more detailed information about specific Handlebars helpers.
 
 ### Templates
 

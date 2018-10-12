@@ -22,19 +22,19 @@ Ghost's front-end and themes are fully translatable by enabling a publication la
 
 ## Making a theme translatable
 
-Follow these steps to make your theme fully translatable: 
+Follow these steps to make your theme fully translatable:
 
 #### 1. Create a `locales` folder and add language files
 
-Create a folder called `locales`. If using a theme that is already translatable, this may exist already. 
+Create a folder called `locales`. If using a theme that is already translatable, this may exist already.
 
-Inside the `locales` folder, add target language files for each translatable language used on your site. For example `locales/en.json` for English and `locales/es.json` for Spanish. A [valid language](https://www.w3schools.com/tags/ref_language_codes.asp/) code must be used. 
+Inside the `locales` folder, add target language files for each translatable language used on your site. For example `locales/en.json` for English and `locales/es.json` for Spanish. A [valid language](https://www.w3schools.com/tags/ref_language_codes.asp/) code must be used.
 
 #### 2. Translate included sentences
 
-Translate the sentences used in your theme inside your new language files. 
+Translate the sentences used in your theme inside your new language files.
 
-For example, in `locales/en.json`: 
+For example, in `locales/en.json`:
 ```
 {
     "Back": "Back",
@@ -105,7 +105,7 @@ And edited to translate into Spanish for `locales/es.json`:
 }
 ```
 
-It is possible to use any translation key on the left, but readable English is advised in order to take advantage of the fallback option inside the `{{t}}` translation helper when no translation is available. 
+It is possible to use any translation key on the left, but readable English is advised in order to take advantage of the fallback option inside the `{{t}}` translation helper when no translation is available.
 
 Dates, with month names, are automatically translated. You don't need to include them in the translation files.
 
@@ -113,31 +113,31 @@ Use HTML entities instead of characters, for example `&lt;` instead of `<`.
 
 #### 3. Enable blog language
 
-Verify that the `.json` translation file for your active theme is in place and then activate the language in the General settings of Ghost admin. Enter the correct language code into your settings menu and hit save. 
+Verify that the `.json` translation file for your active theme is in place and then activate the language in the General settings of Ghost admin. Enter the correct language code into your settings menu and hit save.
 
 #### 4. Ensure templates exist
 
 To ensure that your theme is fully translatable, three core templates must exist in your theme. Check the following templates exist:
 
 **subscribe.hbs** -
-exists in `content/themes/mytheme`, copy the [template](https://github.com/TryGhost/Ghost/blob/master/core/server/apps/subscribers/lib/views/subscribe.hbs/) 
+exists in `content/themes/mytheme`, copy the [template](https://github.com/TryGhost/Ghost/blob/master/core/server/apps/subscribers/lib/views/subscribe.hbs/)
 
-**pagination.hbs** - exists in `content/themes/mytheme/partials`, copy the [template](https://github.com/TryGhost/Ghost/blob/master/core/server/helpers/tpl/pagination.hbs/) 
+**pagination.hbs** - exists in `content/themes/mytheme/partials`, copy the [template](https://github.com/TryGhost/Ghost/blob/master/core/server/helpers/tpl/pagination.hbs/)
 
 **subscribe_form.hbs** - exists in `content/themes/mytheme/partials`, copy the [template](https://github.com/TryGhost/Ghost/blob/master/core/server/helpers/tpl/subscribe_form.hbs/)
 
 
 #### 5. Use the translation helper
 
-Any plain text in your theme must be wrapped in the `{{t}}` translation helper, with `{{t` to the left of the text and `}}` to the right. 
+Any plain text in your theme must be wrapped in the `{{t}}` translation helper, with `{{t` to the left of the text and `}}` to the right.
 
-Look for any plain text in all of your theme's `.hbs` template files and ensure the translation helper is present. 
+Look for any plain text in all of your theme's `.hbs` template files and ensure the translation helper is present.
 
 #### 6. Declare language in HTML
 It's advisable to add the HTML lang attribute to the <html> tag at the start of the theme's default.hbs template, using Ghost's {{lang}} helper: `<html lang="{{lang}}">`. `{{lang}}` will automatically be replaced on the site with the corresponding language locale tag set in Ghost admin.
 
 #### 7. Reactivate the theme
-To make the new changes effective, run `restart ghost`. 
+To make the new changes effective, run `restart ghost`.
 
 
 
@@ -148,26 +148,26 @@ The translation helper can interact with many other handlebars expressions in or
 Here are some of the most commonly used advanced translation features:
 
 #### Placeholders
-Placeholders are dynamic values that are replaced on runtime, and can be implemented using single braces. This is useful for translations if you need to insert dynamic data attributes to your translations. 
+Placeholders are dynamic values that are replaced on runtime, and can be implemented using single braces. This is useful for translations if you need to insert dynamic data attributes to your translations.
 
-For example, here is a placeholder in the theme translation file: 
+For example, here is a placeholder in the theme translation file:
 ```
 "Proudly published with {ghostlink}": "Publicado con {ghostlink}",
 ```
 
-Which is defined in the theme template `default.hbs` using: 
+Which is defined in the theme template `default.hbs` using:
 ```
 {{{t "Proudly published with {ghostlink}" ghostlink="<a href=\"https://ghost.org\">Ghost</a>"}}}
 ```
 
-Placeholders with data attributes can also be used, for example: 
+Placeholders with data attributes can also be used, for example:
 ```
 {{t "Subscribe to {blogtitle}" blogtitle=@blog.title}}
 ```
 
 #### Subexpressions
 
-The concept of subexpressions allows you to invoke multiple helpers in one expression. 
+The concept of subexpressions allows you to invoke multiple helpers in one expression.
 
 For example, a `(t)` subexpression (instead of normal `{{t}}` helper) can be used as a parameter inside another helper such as `{{tags}}`.
 
@@ -176,7 +176,7 @@ This can be used to translate the prefix or suffix attribute of the `{{tags}}` o
 
 #### Plural helper
 
-`{{plural}}` is a [formatting helper](https://docs.ghost.org/api/v2/handlebars-themes/helpers/plural/) for outputting strings which change depending on whether a number is singular or plural.
+`{{plural}}` is a [formatting helper](https://docs.ghost.org/api/handlebars-themes/helpers/plural/) for outputting strings which change depending on whether a number is singular or plural.
 
 This can be used in translations to output information such as number of posts:
 
@@ -195,9 +195,9 @@ In the theme template `author.hbs`, several (t) subexpressions instead of normal
 
 #### Reading time helper
 
-The [reading time helper](https://docs.ghost.org/api/v2/handlebars-themes/helpers/reading_time/) can be used in translations to provide a reading time for your posts in the desired language. 
+The [reading time helper](https://docs.ghost.org/api/handlebars-themes/helpers/reading_time/) can be used in translations to provide a reading time for your posts in the desired language.
 
-For example, in `es.json`: 
+For example, in `es.json`:
 
 "1 min read": "1 min de lectura",
 "% min read": "% min de lectura",
