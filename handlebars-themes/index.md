@@ -12,9 +12,9 @@ keywords:
     - helpers
 sidebar: "handlebars"
 next:
-    - url: "/setup/ghost-pro/"
-    - title: "Setup Ghost(Pro)"
-    - description: "Setup Ghost(Pro)"
+    url: "/setup/ghost-pro/"
+    title: "Setup Ghost(Pro)"
+    description: "Setup Ghost(Pro)"
 ---
 The Ghost theme layer has been engineered to give developers and designers the flexibility to build custom publications that are powered by the Ghost platform.
 
