@@ -1,13 +1,13 @@
 ---
-title: "Content"
+title: "Editor"
 date: "2018-10-01"
-meta_title: "Content"
-meta_description: "The page context is used in Ghost themes to render pages in a publication. Learn more about contexts and building custom theme!"
+meta_title: "Ghost Themes – The Editor"
+meta_description: "Find out how to ensure your theme is fully compatible with the open-source rich editor inside of Ghost!"
 keywords:
-    - api
+    - content
     - handlebars
     - themes
-    - helpers
+    - editor
 sidebar: "handlebars"
 ---
 

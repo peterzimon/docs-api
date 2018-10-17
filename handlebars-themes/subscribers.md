@@ -1,10 +1,10 @@
 ---
 title: "Subscribers"
 date: "2018-10-01"
-meta_title: "Content"
-meta_description: "The page context is used in Ghost themes to render pages in a publication. Learn more about contexts and building custom theme!"
+meta_title: "Subscribers"
+meta_description: "Collect subscriber emails from your Ghost publication with this neat feature and some additional helpers in your theme!"
 keywords:
-    - api
+    - subscribers
     - handlebars
     - themes
     - helpers
@@ -12,79 +12,92 @@ sidebar: "handlebars"
 ---
 
 
-Use: `{{#is "page"}}{{/is}}` to detect this context
+The subscribers tool that is built into Ghost admin allows you to enable a subscribe page and collect emails from your readers directly from your site!
 
-## Description
 
-Whenever you're viewing a static page, you're in the `page` context. The `page` context is not set on posts, which uses the [post context](doc:post-context) instead.
+## Overview
 
-## Routes
+When the subscribers feature is enabled in the settings within Ghost admin, the following new features are activated: 
 
-The URL used to render a static page is always `/:slug/`. This cannot be customised, unlike post permalinks.
+* The route `/subscribe/` renders `subscribe.hbs`, provided there is not already a page on this route
+* A new `{{subscribe_form}}` helper is registered to use within your theme
+* The API gets a new `/subscribers/` endpoint
 
-## Templates
+The new page rendered at `/subscribe/` uses the default template, which can be updated to suit your needs. The subscribe form helper can be used across your site content with some adjustments to your theme. 
 
-The default template for a page is `post.hbs`.
+The subscribers view in Ghost admin allows you to see your subscriber list, add subscribers manually and import or export CSV files. Ghost does not automatically send emails to your subscribers by default, but you can integrate with your favourite email tools to get the job done (such as Mailchimp or Active Campaign).
 
-You can optionally include a `page.hbs` file in your theme which will be used for pages instead.
 
-Additionally, you can provide a custom template for a specific page. If there is a `page-:slug.hbs` file with the `:slug` matching the static page's slug this will be used instead.
+## Subscribe form helper
 
-For example, if you have an 'About' page with the url `/about/`, adding a template called `page-about.hbs` will cause that template to be used for the about page, instead of page.hbs, or post.hbs.
+This helper wraps all of the internals of the form used for submitting emails to the subscriber list. It is a template driven helper just like [navigation](/api/handlebars-themes/helpers/navigation/). This means the template can be overridden by including a correctly named template in the partials folder of your theme. 
 
-These templates exist in a hierarchy. Ghost looks for a template which matches the slug (`page-:slug.hbs`) first, then looks for `page.hbs` and finally uses `post.hbs` if neither is available.
+#### Attributes
 
-## Data
+The `{{subscribe_form}}` helper accepts a number of attributes:
 
-The `page` context provides access to the post object which matches the route. A page is just a special type of post, so the data object is called a post, not a page. As with all contexts, all of the `@blog` global data is also available.
+* `form_class`
+* `input_class`
+* `button_class`
+* `form_id`
+* `input_id`
+* `button_id`
+* `placeholder`
+* `autofocus`
 
-When outputting the page, you can use a block expression (`{{#post}}{{/post}}`) to drop into the post scope and access all of the attributes. All of the data available for a page is the same as the data for a post. See a full list of attributes below:
-
-### Post (page) object attributes
-
-- **id** - the incremental ID of the page
-- **title** - the title of your static page ([title helper](doc:title))
-- **excerpt** - a short preview of your page content ([excerpt helper](doc:excerpt))
-- **content** - the content of the page ([content helper](content))
-- **url** - the web address for the static page ([url helper](doc:url))
-- **feature_image** - the cover image associated with the page  ([img_url helper](doc:img_url))
-- **featured** - indicates a featured page. Defaults to `false`
-- **page** - `true` if the post is a static page. Defaults to `false`
-- **meta_title** - custom meta title for the page ([meta_title helper](doc:meta_title))
-- **meta_description**  -Custom meta description for the page ([meta_description helper](doc:meta_description) )
-- **published_at:** - date and time when the page was published  ([date helper](doc:date))
-- **updated_at:** - date and time when the page was last updated  ([date helper](doc:date))
-- **created_at:** - date and time when the page was created  ([date helper](doc:date))
--  **author** - full details of the page's author (see [author](doc:author) for details)
-- **tags** - a list of tags associated with the page (see [tags](doc:tags) for details)
-
-## Helpers
-
-Using the `{{#post}}{{/post}}` block expression is the key trick to having a happy time theming your static page. Once inside of the page, you can use any of these useful helpers (and many more) to output your page's data:
-
-[{{title}}](doc:title), [{{content}}](doc:content), [{{url}}](doc:url), [{{author}}](doc:author), [{{date}}](doc:date), [{{excerpt}}](doc:excerpt), [{{img_url}}](doc:img_url), [{{post_class}}](doc:post_class), [{{tags}}](doc:tags)
-
-## Example Code
-
-```html
-<!-- Everything inside the #post tags pulls data from the static page -->
-{{#post}}
-
-<article class="{{post_class}}">
-  <header class="page-header">
-    <h1 class="page-title">{{title}}</h1>
-    <section class="page-meta">
-      <time class="page-date" datetime="{{date format='YYYY-MM-DD'}}">
-        {{date format="DD MMMM YYYY"}}
-      </time>
-      {{tags prefix=" on "}}
-    </section>
-  </header>
-  <section class="page-content">
-    {{content}}
-  </section>
-</article>
-
-{{/post}}
+Here's some example code of how the `subscribe.hbs` page users the helper with all of the options: 
 
 ```
+{{subscribe_form
+  form_class="gh-signin"
+  input_class="gh-input"
+  button_class="btn btn-blue btn-block"
+  placeholder="Your email address"
+  autofocus="true"
+}}
+```
+
+The form is used in the default [Casper](https://github.com/TryGhost/Casper/) theme at the bottom of the [post.hbs](https://github.com/TryGhost/Casper/blob/1.3.0/post.hbs/) template like so: 
+
+```
+ {{!-- Email subscribe form at the bottom of the page --}}
+ {{#if @labs.subscribers}}
+   <section class="gh-subscribe">
+     <h3 class="gh-subscribe-title">Subscribe to {{@blog.title}}</h3>
+     <p>Get the latest posts delivered right to your inbox.</p>
+     {{subscribe_form placeholder="Your email address"}}
+     <span class="gh-subscribe-rss">or subscribe <a href="http://cloud.feedly.com/#subscription/feed/{{@blog.url}}/rss/">via RSS</a> with Feedly!</span>
+   </section>
+ {{/if}}
+ ```
+
+#### Using the default template
+
+The default template for the `{{subscribe_form}}` helper is shown below: 
+
+```
+<form method="post" action="{{action}}" class="{{form_class}}">
+    {{! This is required for the form to work correctly }}
+    {{hidden}}
+
+    <div class="form-group{{#if error}} error{{/if}}">
+        {{input_email class=input_class placeholder=placeholder value=email autofocus=autofocus}}
+    </div>
+    <button class="{{button_class}}" type="submit">Subscribe</button>
+    {{! This is used to get extra info about where this subscriber came from }}
+    {{script}}
+</form>
+
+{{#if error}}
+    <p class="main-error">{{ error.message }}</p>
+{{/if}}
+```
+
+This form is passed a set of **required** attributes: `action`, `hidden` and `script`. Once the form is submitted, the template is provided with the `{{error}}`, `{{success}}` and `{{email}}` fields.
+
+> If overriding this form by including a `subsribe_form.hbs` template in your `partials/` directory, ensure it functions correctly, and be mindful of updates to functionality. 
+
+
+## Summary
+
+You've walked through the functionality of the subscribers feature within Ghost, and discovered how the subscribe form works in your theme. Now you can enable the feature, add forms to your site, and even integrate your subscription list to external email services like Mailchimp. 
