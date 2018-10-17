@@ -32,10 +32,10 @@ When you install Ghost using Ghost-CLI, the local directory will be setup with a
 
 **config.[env].json**
 **/content** _(owned by ghost user)_
-**/current** 
-**/system** (production only) 
+**/current**
+**/system** (production only)
 **/versions**
-**.ghost-cli** 
+**.ghost-cli**
 
 Please don't change this structure. Each item is explained below.
 
@@ -57,11 +57,11 @@ This is a symlink to the currently active version of Ghost in the versions folde
 
 #### /system
 
-This folder only appears on production installs. It contains additional tools and configuration files needed for nginx, systemd and for generating letsencrypt certificates. 
+This folder only appears on production installs. It contains additional tools and configuration files needed for nginx, systemd and for generating letsencrypt certificates.
 
 ##### /system/files
 
-Inside the `/system` folder is a files folder, this is the location of any configuration that ghost-cli creates for 3rd party tools such as nginx and systemd. These files are always symlinked into their correct locations. 
+Inside the `/system` folder is a files folder, this is the location of any configuration that ghost-cli creates for 3rd party tools such as nginx and systemd. These files are always symlinked into their correct locations.
 
 These files can be customised if needed. For more information about the configurations that Ghost-CLI generates, see the sections below on [nginx](/docs/cli-knowledge-base#section-nginx) and [systemd](/docs/cli-knowledge-base#section-nginx).
 
@@ -77,7 +77,7 @@ This file contains some information that Ghost-CLI needs about your install in o
 
 NGINX is the web server that backs your Ghost publication. The CLI generates a NGINX config file for your domain and saves it in `[path/to/ghost/]system/files/your-domain.com.conf`. If you also setup ssl, you'll have a second nginx config file `[path/to/ghost/]system/files/your-domain.com-ssl.conf`.
 
-These configuration files are activated via symlinks. Each config file is symlinked to `/etc/nginx/sites-available` to make the configuration available to nginx. The config is then enabled via a second symlink from `/etc/nginx/sites-enabled` to `/etc/nginx/sites-available` (this is standard nginx behaviour). 
+These configuration files are activated via symlinks. Each config file is symlinked to `/etc/nginx/sites-available` to make the configuration available to nginx. The config is then enabled via a second symlink from `/etc/nginx/sites-enabled` to `/etc/nginx/sites-available` (this is standard nginx behaviour).
 
 The config templates used by Ghost-CLI can be found in the [Ghost CLI GitHub repo](https://github.com/TryGhost/Ghost-CLI/tree/master/extensions/nginx/templates)
 [block:callout]
@@ -143,7 +143,7 @@ Once you have made those changes run `sudo nginx -t` to get nginx to verify your
 
 [Let’s Encrypt](https://letsencrypt.org/) provides SSL certificates that are accepted by browsers, free of charge! This is provided by the non-profit Internet Security Research Group (ISRG). The Ghost-CLI will offer you to generate a free ssl certificate as well as renew it every 60 days.
 
-Ghost uses [acme.sh](https://github.com/Neilpang/acme.sh) for provisioning and renewing SSL certificates from Let's Encrypt. 
+Ghost uses [acme.sh](https://github.com/Neilpang/acme.sh) for provisioning and renewing SSL certificates from Let's Encrypt.
 
 **Using acme.sh**
 
@@ -153,7 +153,7 @@ You can call `acme.sh` manually outside of Ghost-CLI if you need to perform extr
 /etc/letsencrypt/acme.sh --home "/etc/letsencrypt"
 ```
 
-Please note you MUST add `--home "/etc/letsencrypt"` to all commands for them to run correctly. 
+Please note you MUST add `--home "/etc/letsencrypt"` to all commands for them to run correctly.
 
 To list all the certificates managed by `acme.sh` use `--list`:
 
@@ -181,7 +181,7 @@ It is advisable to execute all tasks (image upload, theme upload etc.) using the
 
 ### File Permissions
 
-`Ghost-cli` enforces default linux permissions (via `ghost doctor` hooks) for installations. 
+`Ghost-cli` enforces default linux permissions (via `ghost doctor` hooks) for installations.
 
 - For normal users, default directory permissions are 775, and default file permissions are 664.
 - For root users, default directory permissions are 755, and default file permissions are 644.
@@ -226,4 +226,4 @@ All CLI command are composed of stages. Each stage [self registers](https://gith
 
 ## Keeping Ghost-CLI Up-to-date
 
-Don't forget to keep Ghost-CLI up to date, as well as Ghost. Releases are less frequent, but often important. Details can be found in the [upgrading guide](https://docs.ghost.org/v1/docs/upgrade#section-upgrading-ghost-cli).
+Don't forget to keep Ghost-CLI up to date, as well as Ghost. Releases are less frequent, but often important. Details can be found in the [upgrading guide](/v1/docs/upgrade#section-upgrading-ghost-cli).

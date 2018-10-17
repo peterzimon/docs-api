@@ -176,7 +176,7 @@ This can be used to translate the prefix or suffix attribute of the `{{tags}}` o
 
 #### Plural helper
 
-`{{plural}}` is a [formatting helper](https://docs.ghost.org/api/handlebars-themes/helpers/plural/) for outputting strings which change depending on whether a number is singular or plural.
+`{{plural}}` is a [formatting helper](/api/handlebars-themes/helpers/plural/) for outputting strings which change depending on whether a number is singular or plural.
 
 This can be used in translations to output information such as number of posts:
 
@@ -195,7 +195,7 @@ In the theme template `author.hbs`, several (t) subexpressions instead of normal
 
 #### Reading time helper
 
-The [reading time helper](https://docs.ghost.org/api/handlebars-themes/helpers/reading_time/) can be used in translations to provide a reading time for your posts in the desired language.
+The [reading time helper](/api/handlebars-themes/helpers/reading_time/) can be used in translations to provide a reading time for your posts in the desired language.
 
 For example, in `es.json`:
 

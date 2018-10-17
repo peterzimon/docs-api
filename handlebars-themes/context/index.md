@@ -25,7 +25,7 @@ Rather than providing access to all data in all contexts, Ghost optimises what d
 
 ### Using contexts
 Contexts play a big part in the building blocks of a Ghost theme.
-Besides determining what data is available and what template to render, contexts also interact with [helpers](/https://docs.ghost.org/api/handlebars-themes/helpers/), since the context also determines what dynamic data the helper outputs.
+Besides determining what data is available and what template to render, contexts also interact with [helpers](/api/handlebars-themes/helpers/), since the context also determines what dynamic data the helper outputs.
 
 For example, the `{{meta_title}}` helper outputs different things based on the current context. If the context is `post` then the helper knows it can use `post.meta_title` and in a `tag` context it uses `tag.meta_title`.
 

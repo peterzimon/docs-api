@@ -24,7 +24,7 @@ This command requires you to navigate to your Ghost installation folder.
 {
   "type": "warning",
   "title": "Ghost 1.18.3 Troubleshooting",
-  "body": "If you are unable to update to 1.18.3 and you receive an error, please continue reading [here](https://docs.ghost.org/docs/troubleshooting#section-task-execute-is-not-a-function)."
+  "body": "If you are unable to update to 1.18.3 and you receive an error, please continue reading [here](/docs/troubleshooting#section-task-execute-is-not-a-function)."
 }
 [/block]
 ```
@@ -69,7 +69,7 @@ ghost install 1.0                         (Installs Ghost at version 1.0)
 ghost update                             (Downloads Ghost version 2.0)
 ghost update --rollback             (1.0 is running, both 1.0 and 2.0 are installed)
 ghost update                             (2.0 is running, previously downloaded 2.0 version is used, both are installed)
-- OR 
+- OR
 ghost update --force                  (previously downloaded 2.0 is deleted, update proceeds as usual)
 ```
 

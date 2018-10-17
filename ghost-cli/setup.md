@@ -12,7 +12,7 @@ sidebar: "ghost-cli"
 
 ## What does it do?
 
-Setup aims to configure your server ready for running Ghost in production. It assumes the [recommended stack](https://docs.ghost.org/v1.0.0/docs/hosting#section-recommended-stack) and aims to leave your site in a production-ready state.
+Setup aims to configure your server ready for running Ghost in production. It assumes the [recommended stack](/v1.0.0/docs/hosting#section-recommended-stack) and aims to leave your site in a production-ready state.
 
 Setup is broken down into stages. The default stages are:
 
@@ -27,7 +27,7 @@ Each stage can be run individually by running `ghost setup <stage-name>` or skip
 
 ## What if I want to do something else?
 
-The Ghost CLI tool, and `ghost setup` particularly, is designed to work with our [recommended stack](https://docs.ghost.org/v1.0.0/docs/hosting#section-recommended-stack) and get your site ready for production use. However, we understand that it might not fit your needs exactly.
+The Ghost CLI tool, and `ghost setup` particularly, is designed to work with our [recommended stack](/v1.0.0/docs/hosting#section-recommended-stack) and get your site ready for production use. However, we understand that it might not fit your needs exactly.
 
 If you want to use a different stack, or skip a setup stage because you want to do the configuration manually, you absolutely can. The `Ghost CLI` way of doing things is what is officially supported, but the tool is flexible enough that you can use it your way and still get all the benefits.
 
@@ -132,7 +132,7 @@ ghost setup migrate
 - `--no-setup-ssl`
 - `--no-setup-systemd`
 - `--no-setup-linux-user` - will cause systemd to break and should only be used if you're handling this yourself.
-- `--no-setup-migrate` 
+- `--no-setup-migrate`
 
 ```
 --pname

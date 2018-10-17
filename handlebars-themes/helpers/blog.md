@@ -13,7 +13,7 @@ sidebar: "handlebars"
 
 The `@blog` property provides access to [global data](/docs/handlebars#section-global-data) properties, which are available anywhere in your theme:
 
-- `{{@blog.url}}` – the url specified for this blog in [your custom config file](https://docs.ghost.org/docs/config)
+- `{{@blog.url}}` – the url specified for this blog in [your custom config file](/docs/config)
 - `{{@blog.title}}` – the blog title from the settings page
 - `{{@blog.description}}` – the blog description from the settings page
 - `{{@blog.logo}}` – the blog logo from the settings page
