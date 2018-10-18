@@ -16,7 +16,7 @@ sidebar: "ghost-cli"
 
 Use the help command to access a list of possible `ghost-cli` commands when required. 
 
-This command is your port of call when you want to discover a list of available commands in the Ghost CLI. You can call it at any time ✨
+This command is your port of call when you want to discover a list of available commands in the Ghost-CLI. You can call it at any time ✨
 
 ## Output
 

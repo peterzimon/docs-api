@@ -2,7 +2,7 @@
 title: "translate"
 date: "2018-10-01"
 meta_title: "Handlebars Theme Helpers: translate"
-meta_description: "The {{t}} helper outputs text in your publication's language. Read more about Ghost themes! 👻"
+meta_description: "Discover how to translate content using your Ghost theme and the translate helper. Read more about translations in Ghost 👻"
 keywords:
     - api
     - handlebars

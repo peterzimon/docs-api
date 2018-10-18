@@ -2,7 +2,7 @@
 title: "lang"
 date: "2018-10-01"
 meta_title: "Handlebars Theme Helpers: lang"
-meta_description: "Use the {{lang}} helpers to output specified languages in a Ghost publication. Read more about Ghost themes! 👻"
+meta_description: "Discover how to output languages in a Ghost theme using the {{lang}} Handlebars helper. Read more about Ghost themes! 👻"
 keywords:
     - api
     - handlebars

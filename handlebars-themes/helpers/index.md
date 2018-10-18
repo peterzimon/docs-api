@@ -2,7 +2,7 @@
 title: "Helpers"
 date: "2018-10-01"
 meta_title: "Handlebars Helpers"
-meta_description: "Ghost has a number of built in helpers which give you the tools to build a custom publication theme 🛠 Start building your theme here!"
+meta_description: "Ghost has a number of built in helpers which give you the tools required to build a custom theme 🛠 Start developing your theme here!"
 keywords:
     - api
     - handlebars

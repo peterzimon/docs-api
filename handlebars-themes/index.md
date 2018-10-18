@@ -3,7 +3,7 @@ title: "Ghost Handlebars Themes"
 path: /api/handlebars-themes/
 date: "2018-10-01"
 meta_title: "Handlebars Themes"
-meta_description: "Our handlebars theme templating framework works with the Ghost API to build flexible publishing websites. Start building your custom theme here!"
+meta_description: "Our handlebars theme templating framework works with the Ghost API to build flexible publishing websites. Start building your custom Ghost theme here!"
 next: 
   url: "/api/handlebars-themes/structure/"
   title: "Structure"

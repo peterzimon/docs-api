@@ -2,7 +2,7 @@
 title: "reading_time"
 date: "2018-10-01"
 meta_title: "Handlebars Theme Helpers: reading_time"
-meta_description: "Render the estimated reading time of a post in your Ghost publication with a simple handlebars helper ⚡️ Read more about Ghost themes!"
+meta_description: "Render the estimated reading time of a post in your Ghost publication with this handlebars helper ⚡️ Read more about Ghost themes!"
 keywords:
     - api
     - handlebars

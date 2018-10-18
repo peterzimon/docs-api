@@ -2,7 +2,7 @@
 title: "content"
 date: "2018-10-01"
 meta_title: "Handlebars Theme Helpers: content"
-meta_description: "This simple helper makes sure that your HTML gets output correctly. Read more about working with Ghost themes! 👻"
+meta_description: "How to work with the content handlebars helper in your Ghost theme! 👻"
 keywords:
     - api
     - handlebars

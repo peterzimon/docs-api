@@ -2,7 +2,7 @@
 title: "get"
 date: "2018-10-01"
 meta_title: "Handlebars Theme Helpers: get"
-meta_description: "#get is a special block helper that makes a custom query to the Ghost API. Read more about building custom Ghost themes! 👻"
+meta_description: "Make custom queries to the Ghost API using the get helper and fetch publicly available data. Read more about Ghost themes! 👻"
 keywords:
     - api
     - handlebars

@@ -2,7 +2,7 @@
 title: "foreach"
 date: "2018-10-01"
 meta_title: "Handlebars Theme Helpers: foreach"
-meta_description: "#foreach is a special loop helper designed for working with lists of posts. Read more about building custom Ghost themes! 👻"
+meta_description: "Discover how to work with lists of posts in Ghost with the foreach Handlebars helper."
 keywords:
     - api
     - handlebars

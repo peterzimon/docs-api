@@ -2,7 +2,7 @@
 title: "Data Helpers"
 date: "2018-10-01"
 meta_title: "Handlebars Themes - Data Helpers"
-meta_description: "Data helpers are used to output data from your site. Use this reference list to learn more and build a custom Ghost theme!"
+meta_description: "Learn how use the full range of data helpers in Ghost themes and output data from your publication!"
 keywords:
     - api
     - handlebars

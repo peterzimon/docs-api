@@ -16,7 +16,7 @@ sidebar: "ghost-cli"
 
 A fully loaded tool to help you get Ghost installed and configured and to make it super easy to keep your Ghost install up to date.
 
-The main aim of the Ghost CLI is to make it possible to install or update Ghost in a *single command*. 
+The main aim of the Ghost-CLI is to make it possible to install or update Ghost in a *single command*. 
 
 We understand that some users are going to want more flexibility, so the CLI has a whole host of flags and options that allow you to break the steps down and adjust what they do.
 

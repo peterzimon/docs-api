@@ -2,7 +2,7 @@
 title: "Knowledge Base"
 date: "2018-10-01"
 meta_title: "CLI Knowledge Base"
-meta_description: "Advanced information about the Ghost CLI and how it works!"
+meta_description: "Advanced information about the Ghost-CLI and how it works!"
 keywords:
     - cli
     - ghost
@@ -11,7 +11,7 @@ keywords:
 sidebar: "ghost-cli"
 ---
 
-Learn more about using the Ghost CLI for a smooth install, run and update process when working with Ghost, and how to take advantage of it's flexibility. 
+Learn more about using the Ghost-CLI for a smooth install, run and update process when working with Ghost, and how to take advantage of it's flexibility. 
 
 
 ## Overview
@@ -118,7 +118,7 @@ sudo nginx -s reload
 
 #### Let's Encrypt
 
-[Let’s Encrypt](https://letsencrypt.org/) provides SSL certificates that are accepted by browsers free of charge! This is provided by the non-profit Internet Security Research Group (ISRG). The Ghost CLI will offer you to generate a free SSL certificate as well as renew it every 60 days.
+[Let’s Encrypt](https://letsencrypt.org/) provides SSL certificates that are accepted by browsers free of charge! This is provided by the non-profit Internet Security Research Group (ISRG). The Ghost-CLI will offer you to generate a free SSL certificate as well as renew it every 60 days.
 
 Ghost uses [acme.sh](https://github.com/Neilpang/acme.sh) for provisioning and renewing SSL certificates from Let's Encrypt. You can call `acme.sh` manually if you need to perform extra tasks. The following command will output all available options:
 

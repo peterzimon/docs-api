@@ -2,7 +2,7 @@
 title: "prev_post & next_post"
 date: "2018-10-01"
 meta_title: "Handlebars Theme Helpers: prev_post & next_post"
-meta_description: "Create chronological post links on your Ghost publication with some simple handlebars helpers. Read more about Ghost themes! 👻"
+meta_description: "Create chronological post links on your Ghost publication with some useful handlebars helpers. Read more about Ghost themes! 👻"
 keywords:
     - api
     - handlebars

@@ -2,7 +2,7 @@
 title: "body_class"
 date: "2018-10-01"
 meta_title: "Handlebars Theme Helpers: body_class"
-meta_description: "A useful handlebars helper for targeting specific pages of your Ghost publication with styles. Read more about Ghost themes! 👻"
+meta_description: "Learn how to target specific pages of your Ghost publication with styles. Read more about Ghost themes! 👻"
 keywords:
     - api
     - handlebars

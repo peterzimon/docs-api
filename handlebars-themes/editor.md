@@ -1,7 +1,7 @@
 ---
 title: "Editor"
 date: "2018-10-01"
-meta_title: "Features: The Editor"
+meta_title: " Theme Features: Editor"
 meta_description: "Find out how to ensure your theme is fully compatible with the open-source rich editor inside of Ghost!"
 keywords:
     - content

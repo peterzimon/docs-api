@@ -2,7 +2,7 @@
 title: "setup"
 date: "2018-10-01"
 meta_title: "CLI commands: setup"
-meta_description: "The real magic in the Ghost CLI is the automated setup process. Find out how to get started with Ghost using a single command"
+meta_description: "The real magic in the Ghost-CLI is the automated setup process. Find out how to get started with Ghost using a single command"
 next:
   url: "/api/ghost-cli/start/"
   title: "Start"
@@ -14,7 +14,7 @@ keywords:
 sidebar: "ghost-cli"
 ---
 
-`ghost setup` is the real magic in Ghost CLI. You will probably never need to run it yourself, as it is called automatically by `ghost install`.
+`ghost setup` is the real magic in Ghost-CLI. You will probably never need to run it yourself, as it is called automatically by `ghost install`.
 
 
 ## How it works

@@ -2,7 +2,7 @@
 title: "asset"
 date: "2018-10-01"
 meta_title: "Handlebars Theme Helpers: asset"
-meta_description: "Take the pain out of asset management when developing a Ghost theme and managing your publication. Read more about Ghost themes! 👻"
+meta_description: "Take the pain out of asset management when developing a Ghost theme and managing your publication. Read more about asset management with Ghost themes! 👻"
 keywords:
     - api
     - handlebars
