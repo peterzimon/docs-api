@@ -35,7 +35,7 @@ Inside the `locales` folder, add target language files for each translatable lan
 Translate the sentences used in your theme inside your new language files.
 
 For example, in `locales/en.json`:
-```
+```json
 {
     "Back": "Back",
     "Newer Posts": "Newer Posts",
@@ -70,7 +70,7 @@ For example, in `locales/en.json`:
 ```
 
 And edited to translate into Spanish for `locales/es.json`:
-```
+```json
 {
     "Back": "Volver",
     "Newer Posts": "Artículos Siguientes",
@@ -151,17 +151,17 @@ Here are some of the most commonly used advanced translation features:
 Placeholders are dynamic values that are replaced on runtime, and can be implemented using single braces. This is useful for translations if you need to insert dynamic data attributes to your translations.
 
 For example, here is a placeholder in the theme translation file:
-```
+```json
 "Proudly published with {ghostlink}": "Publicado con {ghostlink}",
 ```
 
 Which is defined in the theme template `default.hbs` using:
-```
+```json
 {{{t "Proudly published with {ghostlink}" ghostlink="<a href=\"https://ghost.org\">Ghost</a>"}}}
 ```
 
 Placeholders with data attributes can also be used, for example:
-```
+```json
 {{t "Subscribe to {blogtitle}" blogtitle=@blog.title}}
 ```
 
@@ -180,7 +180,7 @@ This can be used to translate the prefix or suffix attribute of the `{{tags}}` o
 
 This can be used in translations to output information such as number of posts:
 
-```
+```json
 "No posts": "No hay artículos",
 "1 post": "1 artículo",
 "% posts": "% artículos",
@@ -188,7 +188,7 @@ This can be used in translations to output information such as number of posts:
 
 In the theme template `author.hbs`, several (t) subexpressions instead of normal `{{t}}` helpers can be used as parameters inside
 
-```
+```json
 {{plural ../pagination.total empty=(t "No posts") singular=(t "1 post") plural=(t "% posts")}}
 ```
 
@@ -204,7 +204,7 @@ For example, in `es.json`:
 And in theme template post.hbs
 
 And in the theme template `post.hbs`:
-```
+```handlebars
 {{reading_time minute=(t "1 min read") minutes=(t "% min read")}}
 ```
 

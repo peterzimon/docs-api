@@ -23,37 +23,37 @@ You can use the [translation helper](/api/handlebars-themes/helpers/translate/) 
 
 The basic use of the authors helper will output something like 'sam, carl, tobias' where each author is linked to its own author page:
 
-```
+```handlebars
 {{authors}}
 ```
 
 You can customise the separator between authors. The following will output something like 'sam | carl | tobias'
 
-```
+```handlebars
 {{authors separator=" | "}}
 ```
 
 Additionally you can add an optional prefix or suffix. This example will output something like 'More about: sam, carl, tobias'.
 
-```
+```handlebars
 {{authors separator=" | " prefix="More about:"}}
 ```
 
 You can use HTML in the separator, prefix and suffix arguments. So you can achieve something like 'sam • carl • tobias'.
 
-```
+```handlebars
 {{authors separator=" &bull; "}}
 ```
 
 If you don't want your list of authors to be automatically linked to their author pages, you can turn this off:
 
-```
+```handlebars
 {{authors autolink="false"}}
 ```
 
 If you want to output a fixed number of authors, you can add a `limit` to the helper. E.g. adding a limit of 1 will output just the first author:
 
-```
+```handlebars
 {{authors limit="1"}}
 ```
 
@@ -61,7 +61,7 @@ If you want to output a specific range of authors, you can use `from` and `to` e
 
 E.g. using from="2" would output all authors, but starting from the second author:
 
-```
+```handlebars
 {{authors from="2"}}
 ```
 
@@ -106,13 +106,13 @@ If you want to output your authors completely differently, you can fully customi
 * **bio** - a bio of the author
 * **website** - the website of the author
 * **location** - the location of the author
-* **twitter** - the author's twitter username 
-* **facebook** - the author's facebook username 
-* **profile_image** - the profile image for the author 
-* **cover_image** - the cover image for the author 
-* **meta_title** - the tag's meta title 
-* **meta_description** - the tag's meta description 
-* **url** - the web address for the tag's page 
+* **twitter** - the author's twitter username
+* **facebook** - the author's facebook username
+* **profile_image** - the profile image for the author
+* **cover_image** - the cover image for the author
+* **meta_title** - the tag's meta title
+* **meta_description** - the tag's meta description
+* **url** - the web address for the tag's page
 
 ## primary_author
 

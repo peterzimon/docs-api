@@ -21,7 +21,7 @@ The most common use case for the plural helper is outputting information about h
 
 ### Examples
 
-```
+```handlebars
 {{plural pagination.total empty='No posts' singular='% post' plural='% posts'}}
 ```
 

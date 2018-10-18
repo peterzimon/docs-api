@@ -23,7 +23,7 @@ For example, to output  the full 'context' that handlebars currently has access 
 
 Or, to log each post in the loop:
 
-```
+```handlebars
 {{#foreach posts}}
    {{log post}}
 {{/foreach}}

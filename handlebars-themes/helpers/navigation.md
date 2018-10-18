@@ -21,7 +21,7 @@ Usage: `{{navigation}}`
 
 By default, the HTML output by including `{{navigation}}` in your theme, looks like the following:
 
-```
+```html
 <ul class="nav">
     <li class="nav-home nav-current"><a href="/">Home</a></li>
     <li class="nav-about"><a href="/about">About</a></li>
@@ -34,7 +34,7 @@ By default, the HTML output by including `{{navigation}}` in your theme, looks l
 
 If you want to modify the default markup of the navigation helper, this can be achieved by creating a new file at `./partials/navigation.hbs`. If this file exists, Ghost will load it instead of the default template. Example:
 
-```
+```handlebars
 <div class="my-fancy-nav-wrapper">
     <ul class="nav">
         <!-- Loop through the navigation items -->
@@ -65,7 +65,7 @@ The navigation helper doesn't output anything if there are no navigation items t
 
 The data used by the `{{navigation}}` helper is also stored as a global variable called `@blog.navigation`. You can use this global variable in any theme file to check if navigation items have been added by a user in the Ghost admin panel.
 
-```
+```handlebars
 {{#if @blog.navigation}}
     <a class="menu-button" href="#"><span class="word">Menu</span></a>
 {{/if}}
