@@ -1,34 +1,29 @@
 ---
 title: "Gatsby"
-image: "https://unsplash.it/400/300/?random?BoldMage"
 keywords:
-    - api
     - gatsby
-sidebar: gatsby
 ---
 
-## This is the second heading
+Using Gatsby.js as a front end with Ghost
 
-Spicy jalapeno cupidatat chicken ut filet mignon sausage ut boudin nulla reprehenderit strip steak proident cillum incididunt short loin cow. Pig in pastrami, leberkas eiusmod enim bresaola do. Filet mignon officia quis kevin pork, swine strip steak excepteur hamburger chicken pork chop boudin shankle. Velit chicken pig in cupim kielbasa jerky. Bresaola excepteur veniam, andouille magna brisket aliquip nostrud jerky.
+Ghost is fully compatible with static site generators like Gatsby, but we're just getting started i this department so our documentation is a little light.
 
-```javascript
-makeArray() {
-    // Hey hey what can I do
-    const foo = []
-    bar.split('').forEach(letter => {
-      foo.push(letter)
-    })
-    return foo
-}
-```
+That said, this entire docs site is built with Gatsby using the Ghost API as a headless CMS, so you're looking at proof that it really works!
 
-### This is the third heading
+## Gatsby Source Ghost
 
-Pork chop ribeye ut chicken buffalo proident minim leberkas cupim adipisicing burgdoggen incididunt pastrami cupidatat. Prosciutto kevin dolore labore ham, cupidatat pork loin fatback picanha irure ad short ribs duis. Cupidatat excepteur jerky doner, incididunt consectetur turkey pariatur. Culpa consectetur cillum shank ham hock anim pastrami ex tempor eu. Fatback strip steak pig, bacon salami drumstick ut capicola short loin flank.
+Installing the official [Gatsby Source Ghost](https://www.gatsbyjs.org/packages/gatsby-source-ghost/) plugin will give you full access to the Ghost API within any Gatsby.js front end site and allow you to build data queries using GraphQL syntax. It's pretty magical.
 
-Jowl dolor duis, cupidatat pork tempor nostrud incididunt short loin laborum. Duis nostrud fatback ribeye consequat ad. Proident pancetta ut tempor. Short loin officia eiusmod beef. Sunt tongue pig venison, sint mollit ad excepteur velit adipisicing flank pancetta pariatur. Dolor t-bone swine alcatra fatback ribeye, mollit dolore incididunt ullamco.
+#### Limitations
 
-Spare ribs aute fugiat, pariatur andouille labore nulla exercitation. Aliqua picanha sirloin consequat drumstick sint exercitation pork nisi et. Dolore swine fugiat pork salami proident. Bacon excepteur filet mignon labore pariatur in in nulla magna fugiat prosciutto. Laboris sint ground round, pancetta ipsum in pariatur voluptate fatback andouille velit shoulder flank quis sausage.
+**Note:** Ghost must always contain at least one object with all fields filled out for every data type. So you should create at least one post, tag and author with every single field populated with some data. This is Gatsby limitation in how it builds queries.
 
-Hamburger ham shank est, officia qui capicola proident. Ribeye dolore prosciutto sirloin alcatra. Rump short ribs quis ex fugiat proident incididunt irure t-bone meatball veniam sirloin meatloaf. Tongue anim sint pancetta bresaola sirloin.
-Does your lorem ipsum text long for something a little meatier? Give our generator a try…
+## Deploying to production
+
+Like all Gatsby sites, you can easily deploy a static front end using [Netlify](https://netlify.com). Additionally, Ghost can trigger a `site.changed` event and corresponding [webhook](/api/webhooks/) every time content is added or updated in order to trigger a rebuild of the front-end.
+
+## Custom helpers
+
+We're currently in the process of abstracting out our helpers from Ghost Core into a more generic JavaScript SDK. These helpers are used for doing helpful things like returning a list of linked tags or authors, and automatically generating all the correct post data for `<Helmet>`. 
+
+If you're interested in [contributing](/concepts/contributing/) we could always use a hand!
