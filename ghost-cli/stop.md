@@ -1,17 +1,26 @@
 ---
 title: "stop"
 date: "2018-10-01"
-meta_title: ""
-meta_description: ""
+meta_title: "CLI commands: stop"
+meta_description: "Run Ghost in the background using your default process manager."
+next:
+  url: "/api/ghost-cli/restart/"
+  title: "Restart"
 keywords:
     - cli
+    - ghost
+    - stop
+    - install
 sidebar: "ghost-cli"
 ---
 
-Running `ghost stop` stops your site. The command must be executed in your Ghost directory. The CLI stops the site in the folder you have navigated to.
+Running `ghost stop` stops your site from running in the background.
+
+The command must be executed in your Ghost directory. The CLI stops the site in the folder you have navigated to.
 
 ## Options
 
-```--disable</strong></pre>
-
-- The process manager `systemd` is told that the Ghost process should **not** start on server reboot
+```bash
+# Tells the process manager that Ghost should not start on server reboot
+--disable
+```

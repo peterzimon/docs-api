@@ -1,27 +1,29 @@
 ---
 title: "log"
 date: "2018-10-01"
-meta_title: ""
-meta_description: ""
+meta_title: "CLI utilities: log"
+meta_description: "Start a Ghost instance in the foreground for debugging"
+next:
+  url: "/api/ghost-cli/knowledgebase/"
+  title: "Advanced"
 keywords:
     - cli
-sidebar: "ghost-cli"
+    - ghost
+    - run
+    - debugging
+sidebar: "Advanced"
 ---
 
-This command shows you the log of your Ghost site (not of the CLI!). The command requires you to navigate into your Ghost installation folder.
+Show the log of your Ghost site (not the CLI) using the log utility command.
+
+To use the command `ghost log` navigate into your Ghost installation folder.
 
 ### Arguments
 
-```
+```bash
+# Run ghost ls and copy the name of your site
 ghost log name
-```
 
-+ run `ghost ls` and copy the name of your site
-
-### Options
-
-```
+# Follow the log line
 --follow, -f
 ```
-
-+ follow the log line
