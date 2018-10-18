@@ -23,13 +23,13 @@ At the moment, there is only one property which will be passed through:
 
 Standard usage:
 
-```html
+```handlebars
 <a href="{{page_url "next"}}">Show next {{@config.posts_per_page}} posts</a>
 ```
 
 In the get helper limit field:
 
-```html
+```handlebars
 {{#get "posts" filter="featured:true" limit=@config.posts_per_page}}
   {{#foreach posts}}
       <h1>{{title}}</h1>
@@ -41,7 +41,7 @@ In the get helper limit field:
 
 Config values can be provided by adding a `config` block to package.json
 
-```html
+```json
 {
   "name": "my-theme",
   "version": 1.0.0,
@@ -55,7 +55,7 @@ Config values can be provided by adding a `config` block to package.json
 
 Inside of the config block, there is currently a single supported property - `posts_per_page`.
 
-```html
+```json
 {
   "name": "my-theme",
   "version": 1.0.0,

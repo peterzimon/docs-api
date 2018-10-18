@@ -23,7 +23,7 @@ The `{{#foreach}}` helper is context-aware and should **always** be used instead
 
 The main use of the `{{#foreach}}` helper in Ghost is iterating over the posts to display a list of posts on your home page, etc:
 
-```html
+```handlebars
 {{#foreach posts}}
 <article class="{{post_class}}">
   <h2 class="post-title"><a href="{{url}}">{{title}}</a></h2>
@@ -54,7 +54,7 @@ When inside a `{{#foreach}}` block, you have access to a set of data variables a
 
 `{{#foreach}}` is a block helper. The most common use case in Ghost, is looping through posts.
 
-```html
+```handlebars
 {{#foreach posts}}
 <h2><a href="{{url}}">{{title}}</a></h2>
 <p>{{excerpt}}</p>
@@ -65,7 +65,7 @@ When inside a `{{#foreach}}` block, you have access to a set of data variables a
 
 Like all block helpers, `{{#foreach}}` supports adding an `{{else}}` block, which will be executed if there was no data to iterate over:
 
-```html
+```handlebars
 {{#foreach tags}}
 <a href="{{url}}">{{name}}</a>
 {{else}}
@@ -77,7 +77,7 @@ Like all block helpers, `{{#foreach}}` supports adding an `{{else}}` block, whic
 
 Passing `{{#foreach}}` a `limit` attribute, will tell it stop after a certain number of iterations.
 
-```html
+```handlebars
 {{#foreach posts limit="3"}}
 <a href="{{url}}">{{name}}</a>
 {{/foreach}}
@@ -89,7 +89,7 @@ Note that as the `{{#foreach}}` helper is only passively iterating over data, no
 
 Passing  `{{#foreach}}` a `from` or `to` attribute will change the items which are output. Both attributes are 1-indexed and inclusive,  so `from="2"` means from and including the 2nd post.
 
-```html
+```handlebars
 {{#foreach posts from="2" to="5"}}
 <a href="{{url}}">{{name}}</a>
 {{/foreach}}
@@ -101,7 +101,7 @@ Passing  `{{#foreach}}` a `from` or `to` attribute will change the items which a
 
 `{{@index}}` is the 0-based index of the collection - that is the "count" of the loop. It starts at 0 and then each time around the loop, `{{@index}}` increases by 1. This is useful for adding numbered classes:
 
-```html
+```handlebars
 {{#foreach posts}}
   <div class="post-{{@index}}">{{title}}</div>
 {{/foreach}}
@@ -109,7 +109,7 @@ Passing  `{{#foreach}}` a `from` or `to` attribute will change the items which a
 
 `{{@number}}` is very similar to `@index`, but starts at 1 instead of 0, which is useful for outputting numbers you want users to see, e.g. in styled numbered lists:
 
-```html
+```handlebars
 <ol>
 {{#foreach posts}}
   <li>
@@ -127,7 +127,7 @@ Passing  `{{#foreach}}` a `from` or `to` attribute will change the items which a
 
 The following example checks through an array or object e.g `posts` and tests for the first entry.
 
-```html
+```handlebars
 {{#foreach posts}}
   {{#if @first}}
     <div>First post</div>
@@ -137,7 +137,7 @@ The following example checks through an array or object e.g `posts` and tests fo
 
 We can also nest `if` statements to check multiple properties. In this example we are able to output the first and last post separately to other posts.
 
-```html
+```handlebars
 {{#foreach posts}}
     {{#if @first}}
     <div>First post</div>
@@ -155,7 +155,7 @@ We can also nest `if` statements to check multiple properties. In this example w
 
 The following example adds a class of even or odd, which could be used for zebra striping content:
 
-```html
+```handlebars
 {{#foreach posts}}
     <div class="{{#if @even}}even{{else}}odd{{/if}}">{{title}}</div>
 {{/foreach}}
@@ -165,7 +165,7 @@ The following example adds a class of even or odd, which could be used for zebra
 
 Block params allow you to name the individual item being operated on inside the loop, E.g.
 
-```html
+```handlebars
 {{#foreach posts as |my_post|}}
    {{#my_post}}
       <h1>{{title}}</h1>

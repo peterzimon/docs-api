@@ -24,7 +24,7 @@ As of Ghost 1.0.0, there are two features which can be detected:
 
 Test if subscribers is enabled before outputting HTML elements to surround a subscribe form, or before adding a subscribe button.
 
-```html
+```handlebars
 {{#if @labs.subscribers}}
 <div class="subscribe-form">
 {{subscribe_form}}
@@ -34,7 +34,7 @@ Test if subscribers is enabled before outputting HTML elements to surround a sub
 
 It is also possible to test if the publicAPI is enabled before using the get helper:
 
-```html
+```handlebars
 {{#if @labs.publicAPI}}
 <div class="latest-posts">
 {{#get "posts" limit="3"}}...{{/get}}

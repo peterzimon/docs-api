@@ -27,7 +27,7 @@ You can force the image helper to output an absolute url by using the absolute o
 
 Below is a set of examples of how you might output various images that belong to posts, authors or keywords:
 
-```html
+```handlebars
 {{#post}}
 
   <!-- Outputs post's feature image if there is one -->

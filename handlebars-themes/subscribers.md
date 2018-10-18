@@ -17,20 +17,20 @@ The subscribers tool that is built into Ghost admin allows you to enable a subsc
 
 ## Overview
 
-When the subscribers feature is enabled in the settings within Ghost admin, the following new features are activated: 
+When the subscribers feature is enabled in the settings within Ghost admin, the following new features are activated:
 
 * The route `/subscribe/` renders `subscribe.hbs`, provided there is not already a page on this route
 * A new `{{subscribe_form}}` helper is registered to use within your theme
 * The API gets a new `/subscribers/` endpoint
 
-The new page rendered at `/subscribe/` uses the default template, which can be updated to suit your needs. The subscribe form helper can be used across your site content with some adjustments to your theme. 
+The new page rendered at `/subscribe/` uses the default template, which can be updated to suit your needs. The subscribe form helper can be used across your site content with some adjustments to your theme.
 
 The subscribers view in Ghost admin allows you to see your subscriber list, add subscribers manually and import or export CSV files. Ghost does not automatically send emails to your subscribers by default, but you can integrate with your favourite email tools to get the job done (such as Mailchimp or Active Campaign).
 
 
 ## Subscribe form helper
 
-This helper wraps all of the internals of the form used for submitting emails to the subscriber list. It is a template driven helper just like [navigation](/api/handlebars-themes/helpers/navigation/). This means the template can be overridden by including a correctly named template in the partials folder of your theme. 
+This helper wraps all of the internals of the form used for submitting emails to the subscriber list. It is a template driven helper just like [navigation](/api/handlebars-themes/helpers/navigation/). This means the template can be overridden by including a correctly named template in the partials folder of your theme.
 
 #### Attributes
 
@@ -45,9 +45,9 @@ The `{{subscribe_form}}` helper accepts a number of attributes:
 * `placeholder`
 * `autofocus`
 
-Here's some example code of how the `subscribe.hbs` page users the helper with all of the options: 
+Here's some example code of how the `subscribe.hbs` page users the helper with all of the options:
 
-```html:title=Helper usage
+```handlebars:title=Helper usage
 {{subscribe_form
   form_class="gh-signin"
   input_class="gh-input"
@@ -57,9 +57,9 @@ Here's some example code of how the `subscribe.hbs` page users the helper with a
 }}
 ```
 
-The form is used in the default [Casper](https://github.com/TryGhost/Casper/) theme at the bottom of the [post.hbs](https://github.com/TryGhost/Casper/blob/1.3.0/post.hbs/) template like so: 
+The form is used in the default [Casper](https://github.com/TryGhost/Casper/) theme at the bottom of the [post.hbs](https://github.com/TryGhost/Casper/blob/1.3.0/post.hbs/) template like so:
 
-```html:title=post.hbs
+```handlebars:title=post.hbs
  {{!-- Email subscribe form at the bottom of the page --}}
  {{#if @labs.subscribers}}
    <section class="gh-subscribe">
@@ -73,9 +73,9 @@ The form is used in the default [Casper](https://github.com/TryGhost/Casper/) th
 
 #### Using the default template
 
-The default template for the `{{subscribe_form}}` helper is shown below: 
+The default template for the `{{subscribe_form}}` helper is shown below:
 
-```html:title=Rendered output
+```handlebars:title=Rendered output
 <form method="post" action="{{action}}" class="{{form_class}}">
     {{! This is required for the form to work correctly }}
     {{hidden}}
@@ -95,9 +95,9 @@ The default template for the `{{subscribe_form}}` helper is shown below:
 
 This form is passed a set of **required** attributes: `action`, `hidden` and `script`. Once the form is submitted, the template is provided with the `{{error}}`, `{{success}}` and `{{email}}` fields.
 
-> If overriding this form by including a `subsribe_form.hbs` template in your `partials/` directory, ensure it functions correctly, and be mindful of updates to functionality. 
+> If overriding this form by including a `subsribe_form.hbs` template in your `partials/` directory, ensure it functions correctly, and be mindful of updates to functionality.
 
 
 ## Summary
 
-You've walked through the functionality of the subscribers feature within Ghost, and discovered how the subscribe form works in your theme. Now you can enable the feature, add forms to your site, and even integrate your subscription list to external email services like Mailchimp. 
+You've walked through the functionality of the subscribers feature within Ghost, and discovered how the subscribe form works in your theme. Now you can enable the feature, add forms to your site, and even integrate your subscription list to external email services like Mailchimp.

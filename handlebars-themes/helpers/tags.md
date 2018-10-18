@@ -25,37 +25,37 @@ You can use the [translation helper](/docs/t) for the `prefix` and `suffix` attr
 
 The basic use of the tags helper will output something like 'my-tag, my-other-tag, more-tagging' where each tag is linked to its own tag page:
 
-```html
+```handlebars
 {{tags}}
 ```
 
 You can customise the separator between tags. The following will output something like 'my-tag | my-other-tag | more tagging'
 
-```html
+```handlebars
 {{tags separator=" | "}}
 ```
 
 Additionally you can add an optional prefix or suffix. This example will output something like 'Tagged in: my-tag | my-other-tag | more tagging'
 
-```html
+```handlebars
 {{tags separator=" | " prefix="Tagged in:"}}
 ```
 
 You can use HTML in the separator, prefix and suffix arguments. So you can achieve something like 'my-tag • my-other-tag • more tagging'.
 
-```html
+```handlebars
 {{tags separator=" &bull; "}}
 ```
 
 If you don't want your list of tags to be automatically linked to their tag pages, you can turn this off:
 
-```html
+```handlebars
 {{tags autolink="false"}}
 ```
 
 If you want to output a fixed number of tags, you can add a `limit` to the helper. E.g. adding a limit of 1 will output just the first tag:
 
-```html
+```handlebars
 {{tags limit="1"}}
 ```
 
@@ -63,7 +63,7 @@ If you want to output a specific range of tags, you can use `from` and `to` eith
 
 E.g. using from="2" would output all tags, but starting from the second tag:
 
-```html
+```handlebars
 {{tags from="2"}}
 ```
 
@@ -78,7 +78,7 @@ As of Ghost 0.9 posts, tags and users all have a concept of `visibility`, which 
 
 By default the `visibility` attribute is set to the string "public". This can be overridden to pass any other value, and if there is no matching value for `visibility` nothing will be output. E.g. you can set `visibility` to be "internal" to _only_ output internal tags. You can also pass a comma-separated list of values, or the value "all" to output all items.
 
-```html
+```handlebars
 {{tags visibility="all"}}
 ```
 
@@ -86,7 +86,7 @@ By default the `visibility` attribute is set to the string "public". This can be
 
 If you want to output your tags completely differently, you can fully customise the output by using the [foreach](doc:foreach) helper, instead of the tags helper. Here's an example of how to output list markup:
 
-```html
+```handlebars
 {{#post}}
   {{#if tags}}
     <ul>
@@ -116,7 +116,7 @@ If you want to output your tags completely differently, you can fully customise 
 
 To output just the singular, first tag, use the `{{primary_tag}}` helper to output a simple link. You can also access all the same attributes as above if you need more custom output.
 
-```html
+```handlebars
 {{#primary_tag}}
 <div class="primary-tag">
     <a href="{{url}}">{{name}}</a>

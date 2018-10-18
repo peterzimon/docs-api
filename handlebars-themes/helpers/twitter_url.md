@@ -26,7 +26,7 @@ If you pass a variable or string to the helper, it will concatenate the value wi
 
 Output the author's twitter, using an `author` block:
 
-```html
+```handlebars
 {{#foreach posts}}
   {{#author}}
     {{#if twitter}}<a href="{{twitter_url}}">Follow me on twitter</a>{{/if}}

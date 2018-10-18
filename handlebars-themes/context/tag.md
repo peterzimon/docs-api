@@ -72,7 +72,7 @@ The [{{pagination}}](doc:pagination) helper is the best way to output pagination
 
 ## Example Code
 
-```html:title=tag.hbs
+```handlebars:title=tag.hbs
 <!-- Everything inside of #tag pulls data from the tag -->
 {{#tag}}
   <header>

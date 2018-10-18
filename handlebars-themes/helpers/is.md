@@ -21,7 +21,7 @@ The `{{#is}}` helper allows you to check the context of the current route, i.e. 
 
 The `is` helper takes a single parameter of a comma-separated list containing the contexts to check for. Similar to the `has` helper, the comma behaves as an `or` statement, with `and` being achieved by nesting helpers.
 
-```html
+```handlebars
 {{#is "post, page"}}
    ... content to render if the current route represents a post or a page ...
 {{/is}}
@@ -29,7 +29,7 @@ The `is` helper takes a single parameter of a comma-separated list containing th
 
 As with all block helpers, it is possible to use an else statement:
 
-```html
+```handlebars
 {{#is "home"}}
   ... output something special for the home page ...
 {{else}}
@@ -39,7 +39,7 @@ As with all block helpers, it is possible to use an else statement:
 
 If you only want the reverse, or negation, you can use the `^` character:
 
-```
+```handlebars
 {{^is "paged"}}
  ...if this is *not* a 2nd, 3rd etc page of a list...
 {{/is}}

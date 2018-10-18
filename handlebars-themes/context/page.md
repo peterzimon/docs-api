@@ -66,7 +66,7 @@ Using the `{{#post}}{{/post}}` block expression is the key trick to having a hap
 
 ## Example Code
 
-```html:title=page.hbs
+```handlebars:title=page.hbs
 <!-- Everything inside the #post tags pulls data from the static page -->
 {{#post}}
 

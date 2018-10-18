@@ -34,7 +34,7 @@ The data used to output the `{{pagination}}` helper is generated based on the po
 
 The [default template](https://github.com/TryGhost/Ghost/blob/master/core/server/helpers/tpl/pagination.hbs) output by Ghost is shown below. You can override this by placing a file called `pagination.hbs` in the partials directory of your theme.
 
-```html
+```handlebars
 <nav class="pagination" role="navigation">
     {{#if prev}}
         <a class="newer-posts" href="{{page_url prev}}">&larr; Newer Posts</a>

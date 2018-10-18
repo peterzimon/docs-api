@@ -17,14 +17,14 @@ Usage: `{{date value format="formatString"}}`
 
 `{{date}}` is a formatting helper for outputting dates in various format. You can either pass it a date and a format string to be used to output the date like so:
 
-```html
+```handlebars
 // outputs something like 'July 11, 2016'
 {{date published_at format="MMMM DD, YYYY"}}
 ```
 
 Or you can pass it a date and the timeago flag:
 
-```html
+```handlebars
 // outputs something like '5 mins ago'
 {{date published_at timeago="true"}}
 ```
@@ -41,7 +41,7 @@ If you call `{{date}}` without telling it which date to display, it will default
 
 ### Example Code
 
-```html
+```handlebars
 <main role="main">
   {{#foreach posts}}
     <h2><a href="{{url}}">{{title}}</a></h2>

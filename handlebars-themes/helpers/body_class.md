@@ -23,7 +23,7 @@ Full details of what is output on each page can be found in the [context table](
 
 ### Examples
 
-```html:title=default.hbs
+```handlebars:title=default.hbs
 <html>
     <head>...</head>
     <body class="{{body_class}}">

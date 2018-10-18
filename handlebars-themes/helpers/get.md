@@ -27,7 +27,7 @@ It can also be used to perform a 'read' query that fetches one specific **author
 
 A basic request for posts, this will fetch 15 posts from the API including their related tags and authors.
 
-```html
+```handlebars
 {{#get "posts" include="tags,authors"}}
     {{#foreach posts}}
    	    {{title}}
@@ -38,7 +38,7 @@ A basic request for posts, this will fetch 15 posts from the API including their
 
 A basic request for a single post with id of 2, including its related tags and author data, using a block parameter.
 
-```html
+```handlebars
 {{#get "posts" id="2" include="tags,authors" as |post|}}
     {{#post}}
    	    {{title}}
@@ -48,7 +48,7 @@ A basic request for a single post with id of 2, including its related tags and a
 
 Fetch all tags, and output them using the tags helper:
 
-```html
+```handlebars
 {{#get "tags" limit="all"}}{{tags}}{{/get}}
 ```
 
@@ -66,7 +66,7 @@ The first parameter passed in is the name of the resource that you want to query
 
 Example:
 
-```html
+```handlebars
 {{#get "posts"}}
     {{! Loop through our posts collection }}
     {{#foreach posts}}
@@ -87,7 +87,7 @@ The `{{#get}}` helper supports two parameters entered here. The first entry in t
 
 Example using block parameters:
 
-```html
+```handlebars
 {{#get "posts" as |articles pages|}}
     {{! Loop through our articles collection }}
     {{#foreach articles}}
@@ -106,7 +106,7 @@ All block helpers support the `{{else}}` helper, which allows you to output cont
 
 If you want to output different content when there are no results, you will need to use `{{else}}` with the `{{#foreach}}` helper.
 
-```html
+```handlebars
 {{#get "posts" filter="featured:true"}}
     {{! Loop through our featured posts }}
     {{#foreach posts}}
@@ -134,7 +134,7 @@ It is possible to use the global "posts per page" setting which is **5** by defa
 
 Examples:
 
-```html
+```handlebars
 {{! Fetch the 20 most recently published posts }}
 {{#get "posts" limit="20"}}{{/get}}
 
@@ -151,7 +151,7 @@ The resulting collection from the `{{#get}}` query may be paginated, therefore y
 
 Example:
 
-```html
+```handlebars
 {{! Fetch the 4th page of results }}
 
 {{#get "posts" limit="5" page="4"}}{{/get}}
@@ -164,7 +164,7 @@ Specify how your data is ordered before being returned. You can choose any valid
 
 Examples:
 
-```html
+```handlebars
 {{! Fetch the oldest 5 posts }}
 {{#get "posts" limit="5" order="published_at asc"}}{{/get}}
 
@@ -200,7 +200,7 @@ Note: If you include count.posts you can use it to [**order**](doc:get#section--
 
 Examples:
 
-```html
+```handlebars
 {{! Fetch posts with author }}
 {{#get "posts" limit="5" include="authors"}}
 		{{#foreach posts}}
@@ -221,7 +221,7 @@ Examples:
 
 This is a powerful tool that allows you to make a complex logic-based queries on the data to fetch. In its most basic form, you can choose to fetch posts that meet a simple boolean logic such as *featured posts*:
 
-```html
+```handlebars
 {{#get "posts" limit="all" filter="featured:true"}}
 		{{#foreach posts}}
     		<a href="{{slug}}">{title}}</a>
@@ -235,7 +235,7 @@ Filtering can be used to specify multiple rules using *and* or *or** and can che
 
 When used with the `{{#get}}` helper, filters can be passed data which is already available within your theme template. For example, if in your `post.hbs` file you wanted to get 3 more posts by the author of the current post, you can do so as shown here:
 
-```html
+```handlebars
 {{#post}}
 	<h3><a href="{{url}}">{{title}}</a></h3>
   <section class="author-meta">
@@ -258,7 +258,7 @@ In this example, we look for posts with the `primary_author` (which is an alias 
 
 In some cases, you'll need to wrap the data you pass in with quotes, for example if you pass a title rather than a slug, because it contains spaces, and also if you want to use dates.
 
-```html
+```handlebars
 {{#post}}
   {{#get "posts" filter="published_at:<='{{published_at}}'+id:-{{id}}" limit="3"}}
     ...
@@ -271,7 +271,7 @@ Also be aware that, if you want to filter based on dates, you need to use the da
 #### Filtering by primary tag
 The [primary_tag](doc:primary_tag) is a virtual post property and we support filtering by this property
 
-```html
+```handlebars
 {{#post}}
   {{#get "posts" filter="primary_tag:{{primary_tag.slug}}" limit="3"}}
     {{#foreach posts}}
@@ -287,7 +287,7 @@ In this example we fetch 3 posts which have the same primary tag as the current 
 The [primary_author](doc:primary_author) is a virtual post property and we support filtering by this property.
 
 
-```html
+```handlebars
 {{#post}}
   {{#get "posts" filter="primary_author:{{primary_author.slug}}" limit="3"}}
     {{#foreach posts}}

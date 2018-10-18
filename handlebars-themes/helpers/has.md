@@ -25,7 +25,7 @@ Like all block helpers, `{{#has}}` supports adding an `{{else}}` block or using 
 
 The `{{#has}}` helper can be combined with internal tags, to display different information for different types of posts. E.g. you can implement a link-style post by adding an internal tag of `#link` and using the has helper to detect it:
 
-```html
+```handlebars
 {{#post}}
   {{#has tag="#link"}}
      {{> "link-card"}}
@@ -48,7 +48,7 @@ Questions are asked by providing attribute-value pairs, e.g. `tag="tag-name"`. Y
 
 E.g. You can look for a post with a slug of "welcome" OR a tag of "getting started":
 
-```html
+```handlebars
 {{#has slug="welcome" tag="getting-started"}}
   ...Will execute if the slug is welcome OR the tag is getting-started...
 {{/has}}
@@ -58,7 +58,7 @@ E.g. You can look for a post with a slug of "welcome" OR a tag of "getting start
 
 #### Comma Separated List
 
-```html
+```handlebars
 {{#has tag="photo"}}{{/has}}
 {{#has tag="photo, video"}}{{/has}}
 {{#has author="Joanna Bloggs"}}{{/has}}
@@ -66,7 +66,7 @@ E.g. You can look for a post with a slug of "welcome" OR a tag of "getting start
 
 Specifically when inside the context of a post, you can use the `{{#has}}` helper to find out if the post has a particular tag or author. Both the `tag` and `author` attributes take a comma separated list. If you pass multiple values separated by a comma, these will be treated as an OR.
 
-```html
+```handlebars
 {{#has tag="General, News"}}
   ...Will execute if the post has a tag of General or News...
  {{/has}}
@@ -84,7 +84,7 @@ The `author` and `tag` attribute accepts a counting value. You can choose betwee
 
 This functionality can be helpful when designing a theme. You can change the behaviour if a post has only one author or more than 1.
 
-```html
+```handlebars
 {{#has tag="count:1"}}{{/has}}
 {{#has tag="count:>1"}}{{/has}}
 {{#has author="count:<2"}}{{/has}}
@@ -92,7 +92,7 @@ This functionality can be helpful when designing a theme. You can change the beh
 
 ### Slug or id
 
-```html
+```handlebars
 {{#has slug="welcome"}}{{/has}}
 {{#has slug=../../slug}}{{/has}}
 {{#has id=post.id}}{{/has}}
@@ -102,7 +102,7 @@ If you're in the context of an object that has a slug (e.g. post, author, tag an
 
 You can either pass the `{{#has}}` helper a string wrapped in quotes, or a path to a data value from else where in the template data. For example, the following code does an exact match on the string "welcome". If the post's slug is the same, the code inside the has helper will execute.
 
-```html
+```handlebars
 {{#has slug="welcome"}}
   ... do something..
 {{/has}}
@@ -110,7 +110,7 @@ You can either pass the `{{#has}}` helper a string wrapped in quotes, or a path 
 
 Alternatively, you can pass a handlebars path, which references a different piece of data to match against:
 
-```html
+```handlebars
 {{#has slug=../post.slug}}
   ...do something...
 {{/has}}
@@ -120,7 +120,7 @@ Alternatively, you can pass a handlebars path, which references a different piec
 
 The `any` comparison will return true if **any** one of the properties is set in the current context, with support for paths and globals:
 
-```html
+```handlebars
 {{#has any="twitter, facebook, website"}}
 {{#has any="author.facebook, author.twitter,author.website"}}
 {{#has any="@blog.facebook, @blog.twitter, @labs.subscribers"}}
@@ -128,13 +128,13 @@ The `any` comparison will return true if **any** one of the properties is set in
 
 Similarly, the `all` comparison will return true only when **all** of the properties are set:
 
-```html
+```handlebars
 {{#has all="@labs.subscribers,@labs.publicAPI"}}
 ```
 
 ### Foreach loop number or index
 
-```html
+```handlebars
 {{#has number="3"}}{{/has}} // A single number
 {{#has number="3, 6, 9"}}{{/has}} // list of numbers
 {{#has number="nth:3"}}{{/has}} // special syntax for nth item
@@ -145,7 +145,7 @@ When you're inside a `{{#foreach}}` loop of any kind, you have access to [two sp
 
 The `{{#has}}` helper will let you check which number/index of the iteration you are on using the 3 different styles of matching shown above. For example, if you have a list of posts and want to inject a special widget partial every 3rd post, you could do so using the `nth:3` pattern:
 
-```html
+```handlebars
 {{#foreach posts}}
   {{#has number="nth:3"}}
      {{> "widget"}}
@@ -159,7 +159,7 @@ The `{{#has}}` helper will let you check which number/index of the iteration you
 
 To determine if a post has a particular tag:
 
-```html
+```handlebars
 {{#post}}
     {{#has tag="photo"}}
         ...do something if this post has a tag of photo...
@@ -171,7 +171,7 @@ To determine if a post has a particular tag:
 
 You can also supply a comma-separated list of tags, which is the equivalent of an OR query, asking if a post has any one of the given keywords:
 
-```html
+```handlebars
 {{#has tag="photo, video, audio"}}
     ...do something if this post has a tag of photo or video or audio...
 {{else}}
@@ -181,7 +181,7 @@ You can also supply a comma-separated list of tags, which is the equivalent of a
 
 You can do an AND query by nesting your `{{#has}}` helpers:
 
-```html
+```handlebars
 {{#has tag="photo"}}
     ...do something if this post has a tag of photo..
     {{#has tag="panorama"}}

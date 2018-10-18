@@ -27,7 +27,7 @@ Unless also uses the exact same conditional evaluation rules as [`{{#if}}`](/doc
 
 Basic unless example, will execute the template between its start and end tags only if `featured` evaluates to false.
 
-```html
+```handlebars
 {{#unless featured}}
   ...do something...
 {{/unless}}
@@ -35,7 +35,7 @@ Basic unless example, will execute the template between its start and end tags o
 
 If you want, you can also include an else block, although in the majority of cases, if you need an else, then using `{{#if}}` is more readable:
 
-```html
+```handlebars
 // This is identical to if, but with the blocks reversed
 {{#unless featured}}
   ...do thing 1...

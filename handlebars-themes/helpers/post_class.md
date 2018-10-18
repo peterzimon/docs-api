@@ -36,7 +36,7 @@ Setting a post as featured or as a page can be done from the [post settings menu
 
 ### Example Code
 
-```html
+```handlebars
 <article class="{{post_class}}">
   {{content}}
 </article>

@@ -37,7 +37,7 @@ The if helper takes a single value, and evaluates whether it is true or false. A
 
 When in the scope of a post, `featured` is a boolean flag. The following code example will evaluate to true only if the post is marked as featured.
 
-```html
+```handlebars
 {{#post}}
   {{#if featured}}
    ...do something if the post is featured...
@@ -47,7 +47,7 @@ When in the scope of a post, `featured` is a boolean flag. The following code ex
 
 You can also use this to test if any property is set. Strings, like image URLs will evaluate to true as long as one is present, and will be null (false) otherwise:
 
-```html
+```handlebars
 {{#post}}
   {{#if feature_image}}
      <img src="{{img_url feature_image}}" />

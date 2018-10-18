@@ -19,7 +19,7 @@ When in the scope of a post, you can call the next or previous post helper, whic
 
 Inside of the opening and closing tags of the `{{#next_post}}{{/next_post}}` or `{{#prev_post}}{{/prev-post}}` helper, the normal helpers for [outputting posts](/docs/post) will work, but will output the details of the post that was fetched from the API, rather than the original post.
 
-```html
+```handlebars
 {{#post}}
 	{{#prev_post}}
 		<a href="{{url}}">{{title}}</a>
@@ -33,7 +33,7 @@ Inside of the opening and closing tags of the `{{#next_post}}{{/next_post}}` or 
 
 You can also scope where to pull the previous and next posts from using the `in` parameter
 
-```html
+```handlebars
 {{#post}}
 	{{#prev_post in="primary_tag"}}
 		<a href="{{url}}">{{title}}</a>

@@ -25,7 +25,7 @@ The `@blog` property provides access to [global data](/docs/handlebars#section-g
 
 ### Example Code
 
-```html
+```handlebars
 <nav class="main-nav overlay clearfix">
     {{#if @blog.logo}}
         <a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>

@@ -76,7 +76,7 @@ As of Ghost 0.9 posts, tags and users all have a concept of `visibility`, which 
 
 By default the `visibility` attribute is set to the string "public". This can be overridden to pass any other value, and if there is no matching value for `visibility` nothing will be output. You can also pass a comma-separated list of values, or the value "all" to output all items.
 
-```
+```handlebars
 {{authors visibility="all"}}
 ```
 
@@ -84,7 +84,7 @@ By default the `visibility` attribute is set to the string "public". This can be
 
 If you want to output your authors completely differently, you can fully customise the output by using the [foreach](doc:foreach) helper, instead of the authors helper. Here's an example of how to output list markup:
 
-```html
+```handlebars
 {{#post}}
   {{#if authors}}
     <ul>
@@ -118,7 +118,7 @@ If you want to output your authors completely differently, you can fully customi
 
 To output just the singular, first author, use the `{{primary_author}}` helper to output a simple link. You can also access all the same attributes as above if you need more custom output.
 
-```html
+```handlebars
 {{#primary_author}}
 <div class="author">
     <a href="{{url}}">{{name}}</a>

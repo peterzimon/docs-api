@@ -27,7 +27,7 @@ You can override the default text, [see translate the reading helper](/docs/i18n
 
 ### Example Code
 
-```html
+```handlebars
 {{#post}}
     {{reading_time}}
 {{/post}}

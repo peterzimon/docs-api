@@ -29,7 +29,7 @@ To use the `{{asset}}` helper to output the path for an asset, simply provide it
 
 For example:
 
-```html
+```handlebars
 // Styles
 <link rel="stylesheet" type="text/css" href="{{asset 'css/style.css'}}" />
 
