@@ -33,4 +33,4 @@ Currently Ghost has support for below 3 events on which webhook can be setup, bu
 
 ## Verifying authenticity
 
-All webhooks can be configured to send with an optional `secret` field as digital signature, with which you can verify the authenticity of incoming requests if needed.
+All webhooks can be configured to send with an optional `secret` via the `X-Ghost-Secret` header, with which you can verify the authenticity of incoming requests if needed.
