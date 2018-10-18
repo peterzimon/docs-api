@@ -58,5 +58,3 @@ You can also use this to test if any property is set. Strings, like image URLs w
 <p>No posts to display!</p>
 {{/post}}
 ```
-
-If you're looking to do more complex conditionals, E.g. testing for particular values of tags or authors, you need to check out the [has helper](doc:has) instead of the if helper.

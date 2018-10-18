@@ -15,9 +15,9 @@ Usage: `{{#get "posts"}}{{/get}}`
 
 ## Description
 
-`{{#get}}` is a special block helper that makes a custom query to the [Ghost API](http://api.ghost.org) to fetch publicly available data. These requests are made server-side, before your templates are rendered. This means you can fetch additional data, separate from what is provided by default in each [**context**](doc:context-overview).
+`{{#get}}` is a special block helper that makes a custom query to the Ghost API to fetch publicly available data. These requests are made server-side, before your templates are rendered. This means you can fetch additional data, separate from what is provided by default in each [context](/api/handlebars-themes/context/).
 
-In its most basic form it can perform a 'browse' query to create a block of data that represents a list of your [posts](doc:post), [authors](doc:authors) (users) or [tags](doc:tags). That block of data can then be iterated over using the [`{{#foreach}}`](doc:foreach) helper.
+In its most basic form it can perform a 'browse' query to create a block of data that represents a list of your posts, authors (users) or tags. That block of data can then be iterated over using the `{{#foreach}}` helper.
 
 It can also be used to perform a 'read' query that fetches one specific **author**, **post** or **tag** if the relevant *resource field* - E.g. **id** or **slug** is provided as an attribute.
 
@@ -60,9 +60,9 @@ The `{{#get}}` helper has many more options than most helpers, the following sec
 
 The first parameter passed in is the name of the resource that you want to query. This can be either `"posts"`, `"tags"` or `"users"` (authors).
 
-[posts](doc:post) - only published posts can be retrieved
-[tags](doc:tags) - currently all tags can be retrieved
-[users](doc:authors) - only active users can be retrieved
+**posts** - only published posts can be retrieved
+**tags** - currently all tags can be retrieved
+**users** - only active users can be retrieved
 
 Example:
 
@@ -83,7 +83,7 @@ As with the `{{#foreach}}` helper, it is possible to use block parameters to ren
 
 Usage: `as |featuredposts pagination|`
 
-The `{{#get}}` helper supports two parameters entered here. The first entry in the *pipe* refers to your returned data collection. The second entry refers to your [pagination](doc:pagination) object.
+The `{{#get}}` helper supports two parameters entered here. The first entry in the *pipe* refers to your returned data collection. The second entry refers to your pagination object.
 
 Example using block parameters:
 
@@ -98,7 +98,7 @@ Example using block parameters:
 {{/get}}
 ```
 
-In the example above we are fetching **posts** which we will then refer to **as articles** in our loop and a [pagination](doc:pagination) object called **pages**.
+In the example above we are fetching **posts** which we will then refer to **as articles** in our loop and a pagination object called **pages**.
 
 ## Using {{else}}
 
@@ -122,7 +122,7 @@ If you want to output different content when there are no results, you will need
 
 ## Attributes
 
-The attributes that can be passed to the `{{#get}}` helper exactly match up to the query parameters that you can use in the [Ghost JSON API](http://api.ghost.org/v0.1/docs/parameters). These allow you to specify the data to look for and how much data is returned. If you're making a 'browse' request (fetching multiple items) you can use any of these attributes and if you're making a 'read' request (fetching a single item by **id** or **slug**) only **include** is available.
+The attributes that can be passed to the `{{#get}}` helper exactly match up to the query parameters that you can use in the Ghost JSON API. These allow you to specify the data to look for and how much data is returned. If you're making a 'browse' request (fetching multiple items) you can use any of these attributes and if you're making a 'read' request (fetching a single item by **id** or **slug** only **include** is available.
 
 ### *limit*
 
@@ -130,7 +130,7 @@ Specify the size of your collection
 Allowed values: positive integer and 'all'
 Default value: 15
 
-It is possible to use the global "posts per page" setting which is **5** by default or it can be configured via the active theme's [package.json](doc:packagejson#section-recommended-property) file, this global value is available via the `@config` global as `@config.posts_per_page`.
+It is possible to use the global "posts per page" setting which is **5** by default or it can be configured via the active theme's `package.json` file, this global value is available via the `@config` global as `@config.posts_per_page`.
 
 Examples:
 
@@ -182,9 +182,9 @@ When making an API request, the resulting response will only contain base data f
 A Resource may have additional related data that can be included to expand your collection.
 
 Base Resource data:
-* [**Post**](doc:post-context)
-* [**Tag**](doc:tag-context)
-* [**User**](doc:author-context)
+* **Post**
+* **Tag**
+* **User**
 
 There can be multiple *includes* separated by a comma.
 
@@ -196,7 +196,7 @@ The *User* and *Tag* resources can be expanded to include the post count for eac
 
 Include options for *User* and *Tag*: "count.posts"
 
-Note: If you include count.posts you can use it to [**order**](doc:get#section--order-) your collection.
+Note: If you include count.posts you can use it to **order** your collection.
 
 Examples:
 
@@ -229,7 +229,7 @@ This is a powerful tool that allows you to make a complex logic-based queries on
 {{/get}}
 ```
 
-Filtering can be used to specify multiple rules using *and* or *or** and can check for booleans, match against strings, look for items within a group, and many other things. For a full breakdown of the filtering syntax and how to use it, please see the  [Filter documentation](http://api.ghost.org/docs/filter) in the API docs.
+Filtering can be used to specify multiple rules using *and* or *or** and can check for booleans, match against strings, look for items within a group, and many other things. For a full breakdown of the filtering syntax and how to use it, please see the Filter documentation in the API docs.
 
 #### Passing data to `filter`
 
@@ -269,7 +269,7 @@ In some cases, you'll need to wrap the data you pass in with quotes, for example
 Also be aware that, if you want to filter based on dates, you need to use the data attributes e.g.`{{published_at}}`, not the `{{date}}` helper, as helper functions do not get called inside of a filter.
 
 #### Filtering by primary tag
-The [primary_tag](doc:primary_tag) is a virtual post property and we support filtering by this property
+The primary_tag is a virtual post property and we support filtering by this property
 
 ```handlebars
 {{#post}}
@@ -284,7 +284,7 @@ The [primary_tag](doc:primary_tag) is a virtual post property and we support fil
 In this example we fetch 3 posts which have the same primary tag as the current post.
 
 #### Filtering by primary author
-The [primary_author](doc:primary_author) is a virtual post property and we support filtering by this property.
+The primary_author is a virtual post property and we support filtering by this property.
 
 
 ```handlebars
@@ -302,7 +302,7 @@ The [primary_author](doc:primary_author) is a virtual post property and we suppo
 There are a few known limitations with the `{{#get}}` helper at the moment:
 
 - `{{#get}}` helpers may not work correctly when nested
-- Other [async helpers](/docs/helpers#section-async) may not work when nested inside a get block (you may see an **aSyNcId_###** error on your page).
+- Other async helpers may not work when nested inside a get block (you may see an **aSyNcId_###** error on your page).
 - you cannot yet filter on count.posts
 - ordering alphabetically may be case sensitive depending on database
 - `{{pagination}}` won't output anything sensible when used inside  `{{#get}}` block - because the get helper can only fetch existing data, it doesn't create a /page/2/ version of the data you are fetching.

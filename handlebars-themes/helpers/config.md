@@ -11,9 +11,9 @@ keywords:
 sidebar: "handlebars"
 ---
 
-The `@config` property provides access to [global data](/docs/handlebars#section-global-data) properties, which are available anywhere in your theme.
+The `@config` property provides access to global data properties, which are available anywhere in your theme.
 
-Specifically `@config` will pass through the special theme config that is added in the theme's [package.json](doc:packagejson) so that it can be used anywhere in handlebars.
+Specifically `@config` will pass through the special theme config that is added in the theme's `package.json` so that it can be used anywhere in handlebars.
 
 At the moment, there is only one property which will be passed through:
 

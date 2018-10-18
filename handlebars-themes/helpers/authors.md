@@ -17,7 +17,7 @@ Usage: `{{authors}}`
 
 `{{authors}}` is a formatting helper for outputting a linked list of authors for a particular post. It defaults to a comma-separated list (without list markup) but can be customised to use different separators, and the linking can be disabled. The authors are output in the order they appear on the post, these can be reordered by dragging and dropping.
 
-You can use the [translation helper](/docs/t) for the `prefix` and `suffix` attribute, [see translate the authors helper](/docs/i18n#section-translate-the-prefix-attribute-of-the-tags-or-authors-helper).
+You can use the [translation helper](/api/handlebars-themes/helpers/translate/) for the `prefix` and `suffix` attribute.
 
 ### Example code
 
@@ -82,7 +82,7 @@ By default the `visibility` attribute is set to the string "public". This can be
 
 ### Advanced example
 
-If you want to output your authors completely differently, you can fully customise the output by using the [foreach](doc:foreach) helper, instead of the authors helper. Here's an example of how to output list markup:
+If you want to output your authors completely differently, you can fully customise the output by using the foreach helper, instead of the authors helper. Here's an example of how to output list markup:
 
 ```handlebars
 {{#post}}
@@ -106,13 +106,13 @@ If you want to output your authors completely differently, you can fully customi
 * **bio** - a bio of the author
 * **website** - the website of the author
 * **location** - the location of the author
-* **twitter** - the author's twitter username ([twitter_url helper](doc:twitter_url))
-* **facebook** - the author's facebook username ([facebook_url helper](doc:facebook_url))
-* **profile_image** - the profile image for the author ([img_url helper](doc:img_url))
-* **cover_image** - the cover image for the author ([img_url helper](doc:img_url))
-* **meta_title** - the tag's meta title  ([meta_title helper](doc:meta_title))
-* **meta_description** - the tag's meta description ([meta_description helper](doc:meta_description))
-* **url** - the web address for the tag's page ([url helper](doc:url))
+* **twitter** - the author's twitter username 
+* **facebook** - the author's facebook username 
+* **profile_image** - the profile image for the author 
+* **cover_image** - the cover image for the author 
+* **meta_title** - the tag's meta title 
+* **meta_description** - the tag's meta description 
+* **url** - the web address for the tag's page 
 
 ## primary_author
 

@@ -34,41 +34,45 @@ For example, if you have a tag 'photo' with the url `/tag/photo/`, adding a temp
 
 These templates exist in a hierarchy. Ghost looks for a template which matches the slug (`tag-:slug.hbs`) first, then looks for `tag.hbs` and finally uses `index.hbs` if neither is available.
 
+
 ## Data
 
-When in the `tag` context, a template gets access to 3 objects: the [tag object](/docs/author-context#tag-object-attributes) which matches the route, an array of [post objects](/docs/post-context#post-object-attributes) and a [pagination object](/docs/pagination#pagination-attributes). As with all contexts, all of the `@blog` global data is also available.
+When in the `tag` context, a template gets access to 3 objects: the tag object which matches the route, an array of post objects and a pagination object. As with all contexts, all of the `@blog` global data is also available.
+
 
 ### Tag object
 
 When outputting the tag attributes, you can use a block expression (`{{#tag}}{{/tag}}`) to drop into the tag scope and access all of the attributes.
+
 
 #### Tag object attributes
 
 - **id** - the incremental ID of the tag
 - **name** - the name of the tag
 - **description** - a description of the tag
-- **feature_image** - the cover image associated with the tag  ([img_url helper](doc:img_url))
-- **meta_title** - custom meta title for the page ([meta_title helper](doc:meta_title))
-- **meta_description** - Custom meta description for the page ([meta_description helper](doc:meta_description) )
--**url** - the web address for the tag's page ([url helper](doc:url))
+- **feature_image** - the cover image associated with the tag 
+- **meta_title** - custom meta title for the page 
+- **meta_description** - Custom meta description for the page 
+-**url** - the web address for the tag's page 
 
 ### Post list
 
-Each of the posts can be looped through using [`{{#foreach 'posts'}}{{/foreach}}`](doc:foreach). The template code inside the block will be rendered for each post, and have access to all of the [post object attributes](/docs/post-context#post-object-attributes).
+Each of the posts can be looped through using `{{#foreach 'posts'}}{{/foreach}}`. The template code inside the block will be rendered for each post, and have access to all of the post object attributes.
 
 ### Pagination
 
-The [pagination object](/docs/pagination#pagination-attributes) provided is the same everywhere. The best way to output pagination is to use the [pagination](doc:pagination) helper.
+The pagination object provided is the same everywhere. The best way to output pagination is to use the pagination helper.
 
 ## Helpers
 
-The `{{#tag}}{{/tag}}` block expression is useful for accessing all of the author attributes. Once inside the tag you can access the attributes and use helpers like [{{img_url}}](doc:img_url) and [{{url}}](doc:url) to output the tag's details.
+The `{{#tag}}{{/tag}}` block expression is useful for accessing all of the author attributes. Once inside the tag you can access the attributes and use helpers like `{{img_url}}` and `{{url}}` to output the tag's details.
 
 Using `{{#foreach 'posts'}}{{/foreach}}` is the best way to loop through the list of posts and output each one.
 
 If your theme does have a `tag.hbs` and `author.hbs` file all outputting similar post lists to `index.hbs` you may wish to use a partial to define your post list item, e.g. `{{> "loop"}}`. There's an example showing this in detail below.
 
-The [{{pagination}}](doc:pagination) helper is the best way to output pagination. This is fully customisable, see the [pagination helper](doc:pagination) docs for details.
+The `{{pagination}}` helper is the best way to output pagination. This is fully customisable, see the pagination helper docs for details.
+
 
 ## Example Code
 

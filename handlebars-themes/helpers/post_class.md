@@ -32,7 +32,7 @@ A featured post with a tag of `photo` would get `post tag-photo featured`.
 
 A featured page with a tag of `photo` and `panoramic` would get `post tag-photo tag-panoramic featured page`.
 
-Setting a post as featured or as a page can be done from the [post settings menu](https://help.ghost.org/hc/en-us/articles/223237728-Post-Settings-Overview#set-post-as-featured).
+Setting a post as featured or as a page can be done from the post settings menu.
 
 ### Example Code
 

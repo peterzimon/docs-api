@@ -37,12 +37,12 @@ The `{{#has}}` helper can be combined with internal tags, to display different i
 
 ## Usage
 
-The `{{#has}}` helper currently supports 4 different types of "questions", with more coming soon.
+The `{{#has}}` helper supports four different types of "questions":
 
-- Post has [tag or author](/docs/has#section-post-tag-or-author)
-- Context has [slug or id](/docs/has#section-slug-or-id)
-- Context has [any or all](/docs/has#section-any-or-all) properties set
-- Foreach loop [number or index](/docs/has#section-foreach-loop-number-or-index)
+- Post has tag or author
+- Context has slug or id
+- Context has any or all properties set
+- Foreach loop number or index
 
 Questions are asked by providing attribute-value pairs, e.g. `tag="tag-name"`. You can pass multiple attributes, and the `{{#has}}` helper will always treat this as an `OR`.
 
@@ -141,7 +141,7 @@ Similarly, the `all` comparison will return true only when **all** of the proper
 {{!-- All of these work exactly the same for index --}}
 ```
 
-When you're inside a `{{#foreach}}` loop of any kind, you have access to [two special data variables](/docs/foreach#section--index-number-and-key) called `@index` and `@number`. `@index` contains the 0-based index or count of the loop, and `@number` contains a 1-based index. That is each time around the loop these values increase by 1, but `@index` starts at 0, and `@number` starts at 1.
+When you're inside a `{{#foreach}}` loop of any kind, you have access to two special data variables called `@index` and `@number`. `@index` contains the 0-based index or count of the loop, and `@number` contains a 1-based index. That is each time around the loop these values increase by 1, but `@index` starts at 0, and `@number` starts at 1.
 
 The `{{#has}}` helper will let you check which number/index of the iteration you are on using the 3 different styles of matching shown above. For example, if you have a list of posts and want to inject a special widget partial every 3rd post, you could do so using the `nth:3` pattern:
 

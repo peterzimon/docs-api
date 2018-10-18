@@ -21,7 +21,7 @@ The `{{#unless}}` block helper comes built in with Handlebars.
 
 It works exactly the same as `{{#if}}` and supports both `{{else}}` and `^` negation if you want to get really confusing!
 
-Unless also uses the exact same conditional evaluation rules as [`{{#if}}`](/docs/helpers/if).
+Unless also uses the exact same conditional evaluation rules as `{{#if}}`.
 
 ### Example code
 

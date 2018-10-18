@@ -28,7 +28,7 @@ Follow these steps to make your theme fully translatable:
 
 Create a folder called `locales`. If using a theme that is already translatable, this may exist already.
 
-Inside the `locales` folder, add target language files for each translatable language used on your site. For example `locales/en.json` for English and `locales/es.json` for Spanish. A [valid language](https://www.w3schools.com/tags/ref_language_codes.asp/) code must be used.
+Inside the `locales` folder, add target language files for each translatable language used on your site. For example `locales/en.json` for English and `locales/es.json` for Spanish. A valid language](https://www.w3schools.com/tags/ref_language_codes.asp/) code must be used.
 
 #### 2. Translate included sentences
 

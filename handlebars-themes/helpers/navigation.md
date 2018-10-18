@@ -53,7 +53,7 @@ The up-to-date default template in Ghost is always available [here](https://gith
 A navigation item has the following attributes which can be used inside your `./partials/navigation.hbs` template file...
 
 * **{{label}}** - The text to display for the link
-* **{{url}}** - The URL to link to - see the [url helper](doc:url) for more options
+* **{{url}}** - The URL to link to - see the url helper for more options
 * **{{current}}** - Boolean true / false - whether the URL matches the current page
 * **{{slug}** - Slugified name of the page, eg `about-us`. Can be used as a class to target specific menu items with CSS or jQuery.
 

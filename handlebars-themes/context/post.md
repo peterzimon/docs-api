@@ -16,11 +16,13 @@ Use: `{{#is "post"}}{{/is}}` to detect this context
 
 ## Description
 
-Whenever you're viewing a single site post, you're in the `post` context. The `post` context is not set on static pages, which uses the [page context](doc:page-context) instead.
+Whenever you're viewing a single site post, you're in the `post` context. The `post` context is not set on static pages, which uses the page context instead.
+
 
 ## Routes
 
 The URL used to render a single post is configurable in the Ghost admin. The default is `/:slug/`. Ghost also has an option for date-based permalinks, and can support many other formats if the setting is edited in the database.
+
 
 ## Templates
 
@@ -34,6 +36,7 @@ Another option is to use a "global" custom post template. If you add a template 
 
 These templates exist in a hierarchy. Ghost looks for a template which matches the slug (`post-:slug.hbs`) first, then looks for a custom template (`custom-gallery.hbs` if selected in the post settings) and finally uses `post.hbs` if no slug-specific template exists and no custom template is specified.
 
+
 ## Data
 
 The `post` context provides access to the post object which matches the route. As with all contexts, all of the `@blog` global data is also available.
@@ -43,29 +46,29 @@ When outputting the post, you can use a block expression (`{{#post}}{{/post}}`) 
 ### Post object attributes
 
 - **id** - the Object ID of the post
-- **comment_id** - The old, pre-1.0 incremental id of a post if present, or else the new Object ID ( [special attributes: comment id](/docs/post-context#section-comment-id))
-- **title** - the title of your site post ([title helper](doc:title))
+- **comment_id** - The old, pre-1.0 incremental id of a post if present, or else the new Object ID ( special attributes: comment id
+- **title** - the title of your site post title helper
 - **slug** - slugified version of the title (used in urls and also useful for class names)
-- **excerpt** - a short preview of your post content ([excerpt helper](doc:excerpt))
-- **content** - the content of the post ([content helper](content))
-- **url** - the web address for the post page (see [url helper](doc:url) and [special attributes](/docs/post-context#section-special-attributes))
-- **feature_image** - the cover image associated with the post  ([img_url helper](doc:img_url))
+- **excerpt** - a short preview of your post content excerpt helper
+- **content** - the content of the post content helper
+- **url** - the web address for the post page (see url helper] and special attributes
+- **feature_image** - the cover image associated with the post img_url helper
 - **featured** - indicates a featured post. Defaults to `false`
 - **page** `true` if the post is a page. Defaults to `false`
-- **meta_title** - custom meta title for the post ([meta_title helper](doc:meta_title))
-- **meta_description**  Custom meta description for the post ([meta_description helper](doc:meta_description) )
-- **published_at:** date and time when the post was published  ([date helper](doc:date))
-- **updated_at:** date and time when the post was last updated  ([date helper](doc:date))
-- **created_at:** date and time when the post was created  ([date helper](doc:date))
--  **author** - full details of the post's author (see [author](doc:author) for details)
-- **tags** - a list of tags associated with the post (see [tags](doc:tags) for details)
-- **primary_tag** - direct reference to the first tag associated with with the post ([special attributes](/docs/post-context#section-special-attributes))
+- **meta_title** - custom meta title for the post meta_title helper
+- **meta_description**  Custom meta description for the post meta_description helper
+- **published_at:** date and time when the post was published date helper
+- **updated_at:** date and time when the post was last updated date helper
+- **created_at:** date and time when the post was created
+-  **author** - full details of the post's author 
+- **tags** - a list of tags associated with the post 
+- **primary_tag** - direct reference to the first tag associated with with the post
 
 ## Helpers
 
 Using the `{{#post}}{{/post}}` block expression is the key trick to having a happy time theming your post page. Once inside of the post, you can use any of these useful helpers (and many more) to output your post's data:
 
-[{{title}}](doc:title), [{{content}}](doc:content), [{{url}}](doc:url), [{{author}}](doc:author), [{{date}}](doc:date), [{{excerpt}}](doc:excerpt), [{{img_url}}](doc:img_url), [{{post_class}}](doc:post_class), [{{tags}}](doc:tags)
+`{{title}}`, `{{content}}`, `{{url}}`, `{{author}}`, `{{date}}`, `{{excerpt}}`, `{{img_url}}`, `{{post_class}}`, `{{tags}}`.
 
 ## Example code
 
@@ -98,9 +101,10 @@ The post model is the most complex model in Ghost, and it has a couple of specia
 
 ### URL
 
-URL is a calculated, created based on the site's permalink setting and the post's other properties. It exists as a data attribute, but should always be output using the special [{{url}} helper](doc:url) rather than referenced as a data attribute.
+URL is a calculated, created based on the site's permalink setting and the post's other properties. It exists as a data attribute, but should always be output using the special `{{url}}` helper rather than referenced as a data attribute.
 
 That means always open a context and use `{{url}}` explicitly, and is the same for _all_ resources, but especially important because post has a data attribute present. So, **always** do `{{#post}}{{url}}{{/post}}` **never** do `{{post.url}}`.
+
 
 ### Comment ID
 
@@ -122,8 +126,9 @@ Example: The Disqus config in Ghost should look like this, with the code **insid
 
 ```
 
-For a more complete example of Disqus integration please see the [Disqus code in Casper](https://github.com/TryGhost/Casper/blob/d92dda3523c27d68fa78088cd1138300b96bc7c8/post.hbs#L72-L93).
+For a more complete example of Disqus integration see the [Disqus code in Casper](https://github.com/TryGhost/Casper/blob/d92dda3523c27d68fa78088cd1138300b96bc7c8/post.hbs#L72-L93).
 
-### Primary Tag
 
-Each post has a list of 0 or more tags associated with it, which can be accessed via the `tags` property and magical [{{tags}} helper](doc:tags). The first tag in the list is considered more important, and can be accessed via a special `primary_tag` calculated property. This is a path expression, which points to a whole tag object, rather than a helper function. Despite this, there are so many ways it can be used, we have given it a special [primary_tag page](doc:primary_tag) to cover various examples.
+### Primary tag
+
+Each post has a list of 0 or more tags associated with it, which can be accessed via the `tags` property and magical `{{tags}}` helper. The first tag in the list is considered more important, and can be accessed via a special `primary_tag` calculated property. This is a path expression, which points to a whole tag object, rather than a helper function.

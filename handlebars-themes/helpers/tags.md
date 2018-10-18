@@ -19,7 +19,7 @@ Usage: `{{tags}}` or `{{#foreach tags}}{{/foreach}}` in `tag.hbs` you can use `{
 
 The `{{tags}}` helper does not output internal tags. This can be changed by passing a different value to the `visibility` attribute.
 
-You can use the [translation helper](/docs/t) for the `prefix` and `suffix` attribute, [see translate the tags helper](/docs/i18n#section-usage-of-subexpressions-and-translations).
+You can use the [translation helper](/api/handlebars-themes/helpers/translate/) for the `prefix` and `suffix` attribute.
 
 ### Example code
 
@@ -84,7 +84,7 @@ By default the `visibility` attribute is set to the string "public". This can be
 
 ### Advanced example
 
-If you want to output your tags completely differently, you can fully customise the output by using the [foreach](doc:foreach) helper, instead of the tags helper. Here's an example of how to output list markup:
+If you want to output your tags completely differently, you can fully customise the output by using the foreach helper, instead of the tags helper. Here's an example of how to output list markup:
 
 ```handlebars
 {{#post}}
@@ -106,10 +106,10 @@ If you want to output your tags completely differently, you can fully customise 
 * **name** - the name of the tag
 * **slug** - slugified version of the name (used in urls and also useful for class names)
 * **description** - a description of the tag
-* **feature_image** - the cover image for the tag ([img_url helper](doc:img_url))
-* **meta_title** - the tag's meta title  ([meta_title helper](doc:meta_title))
-* **meta_description** - the tag's meta description ([meta_description helper](doc:meta_description))
-* **url** - the web address for the tag's page ([url helper](doc:url))
+* **feature_image** - the cover image for the tag 
+* **meta_title** - the tag's meta title 
+* **meta_description** - the tag's meta description 
+* **url** - the web address for the tag's page
 
 
 ## primary_tag

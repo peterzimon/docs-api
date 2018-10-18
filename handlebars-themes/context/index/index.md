@@ -20,23 +20,26 @@ Use: {{#is "index"}}{{/is}} to detect this context.
 
 ## Routes
 
-The index context is present on both the root URL of the site, e.g. `/` and also on subsequent pages of the post list, which live at `/page/:num/`. All routes are customisable with [Dynamic Routing](/v2/docs/dynamic-routing).
+The index context is present on both the root URL of the site, e.g. `/` and also on subsequent pages of the post list, which live at `/page/:num/`. All routes are customisable with [dynamic routing](/concepts/routing/).
+
 
 ## Templates
 
-The index context is rendered with `index.hbs` by default. This template is required in all Ghost themes. If there is a `home.hbs` present in the theme, the home page will be rendered using that instead - see the [home context](doc:home-context) documentation for more details.
+The index context is rendered with `index.hbs` by default. This template is required in all Ghost themes. If there is a `home.hbs` present in the theme, the home page will be rendered using that instead.
 
 Note that the `index.hbs` template is also used to output the tag and author contexts, if no specific `tag.hbs` or `author.hbs` templates are provided.
 
 ## Data
 
-The `index` context provides templates with access to an array of [post objects](/docs/post-context#section-post-object-attributes) and a [pagination object](/docs/pagination#section-pagination-attributes). As with all contexts, all of the `@blog` global data is also available.
+The `index` context provides templates with access to an array of [
+post objects and a pagination object. As with all contexts, all of the `@blog` global data is also available.
 
-The number of posts provided will depend on the `post per page` setting which you can configure [in your package.json](/docs/packagejson#section--config-posts_per_page-). The provided array will provide the correct posts for the current page number, with the posts ordered chronologically, newest first. Therefore on the home page, the theme will have access to the first 6 posts by default. On /page/2/ the theme will have access to posts 7-12.
+The number of posts provided will depend on the `post per page` setting which you can configure [in your package.json](/api/handlebars-themes/helpers/foreach/) file. The array will provide the correct posts for the current page number, with the posts ordered chronologically, newest first. Therefore on the home page, the theme will have access to the first 6 posts by default. On /page/2/ the theme will have access to posts 7-12.
 
-Each of the posts can be looped through using [`{{#foreach 'posts'}}{{/foreach}}`](doc:foreach). The template code inside the block will be rendered for each post, and have access to all of the [post object attributes](/docs/post-context#post-object-attributes).
+Each of the posts can be looped through using `{{#foreach 'posts'}}{{/foreach}}`. The template code inside the block will be rendered for each post, and have access to all of the post object attributes.
 
-The [pagination object](/docs/pagination#section-pagination-attributes) provided is the same everywhere. The best way to output pagination is to use the [pagination](doc:pagination) helper.
+The pagination object provided is the same everywhere. The best way to output pagination is to use the pagination helper.
+
 
 ## Helpers
 
@@ -44,7 +47,8 @@ Using `{{#foreach 'posts'}}{{/foreach}}` is the best way to loop through your po
 
 If your theme does have a `tag.hbs` and `author.hbs` file all outputting similar post lists you may wish to use a partial to define your post list item, e.g. `{{> "loop"}}`. There's an example showing this in detail below.
 
-The [{{pagination}}](doc:pagination) helper is the best way to output pagination. This is fully customisable, see the [pagination helper](doc:pagination) docs for details.
+The [{{pagination}}](/api/handlebars-themes/helpers/pagination/) helper is the best way to output pagination. This is fully customisable.
+
 
 ## Example Code
 
@@ -96,6 +100,4 @@ The default template for the home page is `index.hbs`. You can optionally add a 
 
 ### Data
 
-The data available on the home page is exactly the same as described in the [index](doc:index-context) context. The home page's posts will always be the first X posts ordered by published date with the newest first, where X is defined by the post per page setting in the Ghost admin.
-
-See the [index context](doc:index-context) for more details.
+The data available on the home page is exactly the same as described in the index context. The home page's posts will always be the first X posts ordered by published date with the newest first, where X is defined by the post per page setting in the Ghost admin.

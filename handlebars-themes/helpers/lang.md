@@ -19,7 +19,7 @@ Usage: `{{lang}}`
 
 ### Example Code
 
-Please [read](/docs/i18n) through our i18n guide.
+Read the [translate helper page](/api/handlebars-themes/helpers/translate/) for further information:
 
 ```handlebars:title=default.hbs
 <html lang="{{lang}}">

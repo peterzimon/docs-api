@@ -18,7 +18,7 @@ Usage: `{{excerpt}}`
 
 `{{excerpt}}` outputs content but strips all HTML. This is useful for creating excerpts of posts.
 
-If the post's [`custom_excerpt`](https://blog.ghost.org/custom-excerpts/) property is set, then the helper will always output the `custom_excerpt` content ignoring the `words` & `characters` attributes.
+If the post's `custom_excerpt` property is set, then the helper will always output the `custom_excerpt` content ignoring the `words` & `characters` attributes.
 
 You can limit the amount of text to output by passing one of the options:
 

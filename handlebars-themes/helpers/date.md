@@ -37,7 +37,7 @@ If you call `{{date}}` without telling it which date to display, it will default
 2. Otherwise, it will default to the current date
 
 
-`date` uses [moment.js](http://momentjs.com/) for formatting dates. See their [documentation](http://momentjs.com/docs/#/parsing/string-format/) for a full explanation of all the different format strings that can be used.
+`date` uses moment.js for formatting dates. See their documentation for a full explanation of all the different format strings that can be used.
 
 ### Example Code
 

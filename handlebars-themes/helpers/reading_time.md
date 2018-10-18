@@ -23,7 +23,7 @@ By *default* the helper will render a text like this:
 - `x min read` for estimated reading time longer than one minute
 - `1 min read` for estimated reading time shorter than or equal to one minute
 
-You can override the default text, [see translate the reading helper](/docs/i18n#section-reading-time-helper).
+You can override the default text.
 
 ### Example Code
 

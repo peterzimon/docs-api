@@ -11,7 +11,7 @@ keywords:
 sidebar: "handlebars"
 ---
 
-Each page in a Ghost theme belongs to a context, which determines which template is used, what data will be available and what content is output by the `{{body_class}} helper.
+Each page in a Ghost theme belongs to a context, which determines which template is used, what data will be available and what content is output by the `{{body_class}}` helper.
 
 ## What is a context?
 
@@ -30,14 +30,3 @@ Besides determining what data is available and what template to render, contexts
 For example, the `{{meta_title}}` helper outputs different things based on the current context. If the context is `post` then the helper knows it can use `post.meta_title` and in a `tag` context it uses `tag.meta_title`.
 
 To detect a context in your theme, use the `{{is}}` helper. For example, in a partial template that is shared between many contexts, using `{{is}}` will pass it a context and only execute the contained block when it is in that context.
-
-
-### Context Table
-
-The table below provides the details of all the different contexts available in Ghost.
-
-It shows what the name of the context is, what their URLs or routes will look like, which template they use (in order of precedence), what data they have available to them and what is output by the [`{{body_class}}`](doc:body_class) helper.
-
-
-Table goes here.
-
