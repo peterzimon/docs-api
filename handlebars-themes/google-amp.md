@@ -1,7 +1,7 @@
 ---
 title: "Google AMP"
 date: "2018-10-01"
-meta_title: "Ghost Themes – Google AMP"
+meta_title: "Features: Google AMP"
 meta_description: "Ghost supports Google Accelerated Mobile Pages by default ⚡️ Discover all of the tools you need to develop AMP pages with Ghost!"
 keywords:
     - amp

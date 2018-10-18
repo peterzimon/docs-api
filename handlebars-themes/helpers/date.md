@@ -1,7 +1,7 @@
 ---
 title: "date"
 date: "2018-10-01"
-meta_title: "Ghost Handlebars Theme Helpers: date"
+meta_title: "Handlebars Theme Helpers: date"
 meta_description: "Output various date formats in your Ghost publication with the date helper. More about Ghost themes inside ✨"
 keywords:
     - api

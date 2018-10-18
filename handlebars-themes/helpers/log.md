@@ -1,7 +1,7 @@
 ---
 title: "log"
 date: "2018-10-01"
-meta_title: "Ghost Handlebars Theme Helpers: log"
+meta_title: "Handlebars Theme Helpers: log"
 meta_description: "A handy debugging handlebars helper for Ghost theme developers ⚡️ Read more about Ghost themes!"
 keywords:
     - api

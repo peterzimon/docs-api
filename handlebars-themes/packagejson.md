@@ -1,8 +1,8 @@
 ---
 title: "Package.json"
 date: "2018-10-01"
-meta_title: "The package.json file is a set of meta data about a theme, and is a requirement in your Ghost theme."
-meta_description: "Package.json"
+meta_title: "Handlebars Themes - package.json"
+meta_description: "The package.json file is a set of meta data about a theme, and is a requirement in your Ghost theme."
 next: 
   url: "/api/handlebars-themes/context/"
   title: "Contexts"

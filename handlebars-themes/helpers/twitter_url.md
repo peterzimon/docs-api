@@ -1,7 +1,7 @@
 ---
 title: "twitter_url"
 date: "2018-10-01"
-meta_title: "Ghost Handlebars Theme Helpers: Twitter"
+meta_title: "Handlebars Theme Helpers: Twitter"
 meta_description: "Connect your Ghost theme with your Twitter account. Read more about building custom Ghost themes! 👻"
 keywords:
     - api

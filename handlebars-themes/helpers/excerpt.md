@@ -2,7 +2,7 @@
 title: "excerpt"
 path: /api/handlebars-themes/helpers/data/excerpt/
 date: "2018-10-01"
-meta_title: "Ghost Handlebars Theme Helpers: excerpt"
+meta_title: "Handlebars Theme Helpers: excerpt"
 meta_description: "Learn how to create custom excerpts using Ghost Handlebars theme helpers. Build your custom theme today!"
 keywords:
     - api

@@ -1,7 +1,7 @@
 ---
 title: "navigation"
 date: "2018-10-01"
-meta_title: "Ghost Handlebars Theme Helpers: navigation"
+meta_title: "Handlebars Theme Helpers: navigation"
 meta_description: "Navigation is a template driven helper which outputs a HTML menu of items defined in the Ghost admin panel. Read more about Ghost themes!"
 keywords:
     - api

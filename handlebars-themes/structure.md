@@ -1,7 +1,7 @@
 ---
 title: "Structure"
 date: "2018-10-01"
-meta_title: "Stucture – Ghost Handlebars Themes"
+meta_title: "Handlebars Themes Structure"
 meta_description: "Discover the building blocks of a Handlebars theme in Ghost and start building your custom publication! Read more about the structure of a Ghost theme 👉"
 next: 
   url: "/api/handlebars-themes/packagejson/"
@@ -112,11 +112,11 @@ Each page in a Ghost theme belongs to a [context](/api/handlebars-themes/context
 When building themes it is important to consider the scope of classes and IDs to avoid clashes between your main styling and your post styling. IDs are automatically generated for headings and used inside a post, so it's best practice to scope things to a particular part of the page. For example: #themename-my-id is preferrable to #my-id.
 
 ### Development mode
-It is recommended to use a local install to build a custom theme using development mode – review the l[ocal install guide](/install/local/) to get started with your own local install for development.
+It is recommended to use a local install to build a custom theme using development mode – review the [local install guide](/install/local/) to get started with your own local install for development.
 
 In production mode, template files are loaded and cached by the server. For any changes in a `hbs` file to be reflected, use the `restart ghost` command.
 
-Ghost themes only support serving standard CSS and JS. There is no support for CSS preprocessors.
+Ghost will automatically check for fatal errors when you upload your theme into Ghost admin. For a full validation report during development, use the [GScan tool](https://gscan.ghost.org/).
 
 
 ## Summary

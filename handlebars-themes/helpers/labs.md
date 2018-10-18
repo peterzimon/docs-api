@@ -1,7 +1,7 @@
 ---
 title: "@labs"
 date: "2018-10-01"
-meta_title: "Ghost Handlebars Theme Helpers: @labs"
+meta_title: "Handlebars Theme Helpers: @labs"
 meta_description: "The @labs variable provides access to global data properties, which are available anywhere in your theme. Read more about Ghost themes! 👻"
 keywords:
     - api
