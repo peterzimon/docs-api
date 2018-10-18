@@ -11,7 +11,7 @@ keywords:
     - ghost
     - run
     - debugging
-sidebar: "Advanced"
+sidebar: "ghost-cli"
 ---
 
 Show the log of your Ghost site (not the CLI) using the log utility command.
