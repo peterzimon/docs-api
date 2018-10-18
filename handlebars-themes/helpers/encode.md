@@ -20,7 +20,7 @@ Usage: `{{encode value}}`
 The most obvious example of where this is useful is shown in Casper's `post.hbs`, for outputting a twitter share link:
 
 ```html
-<a class="icon-twitter" href="http://twitter.com/share?text={{encode title}}&url={{url absolute="true"}}"
+<a class="icon-twitter" href="http://twitter.com/share?text={{encode title}}&url={{url absolute='true'}}"
     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
     <span class="hidden">Twitter</span>
 </a>

@@ -48,7 +48,7 @@ The [{{pagination}}](doc:pagination) helper is the best way to output pagination
 
 ## Example Code
 
-```html
+```html:title=post.hbs
 <header>
   <h1 class="page-title">{{@blog.title}}</h1>
   <h2 class="page-description">{{@blog.description}}</h2>

@@ -19,7 +19,7 @@ A Ghost theme contains static HTML templates that make use of helpers to output 
 
 The recommended file structure for a Ghost theme is:
 
-```
+```bash:title=File structure
 .
 ├── /assets
 |   └── /css
@@ -35,7 +35,7 @@ The recommended file structure for a Ghost theme is:
 
 An optional `/partials` directory allows you to use partial templates across your site. This allows you to share blocks of HTML between multiple templates and reduce code duplication. 
 
-```
+```bash:title=File structure
 .
 ├── /assets
     ├── /css

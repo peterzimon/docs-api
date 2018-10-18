@@ -69,7 +69,7 @@ Using the `{{#post}}{{/post}}` block expression is the key trick to having a hap
 
 ## Example code
 
-```html
+```html:title=post.hbs
 <!-- Everything inside the #post tags pulls data from the post -->
 {{#post}}
 
@@ -110,7 +110,7 @@ For those sites, when the IDs changed after 1.0, Disqus was no longer able to as
 
 Example: The Disqus config in Ghost should look like this, with the code **inside** a `{{#post}}{{/post}}` block.
 
-```html
+```html:title=post.hbs
 {{#post}}
 <script>
   var disqus_config = function () {

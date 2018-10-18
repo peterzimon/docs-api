@@ -21,7 +21,7 @@ Usage: `{{lang}}`
 
 Please [read](/docs/i18n) through our i18n guide.
 
-```html
+```html:title=default.hbs
 <html lang="{{lang}}">
 ...
 </html>

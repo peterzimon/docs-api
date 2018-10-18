@@ -30,7 +30,12 @@ To use the `{{asset}}` helper to output the path for an asset, simply provide it
 For example:
 
 ```html
-<link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
-<script type="text/javascript" src="{{asset "js/index.js"}}"></script>
-<img src="{{asset "images/my-image.jpg"}}" />
+// Styles
+<link rel="stylesheet" type="text/css" href="{{asset 'css/style.css'}}" />
+
+// Scripts
+<script type="text/javascript" src="{{asset 'js/index.js'}}"></script>
+
+// Images
+<img src="{{asset 'images/my-image.jpg'}}" />
 ```

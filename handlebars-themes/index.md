@@ -50,7 +50,7 @@ Validating your Ghost theme is handled efficiently with the [GScan tool](https:/
 
 To use GScan as a command line tool, globally install the `gscan` npm package: 
 
-```bash
+```bashhtml:title=Terminal
 # Install the npm package
 npm install -g gscan
 

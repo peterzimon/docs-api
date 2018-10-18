@@ -23,7 +23,8 @@ For these author-specified options to work, themes need to support the HTML mark
 ### `<figure>` and `<figcaption>`
 
 Images and embeds will be output using the semantic `<figure>` and `<figcaption>` elements. For example:
-```html
+
+```html:title=Rendered Output
 <figure class="kg-image-card">
     <img class="kg-image" src="https://casper.ghost.org/v1.25.0/images/koenig-demo-1.jpg">
     <figcaption>An example image</figcaption>
@@ -39,8 +40,9 @@ This is only relevant when authors use the built-in image and embed cards, and t
 
 ### Image size options 
 
-The editor allows three size options for images: normal, wide and full width. These size options are achieved by adding `kg-width-wide` and `kg-width-full` classes to the `<figure>` elements in the HTML output. Here's an example for wide images: 
-```html
+The editor allows three size options for images: normal, wide and full width. These size options are achieved by adding `kg-width-wide` and `kg-width-full` classes to the `<figure>` elements in the HTML output. Here's an example for wide images:
+
+```html:title=Rendered Output
 <figure class="kg-image-card kg-width-wide">
     <img class="kg-image" src="https://casper.ghost.org/v1.25.0/images/koenig-demo-1.jpg">
 </figure>
@@ -52,9 +54,7 @@ Normal width image cards do not have any extra CSS classes.
 
 The specific implementation required for making images wider than their container width will depend on your theme's existing styles. The default Ghost theme Casper uses flexbox to implement layout using the following HTML and CSS: 
 
-```html
-<header>Ghost 2.0 - Flexbox</header>
-
+```html:title=Rendered Output
 <div class="content">
   <article>
     <h1>Image size implementation</h1>
@@ -80,8 +80,10 @@ The specific implementation required for making images wider than their containe
 
 <footer>An example post</footer>
 ```
+
 And the CSS: 
-```css
+
+```css:title=style.css
 .content {
   width: 70%;
   margin: 0 auto;
@@ -133,7 +135,7 @@ h1 {
 
 Traditional CSS layout doesn't support many elegant methods for breaking elements out of their container. The following example uses negative margins and transforms to acheive breakout. Themes that are based on Casper use similar techniques. 
 
-```css
+```css:title=style.css
 .content {
   width: 70%;
   margin: 0 auto;
@@ -189,7 +191,8 @@ The image gallery card requires some CSS and JS in your theme to function correc
 * `.kg-gallery-image`
 
 Example gallery HTML:
-```html
+
+```html:title=Rendered Output
 <figure class="kg-card kg-gallery-card kg-width-wide">
     <div class="kg-gallery-container">
         <div class="kg-gallery-row">

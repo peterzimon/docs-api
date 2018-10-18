@@ -47,7 +47,7 @@ The `{{subscribe_form}}` helper accepts a number of attributes:
 
 Here's some example code of how the `subscribe.hbs` page users the helper with all of the options: 
 
-```
+```html:title=Helper usage
 {{subscribe_form
   form_class="gh-signin"
   input_class="gh-input"
@@ -59,7 +59,7 @@ Here's some example code of how the `subscribe.hbs` page users the helper with a
 
 The form is used in the default [Casper](https://github.com/TryGhost/Casper/) theme at the bottom of the [post.hbs](https://github.com/TryGhost/Casper/blob/1.3.0/post.hbs/) template like so: 
 
-```
+```html:title=post.hbs
  {{!-- Email subscribe form at the bottom of the page --}}
  {{#if @labs.subscribers}}
    <section class="gh-subscribe">
@@ -75,7 +75,7 @@ The form is used in the default [Casper](https://github.com/TryGhost/Casper/) th
 
 The default template for the `{{subscribe_form}}` helper is shown below: 
 
-```
+```html:title=Rendered output
 <form method="post" action="{{action}}" class="{{form_class}}">
     {{! This is required for the form to work correctly }}
     {{hidden}}

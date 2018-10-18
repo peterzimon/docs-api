@@ -76,7 +76,7 @@ The [{{pagination}}](doc:pagination) helper is the best way to output pagination
 
 ## Example Code
 
-```html
+```html:title=author.hbs
 <!-- Everything inside the #author tags pulls data from the author -->
 {{#author}}
   <header>

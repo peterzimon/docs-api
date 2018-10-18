@@ -25,9 +25,8 @@ To reference a working example of a `package.json` file, review the [Casper file
 
 ## Example
 
-Below is an example of the required properties in `package.json`: 
 
-```
+```json:title=package.json
 {
     "name": "your-theme-name",
     "description": "A brief explanation of your theme",
