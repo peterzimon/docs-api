@@ -11,12 +11,12 @@ keywords:
 sidebar: "ghost-cli"
 ---
 
-Learn more about using the Ghost-CLI for a smooth install, run and update process when working with Ghost, and how to take advantage of it's flexibility. 
+Learn more about using the Ghost-CLI for a smooth install, run and update process when working with Ghost, and how to take advantage of it's flexibility.
 
 
 ## Overview
 
-Below is a list of the things the `ghost-cli` handles: 
+Below is a list of the things the `ghost-cli` handles:
 
 - Checks for common environment problems
 - Creates a **useful folder structure**
@@ -47,12 +47,12 @@ config.[env].json #env is production or development
 
 #### config.[env].json
 
-These files contain the config for your site, read more here. 
-You can add information about your site and it's theme in these files. 
+These files contain the config for your site, read more here.
+You can add information about your site and it's theme in these files.
 
 #### /content
 
-Themes, images, redirects, custom adapters will live in this folder. This folder is owned by the ghost user and it is recommended to keep a backup of this folder. 
+Themes, images, redirects, custom adapters will live in this folder. This folder is owned by the ghost user and it is recommended to keep a backup of this folder.
 
 #### /current
 
@@ -72,7 +72,7 @@ Contains the versions of Ghost which are currently available on your machine. Th
 
 #### .ghost-cli
 
-This file contains some information that Ghost-CLI needs about your install in order to perform certain tasks. There's no need to worry about this file and it's recommended that you don't edit it! 
+This file contains some information that Ghost-CLI needs about your install in order to perform certain tasks. There's no need to worry about this file and it's recommended that you don't edit it!
 
 
 ## NGINX
@@ -81,11 +81,11 @@ NGINX is the web server that backs your Ghost publication. The CLI generates a N
 
 ## SSL
 
-The CLI generates a free SSL certificate from [Let’s Encrypt](#section-let-s-encrypt) using [acme.sh](#section-let-s-encrypt) and a secondary NGINX config file to serve https traffic via port 443.
+The CLI generates a free SSL certificate from [Let’s Encrypt](#lets-encrypt) using [acme.sh](#lets-encrypt) and a secondary NGINX config file to serve https traffic via port 443.
 
 #### SSL configuration
 
-After a successful ssl setup, you can find your ssl certificate in `/etc/letsencrypt`. 
+After a successful ssl setup, you can find your ssl certificate in `/etc/letsencrypt`.
 
 
 #### SSL for additional domains
@@ -105,7 +105,7 @@ ghost setup nginx ssl
 # Change your config back to your canonical domain
 ghost config url https://my-canonical-domain.com
 
-# Edit the nginx config files for your second domain to redirect to your canonical domain. In both files replace the content of the first location block with: 
+# Edit the nginx config files for your second domain to redirect to your canonical domain. In both files replace the content of the first location block with:
 return 301 https://my-canonical-domain.com$request_uri;
 
 # Get nginx to verify your config
@@ -129,7 +129,7 @@ Ghost uses [acme.sh](https://github.com/Neilpang/acme.sh) for provisioning and r
 
 ## Systemd
 
-`systemd` is the default way of starting and stopping applications on Ubuntu. The advantage is that if Ghost crashes, `systemd` will restart your instance. This is the default recommended process manager. 
+`systemd` is the default way of starting and stopping applications on Ubuntu. The advantage is that if Ghost crashes, `systemd` will restart your instance. This is the default recommended process manager.
 
 ## Permissions
 
@@ -137,7 +137,7 @@ Ghost-CLI will create a new system user and user-group called `ghost` during the
 
 This means that Ghost will run with a user that has no system-wide permissions or a shell that can be used (similar to other services such as NGINX). Sudo is required to modify files in the The  `<install-directory>/content/`.
 
-To prevent accidental permissions changes, it's advisable to execute tasks such as image upload or theme upload using Ghost admin. 
+To prevent accidental permissions changes, it's advisable to execute tasks such as image upload or theme upload using Ghost admin.
 
 
 ### File Permissions
@@ -162,7 +162,7 @@ The cli doesn't support directory flags such as `setuid` and `setguid`). If your
 
 ## Keeping Ghost CLI updated
 
-It's important to keep `ghost-cli` up to date, as well as Ghost. If your CLI is out of date and you've been running certain commands in your terminal then you may see an error message that your version of the CLI is outdated. To upgrade use: 
+It's important to keep `ghost-cli` up to date, as well as Ghost. If your CLI is out of date and you've been running certain commands in your terminal then you may see an error message that your version of the CLI is outdated. To upgrade use:
 
 ```bash
 
