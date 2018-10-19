@@ -29,8 +29,3 @@ Currently Ghost has support for below 3 events on which webhook can be setup, bu
 |`site.changed`|Triggered whenever any content changes in your site data or settings|
 |`subscriber.added`|Triggered whenever a new subscriber signs up for a newsletter|
 |`subscriber.deleted`|Triggered when someone unsubscribes or is deleted|
-
-
-## Verifying authenticity
-
-All webhooks can be configured to send with an optional `secret` via the `X-Ghost-Secret` header, with which you can verify the authenticity of incoming requests if needed.
