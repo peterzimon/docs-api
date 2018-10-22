@@ -52,7 +52,7 @@ Each command is documented in detail on its own page:
 - [ghost restart](/api/ghost-cli/restart/) 
 - [ghost run](/api/ghost-cli/run/) 
 - [ghost update](/api/ghost-cli/update/) 
-- [ghost uninstall](/api/ghost-cli/unstall/)
+- [ghost uninstall](/api/ghost-cli/uninstall/)
 
 
 ## Useful flags
