@@ -1,5 +1,5 @@
 ---
-title: "facebook_url"
+title: "facebook"
 date: "2018-10-01"
 meta_title: "Handlebars Theme Helpers: facebook"
 meta_description: "Connect your Ghost theme to your Facebook account. Read more about building custom Ghost themes! 👻!"
