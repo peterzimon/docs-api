@@ -1,7 +1,7 @@
 ---
 title: "@config"
 date: "2018-10-01"
-meta_title: "Handlebars Theme Helpers: @config"
+meta_title: "Ghost Handlebars Theme Helpers: @config"
 meta_description: "How to access global data properties with @config in your Handlebars theme. Read more about Ghost themes ⚡️"
 keywords:
     - api

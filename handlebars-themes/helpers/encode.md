@@ -1,7 +1,7 @@
 ---
 title: "encode"
 date: "2018-10-01"
-meta_title: "Handlebars Theme Helpers: encode"
+meta_title: "Ghost Handlebars Theme Helpers: encode"
 meta_description: "Encode strings for a URL in your Ghost theme with this handlebars helper. Read more about themes 👻"
 keywords:
     - api

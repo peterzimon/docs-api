@@ -1,12 +1,12 @@
 ---
 title: "Author"
-meta_title: "Handlebars Themes – Ghost"
-meta_description: "Our handlebars theme templating framework works with the Ghost API to build flexible publishing websites. Start building your custom theme here!"
+meta_title: "Author Context: Ghost Themes - Documentation"
+meta_description: "The author context in Ghost assigns each publication author with their own page. Learn more about contexts and building a custom theme 👻"
 keywords:
     - api
     - handlebars
     - themes
-    - helpers
+    - contexts
 sidebar: "handlebars"
 ---
 

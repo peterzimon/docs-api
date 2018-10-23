@@ -1,7 +1,7 @@
 ---
 title: "config"
 date: "2018-10-01"
-meta_title: "CLI commands: config"
+meta_title: "Ghost-CLI commands: config - Documentation"
 meta_description: "Create and manage configuration for a Ghost instance using advanced CLI tooling."
 next:
   url: "/api/ghost-cli/install/"

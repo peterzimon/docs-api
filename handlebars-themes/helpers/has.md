@@ -1,7 +1,7 @@
 ---
 title: "has"
 date: "2018-10-01"
-meta_title: "Handlebars Theme Helpers: has"
+meta_title: "Ghost Handlebars Theme Helpers: has"
 meta_description: "#has allows theme developers to ask questions about the current context and provides more flexibility ⚡️ Read more about custom Ghost themes!"
 keywords:
     - api

@@ -1,8 +1,8 @@
 ---
 title: "ls"
 date: "2018-10-01"
-meta_title: "CLI utilities: ls"
-meta_description: "List all Ghost sites and their status"
+meta_title: "Ghost-CLI utilities: ls - Documentation"
+meta_description: "Use this command to list all Ghost sites and their status using the Ghost-CLI tool. Read more in the official documentation."
 next:
   url: "/api/ghost-cli/run/"
   title: "Run"

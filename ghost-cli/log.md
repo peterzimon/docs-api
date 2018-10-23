@@ -1,7 +1,7 @@
 ---
 title: "log"
 date: "2018-10-01"
-meta_title: "CLI utilities: log"
+meta_title: "Ghost-CLI utilities: log - Documentation"
 meta_description: "Start a Ghost instance in the foreground for debugging"
 next:
   url: "/api/ghost-cli/knowledgebase/"

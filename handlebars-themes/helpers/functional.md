@@ -1,7 +1,7 @@
 ---
 title: "Functional Helpers"
 date: "2018-10-01"
-meta_title: "Handlebars Themes - Functional Helpers"
+meta_title: "Ghost Handlebars Themes - Functional Helpers"
 meta_description: "Discover how to work with the full range of functional helpers in a custom Ghost theme. Learn more about Handlebars themes!"
 keywords:
     - api

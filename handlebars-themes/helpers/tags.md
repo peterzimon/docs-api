@@ -1,7 +1,7 @@
 ---
 title: "tags"
 date: "2018-10-01"
-meta_title: "Handlebars Theme Helpers: tags"
+meta_title: "Ghost Handlebars Theme Helpers: tags"
 meta_description: "Find out how to build a list of tags for a post in your Ghost theme using the tags Handlebars helper. Read more about Ghost themes!"
 keywords:
     - api

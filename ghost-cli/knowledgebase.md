@@ -1,7 +1,7 @@
 ---
 title: "Knowledge Base"
 date: "2018-10-01"
-meta_title: "CLI Knowledge Base"
+meta_title: "Ghost-CLI Knowledge Base - Documentation"
 meta_description: "Advanced information about the Ghost-CLI and how it works!"
 keywords:
     - cli

@@ -1,13 +1,13 @@
 ---
 title: "Index"
 date: "2018-10-01"
-meta_title: "Index Context: Ghost Themes"
-meta_description: "The index context is used in Ghost themes to render lists of posts in a publication. Learn more about contexts and building custom theme 👻"
+meta_title: "Index Context: Ghost Themes - Documentation"
+meta_description: "The index context in Ghost themes is used to render lists of posts in a publication. Learn more about contexts and building a custom theme 👻"
 keywords:
-    - api
+    - contexts
     - handlebars
     - themes
-    - helpers
+    - api
 sidebar: "handlebars"
 ---
 

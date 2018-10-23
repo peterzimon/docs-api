@@ -1,7 +1,7 @@
 ---
 title: "post"
 date: "2018-10-01"
-meta_title: "Handlebars Theme Helpers: post"
+meta_title: "Ghost Handlebars Theme Helpers: post"
 meta_description: "Output content from your Ghost publication to your live site using the post Handlebars helper. Read more about Ghost themes!"
 keywords:
     - api

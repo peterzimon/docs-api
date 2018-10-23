@@ -1,13 +1,14 @@
 ---
 title: "Context Overview"
 date: "2018-10-01"
-meta_title: "Context Overview: Ghost Themes"
-meta_description: "Ghost themes use contexts to determine how to render pages on a publication. Learn more about contexts and building custom theme!"
+path: /api/handlebars-themes/context/
+meta_title: "Context Overview: Ghost Themes - Documentation"
+meta_description: "Ghost themes use contexts to determine how to render pages on a publication. Learn more about contexts and building your own custom theme!"
 keywords:
     - api
     - handlebars
     - themes
-    - helpers
+    - contexts
 sidebar: "handlebars"
 ---
 

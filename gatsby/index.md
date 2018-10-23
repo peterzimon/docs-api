@@ -1,12 +1,20 @@
 ---
 title: "Gatsby"
+date: "2018-10-01"
+meta_title: "Using Gatsby.js as a front end with Ghost"
+meta_description: "Ghost is fully compatible with static site generators like Gatsby. Find out how the Ghost API works as a headless CMS!"
+keywords:
+    - content
+    - handlebars
+    - themes
+    - editor
 keywords:
     - gatsby
 ---
 
-Using Gatsby.js as a front end with Ghost
+Using Gatsby.js as a front end with Ghost!
 
-Ghost is fully compatible with static site generators like Gatsby, but we're just getting started i this department so our documentation is a little light.
+Ghost is fully compatible with static site generators like Gatsby, but we're just getting started in this department so our documentation is a little light.
 
 That said, this entire docs site is built with Gatsby using the Ghost API as a headless CMS, so you're looking at proof that it really works!
 

@@ -1,7 +1,7 @@
 ---
 title: "Migrating to Ghost"
 date: "2018-10-01"
-meta_title: "How to Migrate to Ghost"
+meta_title: "How to Migrate to Ghost from other platforms - Docs"
 meta_description: "A detailed guide for migrating to the Ghost publishing platform from WordPress, Tumblr, Medium, Blogger, and other CMS."
 keywords:
     - import

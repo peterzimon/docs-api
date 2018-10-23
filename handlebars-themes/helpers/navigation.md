@@ -1,7 +1,7 @@
 ---
 title: "navigation"
 date: "2018-10-01"
-meta_title: "Handlebars Theme Helpers: navigation"
+meta_title: "Ghost Handlebars Theme Helpers: navigation"
 meta_description: "Find out how to output a navigation menu in a custom Ghost theme using the navigation helper. Read more about Ghost themes!"
 keywords:
     - api

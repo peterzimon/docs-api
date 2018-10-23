@@ -1,7 +1,7 @@
 ---
 title: "foreach"
 date: "2018-10-01"
-meta_title: "Handlebars Theme Helpers: foreach"
+meta_title: "Ghost Handlebars Theme Helpers: foreach"
 meta_description: "Discover how to work with lists of posts in Ghost with the foreach Handlebars helper."
 keywords:
     - api

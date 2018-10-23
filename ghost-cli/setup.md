@@ -1,7 +1,7 @@
 ---
 title: "setup"
 date: "2018-10-01"
-meta_title: "CLI commands: setup"
+meta_title: "Ghost-CLI commands: setup - Documentation"
 meta_description: "The real magic in the Ghost-CLI is the automated setup process. Find out how to get started with Ghost using a single command"
 next:
   url: "/api/ghost-cli/start/"

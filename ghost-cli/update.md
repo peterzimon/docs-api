@@ -1,8 +1,8 @@
 ---
 title: "update"
 date: "2018-10-01"
-meta_title: "CLI commands: update"
-meta_description: "Find out how to update your Ghost version using the CLI."
+meta_title: "Ghost-CLI commands: update - Documentation"
+meta_description: "Find out how to update your Ghost version using the CLI tool. Read more in the official Ghost documentation."
 next:
   url: "/api/ghost-cli/doctor/"
   title: "Doctor"

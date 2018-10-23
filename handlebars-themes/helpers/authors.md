@@ -1,7 +1,7 @@
 ---
 title: "authors"
 date: "2018-10-01"
-meta_title: "Handlebars Theme Helpers: authors"
+meta_title: "Ghost Handlebars Theme Helpers: authors"
 meta_description: "How to work with Authors in a Ghost theme & the formatting helper. Read more about Ghost themes!"
 keywords:
     - api

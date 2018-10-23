@@ -1,7 +1,7 @@
 ---
 title: "if"
 date: "2018-10-01"
-meta_title: "Handlebars Theme Helpers: if"
+meta_title: "Ghost Handlebars Theme Helpers: if"
 meta_description: "Test simple conditionals and execute different templates using this Handlebars theme helper in your custom Ghost theme."
 keywords:
     - api

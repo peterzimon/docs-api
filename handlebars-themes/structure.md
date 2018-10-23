@@ -1,8 +1,8 @@
 ---
 title: "Structure"
 date: "2018-10-01"
-meta_title: "Handlebars Themes Structure"
-meta_description: "Discover the building blocks of a Handlebars theme in Ghost and start building a custom publication!"
+meta_title: "Ghost Handlebars Theme Structure - Documenation"
+meta_description: "Discover the building blocks of a Handlebars theme in Ghost and start building a custom publication of your own! 👻"
 next: 
   url: "/api/handlebars-themes/packagejson/"
   title: "Package.json"

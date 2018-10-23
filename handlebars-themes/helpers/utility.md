@@ -1,7 +1,7 @@
 ---
 title: "Utility Helpers"
 date: "2018-10-01"
-meta_title: "Handlebars Themes - Utility Helpers"
+meta_title: "Ghost Handlebars Themes - Utility Helpers"
 meta_description: "Utility helpers are used to perform minor tasks on your Ghost publcation. Learn more about developing with Ghost themes!"
 keywords:
     - api

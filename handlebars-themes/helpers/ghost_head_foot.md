@@ -1,7 +1,7 @@
 ---
 title: "ghost_head/foot"
 date: "2018-10-01"
-meta_title: "Handlebars Theme Helpers: ghost_head/foot"
+meta_title: "Ghost Handlebars Theme Helpers: ghost_head/foot"
 meta_description: "Create responsive headers and footers for your Ghost theme with the ghost_head/foot helper. Read more about Ghost themes! 👻"
 keywords:
     - api

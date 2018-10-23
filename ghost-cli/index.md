@@ -1,7 +1,7 @@
 ---
 title: "Ghost CLI"
 date: "2018-10-01"
-meta_title: "CLI - A fully loaded tool for installation and configuration"
+meta_title: "Ghost-CLI - A fully loaded tool for installation and configuration"
 meta_description: "The best way to install, manage, and update your site locally or when self-hosting Ghost. A full guide for our advanced CLI tool."
 next:
   url: "/api/ghost-cli/config/"

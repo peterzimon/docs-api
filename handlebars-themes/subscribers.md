@@ -1,7 +1,7 @@
 ---
 title: "Subscribers"
 date: "2018-10-01"
-meta_title: "Theme Features: Subscribers"
+meta_title: "Theme Features: Subscribers - Documentation"
 meta_description: "Discover how to collect subscriber emails from your Ghost publication with this neat feature and some additional helpers in your theme!"
 keywords:
     - subscribers

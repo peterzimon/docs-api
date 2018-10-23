@@ -1,7 +1,7 @@
 ---
 title: "get"
 date: "2018-10-01"
-meta_title: "Handlebars Theme Helpers: get"
+meta_title: "Ghost Handlebars Theme Helpers: get"
 meta_description: "Make custom queries to the Ghost API using the get helper and fetch publicly available data. Read more about Ghost themes! 👻"
 keywords:
     - api

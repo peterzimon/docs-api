@@ -1,7 +1,7 @@
 ---
 title: "help"
 date: "2018-10-01"
-meta_title: "CLI commands: help"
+meta_title: "Ghost-CLI commands: help - Documentation"
 meta_description: "Diagnose potential issues for installing and updating ghost using a single command in the CLI tool."
 next:
   url: "/api/ghost-cli/ls/"

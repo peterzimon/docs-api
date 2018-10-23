@@ -1,7 +1,7 @@
 ---
 title: "doctor"
 date: "2018-10-01"
-meta_title: "CLI commands: doctor"
+meta_title: "Ghost-CLI commands: doctor - Documentation"
 meta_description: "Diagnose potential issues for installing and updating ghost using a single command in the CLI tool."
 next:
   url: "/api/ghost-cli/uninstall/"

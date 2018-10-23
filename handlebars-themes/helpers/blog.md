@@ -1,7 +1,7 @@
 ---
 title: "@blog"
 date: "2018-10-01"
-meta_title: "Handlebars Theme Helpers: @blog"
+meta_title: "Ghost Handlebars Theme Helpers: @blog"
 meta_description: "How to access global data properties with @blog in your Ghost theme. Read more 👉"
 keywords:
     - api

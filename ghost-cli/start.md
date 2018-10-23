@@ -1,8 +1,8 @@
 ---
 title: "start"
 date: "2018-10-01"
-meta_title: "CLI commands: start"
-meta_description: "Run Ghost in the background using your default process manager."
+meta_title: "Ghost-CLI commands: start - Documentation"
+meta_description: "Run Ghost in the background using your default process manager with a single command using Ghost-CLI. Read more in the official documentation." 
 next:
   url: "/api/ghost-cli/stop/"
   title: "Stop"

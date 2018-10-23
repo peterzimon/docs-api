@@ -1,8 +1,8 @@
 ---
 title: "restart"
 date: "2018-10-01"
-meta_title: "CLI commands: restart"
-meta_description: "Stop and then start your site with this simple command."
+meta_title: "Ghost-CLI commands: restart - Documentation"
+meta_description: "Stop and start your Ghost site with this simple command with the Ghost-CLI. Read more in the Ghost documentation."
 next:
   url: "/api/ghost-cli/update/"
   title: "Update"

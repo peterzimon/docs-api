@@ -1,8 +1,8 @@
 ---
 title: "uninstall"
 date: "2018-10-01"
-meta_title: "CLI commands: uninstall"
-meta_description: "Diagnose potential issues for installing and updating ghost using a single command in the CLI tool."
+meta_title: "Ghost-CLI commands: uninstall - Documentation"
+meta_description: "Diagnose potential issues for installing and updating Ghost using a single command in the Ghost-CLI tool."
 next:
   url: "/api/ghost-cli/help/"
   title: "Help"

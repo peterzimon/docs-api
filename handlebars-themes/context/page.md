@@ -1,13 +1,13 @@
 ---
 title: "Page"
 date: "2018-10-01"
-meta_title: "Page Context: Ghost Themes"
-meta_description: "The page context is used in Ghost themes to render pages in a publication. Learn more about contexts and building custom theme!"
+meta_title: "Page Context: Ghost Themes - Documentation"
+meta_description: "The page context is used in Ghost themes to render pages in a publication. Learn more about contexts and building a custom theme!"
 keywords:
     - api
     - handlebars
     - themes
-    - helpers
+    - contexts
 sidebar: "handlebars"
 ---
 

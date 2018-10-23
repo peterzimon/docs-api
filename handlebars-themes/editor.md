@@ -1,8 +1,8 @@
 ---
 title: "Editor"
 date: "2018-10-01"
-meta_title: " Theme Features: Editor"
-meta_description: "Find out how to ensure your theme is fully compatible with the open-source rich editor inside of Ghost!"
+meta_title: "Ghost Theme Features: The Editor - Documentation"
+meta_description: "Find out how to ensure your theme is fully compatible with the open-source rich editor inside of Ghost and start publishing!"
 keywords:
     - content
     - handlebars

@@ -2,8 +2,8 @@
 title: "Ghost Handlebars Themes"
 path: /api/handlebars-themes/
 date: "2018-10-01"
-meta_title: "Handlebars Themes"
-meta_description: "Our handlebars theme templating framework works with the Ghost API to build flexible publishing websites. Start building your custom Ghost theme here!"
+meta_title: "Ghost Handlebars Themes - Building a custom Ghost theme - Docs"
+meta_description: "Our handlebars theme templating framework works with the Ghost API to build flexible publishing websites. Get all the tools you need to start building your custom theme here!"
 next: 
   url: "/api/handlebars-themes/structure/"
   title: "Structure"
@@ -12,7 +12,7 @@ keywords:
     - ghost
     - handlebars
     - themes
-    - helpers
+    - templates
 ---
 
 The Ghost theme layer has been engineered to give developers and designers the flexibility to build custom publications that are powered by the Ghost platform.

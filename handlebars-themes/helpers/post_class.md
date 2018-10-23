@@ -1,7 +1,7 @@
 ---
 title: "post_class"
 date: "2018-10-01"
-meta_title: "Handlebars Theme Helpers: post_class"
+meta_title: "Ghost Handlebars Theme Helpers: post_class"
 meta_description: "Target specific posts in a Ghost publication with styles using the post_class handlebars helper. Read more about Ghost themes! 👻"
 keywords:
     - api
