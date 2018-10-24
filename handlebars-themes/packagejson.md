@@ -20,7 +20,7 @@ The `package.json` file is a set of meta data about a theme.
 
 The `package.json` file is a required file and sets some information about your theme. Edit this file and keep it up to date with the relevant information about your publication's theme. 
 
-To reference a working example of a `package.json` file, review the [Casper file](https://github.com/TryGhost/Casper/blob/master/package.json/), and for further information about specific details of package.json handling, read the [npm docs](https://docs.npmjs.com/files/package.json/). 
+To reference a working example of a `package.json` file, review the [Casper file](https://github.com/TryGhost/Casper/blob/master/package.json/), and for further information about specific details of package.json handling, read the [npm docs](https://docs.npmjs.com/files/package.json). 
 
 
 ## Example
