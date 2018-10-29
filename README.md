@@ -1,6 +1,6 @@
 # Docs Api
 
-tbd
+Versioned content for Ghost documentation. This repository is a submodule of https://github.com/tryghost/docs
 
 # Copyright & License
 
