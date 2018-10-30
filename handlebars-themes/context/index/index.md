@@ -16,7 +16,7 @@ Use: {{#is "index"}}{{/is}} to detect this context.
 
 ## Description
 
-`index` is the name for the main post list in your Ghost site, the `index` context includes the home page and subsequent pages of the main post list. The `index` context is always paired with either the `home` context when on the first page of your site, or the `paged` context when on subsequent pages.
+`index` is the name for the main post list in your Ghost site, the `index` context includes the home page and subsequent pages of the main post list. The `index` context is always paired with either the `home` context when on the first page of your site, or the `page` context when on subsequent pages.
 
 ## Routes
 
