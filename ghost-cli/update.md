@@ -14,7 +14,7 @@ keywords:
 sidebar: "ghost-cli"
 ---
 
-The vast majority of upgrades in Ghost are completely automatic. Typically, we release a minor version of Ghost 1-2 times per week.
+The vast majority of Ghost upgrades are automated from a single command. Typically, we release a minor version of Ghost 1-2 times per week.
 
 The Ghost-CLI has a single command for upgrades: `ghost update`. 
 
