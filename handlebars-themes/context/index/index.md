@@ -52,7 +52,7 @@ The [{{pagination}}](/api/handlebars-themes/helpers/pagination/) helper is the b
 
 ## Example Code
 
-```handlebars:title=post.hbs
+```handlebars:title=index.hbs
 <header>
   <h1 class="page-title">{{@blog.title}}</h1>
   <h2 class="page-description">{{@blog.description}}</h2>
