@@ -22,8 +22,8 @@ Updating can be done using a single command, `ghost update`, however there are a
 
 Check out the latest upgrade guides to ensure you carry out all of the necessary steps for a smooth upgrade: 
 
-* [Ghost 1.0](/faq/upgrade-to-ghost-2-0/)
-* [Ghost 2.0](/faq/upgrade-to-ghost-1-0/) (latest major version)
+* [Ghost 1.0](/faq/upgrade-to-ghost-1-0/)
+* [Ghost 2.0](/faq/upgrade-to-ghost-2-0/) (latest major version)
 
 
 ## Options
