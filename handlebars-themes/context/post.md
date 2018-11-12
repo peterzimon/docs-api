@@ -46,12 +46,12 @@ When outputting the post, you can use a block expression (`{{#post}}{{/post}}`) 
 ### Post object attributes
 
 - **id** - the Object ID of the post
-- **comment_id** - The old, pre-1.0 incremental id of a post if present, or else the new Object ID ( special attributes: comment id
+- **comment_id** - The old, pre-1.0 incremental id of a post if present, or else the new Object ID
 - **title** - the title of your site post title helper
 - **slug** - slugified version of the title (used in urls and also useful for class names)
 - **excerpt** - a short preview of your post content excerpt helper
 - **content** - the content of the post content helper
-- **url** - the web address for the post page (see url helper] and special attributes
+- **url** - the web address for the post page (see url helper) and special attributes
 - **feature_image** - the cover image associated with the post img_url helper
 - **featured** - indicates a featured post. Defaults to `false`
 - **page** `true` if the post is a page. Defaults to `false`
