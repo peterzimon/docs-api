@@ -202,42 +202,13 @@ When Ghost detects an error, the import will be cancelled, no information is imp
 
 An Error or warning should contain a relevant message on why the import was not successful along with a the relevant JSON entry that caused the issue where applicable.
 
-An example of an error would be a JSON file that contains a null email field.
+An example of an error would be a JSON file that contains a null email field:
 
-```json
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/e56ea53-ScreenShot2017-06-06at18.48.05.png",
-        "Screen+Shot+2017-06-06+at+18.48.05.png",
-        1821,
-        530,
-        "#f1f7f8"
-      ],
-      "caption": "Import Error"
-    }
-  ]
-}
-```
+![Import Failed](../images/api/import-failed.png)
+
 
 ### Warning
 
 Your blog may contain multiple warnings. These are issues that may want to know about but are not significant enough to prevent the data being imported. Examples of this include a duplicate user (either duplicated in your JSON file or matching an existing user) or a post linked to an unknown user. 
 
-```json
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/54cc472-ScreenShot2017-06-06at19.00.36.png",
-        "Screen+Shot+2017-06-06+at+19.00.36.png",
-        1653,
-        604,
-        "#f2f6f8"
-      ],
-      "caption": "Import Warning"
-    }
-  ]
-}
-```
+![Import Warnings](../images/api/import-warnings.png)
