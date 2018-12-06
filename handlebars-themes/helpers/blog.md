@@ -14,14 +14,15 @@ sidebar: "handlebars"
 The `@blog` property provides access to global data properties, which are available anywhere in your theme:
 
 - `{{@blog.url}}` – the url specified for this blog in your custom config file
-- `{{@blog.title}}` – the blog title from the settings page
-- `{{@blog.description}}` – the blog description from the settings page
-- `{{@blog.logo}}` – the blog logo from the settings page
-- `{{@blog.cover_image}}` – the blog cover image from the settings page
-- `{{@blog.twitter}}` – the twitter username from the settings page 
-- `{{@blog.facebook}}` – the facebook username / page name from the settings page (see 
-- `{{@blog.navigation}}` – the navigation information configured on the settings/navigation page
-- `{{@blog.timezone}}` – the timezone as configured in settings
+- `{{@blog.title}}` – the blog title from general settings
+- `{{@blog.description}}` – the blog description from general settings
+- `{{@blog.icon}}` - The publication icon from general settings
+- `{{@blog.logo}}` – the blog logo from general settings
+- `{{@blog.cover_image}}` – the blog cover image from general settings
+- `{{@blog.twitter}}` – the twitter URL from general settings 
+- `{{@blog.facebook}}` – the facebook URL from general settings
+- `{{@blog.navigation}}` – the navigation information configured in settings/design
+- `{{@blog.timezone}}` – the timezone as configured in general settings
 
 ### Example Code
 
