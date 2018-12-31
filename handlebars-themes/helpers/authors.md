@@ -123,6 +123,6 @@ To output just the singular, first author, use the `{{primary_author}}` helper t
 <div class="author">
     <a href="{{url}}">{{name}}</a>
     <span class="bio">{{bio}}</span>
-<div>
+</div>
 {{/primary_author}}
 ```
