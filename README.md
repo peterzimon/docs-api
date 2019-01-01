@@ -4,4 +4,4 @@ Versioned content for Ghost documentation. This repository is a submodule of htt
 
 # Copyright & License
 
-Copyright (c) 2018 Ghost Foundation - Released under the [MIT license](LICENSE).
+Copyright (c) 2018-2019 Ghost Foundation - Released under the [MIT license](LICENSE).
