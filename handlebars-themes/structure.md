@@ -114,7 +114,7 @@ When building themes it is important to consider the scope of classes and IDs to
 ### Development mode
 It is recommended to use a local install to build a custom theme using development mode – review the [local install guide](/install/local/) to get started with your own local install for development.
 
-In production mode, template files are loaded and cached by the server. For any changes in a `hbs` file to be reflected, use the `restart ghost` command.
+In production mode, template files are loaded and cached by the server. For any changes in a `hbs` file to be reflected, use the `ghost restart` command.
 
 Ghost will automatically check for fatal errors when you upload your theme into Ghost admin. For a full validation report during development, use the [GScan tool](https://gscan.ghost.org/).
 
