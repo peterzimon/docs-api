@@ -17,9 +17,7 @@ To achieve this, we're in the process of abstracting out Ghost's [handlebars hel
 
 ## Tags
 
-Pass a post, or an object with a tags array to the tags helper, and it will handle filtering and outputting tags for you.
-
-By default, the helper will output a comma separated list of tag names, excluding any internal tags.
+The tags helper filters and outputs tags. By default, the helper will output a comma separated list of tag names, excluding any internal tags.
 
 ```javascript
 // Outputs e.g. Posted in: New Things, Releases, Features.
@@ -27,6 +25,8 @@ posts.forEach((post) => {
     tags(post, {prefix: 'Posted in: ', suffix: '.'});
 });
 ```
+
+The first argument must be a post object, or any object that has a `tags` array.
 
 ### Options
 
