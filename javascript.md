@@ -92,8 +92,6 @@ api.settings.browse();
 
 `yarn add @tryghost/content-api`
 
-or
-
 `npm install @tryghost/content-api`
 
 You can also use the standalone UMD build:
@@ -108,7 +106,7 @@ ES modules:
 import GhostContentAPI from '@tryghost/content-api'
 ```
 
-Node.js
+Node.js:
 
 ```javascript
 const GhostContentAPI = require('@tryghost/content-api');

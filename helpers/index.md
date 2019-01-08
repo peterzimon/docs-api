@@ -46,8 +46,6 @@ The tag helper supports multiple options so that you can control exactly what is
 
 `yarn add @tryghost/helpers`
 
-or
-
 `npm install @tryghost/helpers`
 
 You can also use the standalone UMD build:
@@ -62,7 +60,7 @@ ES modules:
 import {tags} from '@tryghost/helpers'
 ```
 
-Node.js
+Node.js:
 
 ```javascript
 const tags = require('@tryghost/helpers').tags;
