@@ -15,7 +15,7 @@ Ghost provides a flexible promise-based JavaScript library for accessing the Con
 ```javascript
 const api = new GhostContentAPI({
   host: 'https://demo.ghost.io',
-  key: '993caa7db6dee20559e99d3f90',
+  key: '22444f78447824223cefc48062',
   version: 'v2'
 });
 

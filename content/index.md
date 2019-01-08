@@ -34,14 +34,14 @@ All Ghost(Pro) blogs have a `*.ghost.io domain` as their admin domain and requir
 
 ### Key
 
-`?key=0123456789abcdef0123456789`.
+`?key=22444f78447824223cefc48062`.
 
 The Content API only ever returns public data. Content API keys can be obtained from the Integrations screen in Ghost Admin. The key is provided to the API as a query parameter.
 
 ## Basic Example
 
 ```bash
-curl GET "https://demo.ghost.io/ghost/api/v2/content/posts/?key=993caa7db6dee20559e99d3f90"
+curl GET "https://demo.ghost.io/ghost/api/v2/content/posts/?key=22444f78447824223cefc48062"
 ```
 
 
