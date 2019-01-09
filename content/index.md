@@ -407,12 +407,12 @@ By default, only `html` is returned, however each post and page in Ghost has 3 a
 
 (Browse requests only)
 
-It is possible to apply fine-grained filters so that only very specific data is returned.
+Aply fine-grained filters to target specific data
 
 - `&filter=featured:true` on posts, would return only those marked featured.
 - `&filter=tag:getting-started` on posts, would return those with the tag slug that matches `getting-started`.
 
-The possibilities are extensive and the format used for filter query strings is explained in detail in the [filtering](#filtering) section.
+The possibilities are extensive! Query strings are explained in detail in the [filtering](#filtering) section.
 
 ### Limit
 
@@ -452,7 +452,7 @@ Ghost uses a query language called NQL to perform filters on the API.
 
 NQL can filter on any field or included field, using matches, greater/less than or negation, as well as combining with and/or. NQL doesn't yet support 'like' or partial matches.
 
-Filter strings must be URL encoded. When using the `{{get}}` helper or a [api client](/api/javascript) this complexity is handled for you.
+Filter strings must be URL encoded. When using the [{{get}}](/api/handlebars-themes/helpers/get/) helper or a [api client](/api/javascript) this complexity is handled for you.
 
 At it's most simple, filtering works the same as in GMail, GitHub or Slack - you provide a field and a value, separated by a colon.
 
@@ -461,6 +461,9 @@ At it's most simple, filtering works the same as in GMail, GitHub or Slack - you
 - `featured:true` - all resources with a field `featured` that is set to `true`.
 - `featured:true+feature_image:null` - looks for featured posts which don't have a feature image setby using `+` (and).
 - `tag:hash-noimg` - `tag` is an alias for `tags.slug` and `hash-noimg` would be the slug for an internal tag called `#NoImg`. This filter would allow us to find any post that has this internal tag.
+- `tags:[photo, video, audio]` - filters posts which have any one of the listed tags, `[]` (grouping) is more efficient than using or when quering the same field.
+- `primary_author:my-author` - `primary_author` is an alias for the first author, allowing for filtering based on the first author.
+- `published_at:>'2017-06-03 23:43:12'` - looks for posts published after a date, using a date string wrapped in single quotes and the `>` operator
 
 ### Syntax Reference
 
@@ -519,6 +522,7 @@ Can be one of the following
 Most of the time, there's no need to put quotes around strings when building filters in Ghost.
 If you filter based on slugs, slugs are always compatible with literals.
 However, in some cases you may need to use a string that contains one of the other characters used in the filter syntax, e.g. dates & times contain`:`. Use single-quotes for these.
+
 
 
 ## Pagination
