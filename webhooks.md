@@ -1,8 +1,13 @@
 ---
 title: "Webhooks"
+date: "2019-01-09"
+meta_title: "Ghost Webhooks"
+meta_description: "Trigger events when something happens in Ghost using webhooks configured through the Ghost Admin user interface. Find out more on Ghost Docs 👉"
 keywords:
-    - webhooks
-    - events
+    - "webhooks
+    - "api"   
+    - "ghost"
+    - "events"
 ---
 
 Webhooks are specific events triggered when something happens in Ghost, like publishing a new post or receiving a new subscriber

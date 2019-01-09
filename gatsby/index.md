@@ -5,7 +5,7 @@ meta_title: "Using Gatsby.js as a front end with Ghost"
 meta_description: "Ghost is fully compatible with static site generators like Gatsby. Find out how the Ghost API works as a headless CMS!"
 keywords:
     - "headless cms"
-    - gatsby
+    - "gatsby"
     - "static site"   
     - "ghost api"
 ---

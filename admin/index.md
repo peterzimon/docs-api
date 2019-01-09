@@ -1,8 +1,12 @@
 ---
 title: "Admin API"
+date: "2019-01-09"
+meta_title: "Ghost Admin API Documentation"
+meta_description: "Manage content via Ghost's Admin API, with secure role-based authentication. Read more on Ghost Docs 👉"
 keywords:
-    - admin
-    - api
+    - "admin api"
+    - "javascript"   
+    - "ghost api"
 ---
 
 Managing content is done via Ghost's Admin API, which has both read and write access used to create and update content.
