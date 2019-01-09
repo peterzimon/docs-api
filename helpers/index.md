@@ -9,7 +9,7 @@ keywords:
     - "ghost api"
 ---
 
-Vanilla JavaScript SDK
+ JavaScript SDK
 
 When you're working with the data returned from Ghost's API, there are some common repetitive tasks that we want to make easier.
 
@@ -75,4 +75,4 @@ In the browser:
 </script>
 ```
 
-Visit https://unpkg.com/@tryghost/helpers to get the [latest version](https://unpkg.com/@tryghost/helpers).
+Get the [latest version](https://unpkg.com/@tryghost/helpers) from https://unpkg.com.

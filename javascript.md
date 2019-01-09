@@ -9,8 +9,7 @@ Content API Client Library
 
 Ghost provides a flexible promise-based JavaScript library for accessing the Content API. The library can be used in any JavaScript project, client or server side and abstracts away all the pain points of working with API data.
 
-
-## Basic Example
+## Working Example
 
 ```javascript
 const api = new GhostContentAPI({
@@ -40,7 +39,7 @@ The client requires the host address of your Ghost API, a Content API key, and a
 - `key` - hex string copied from the "Integrations" screen in Ghost Admin
 - `version` - should be set to 'v2'
 
-See the documentation on [Content API authentication](http://localhost:8003/api/content/#authentication) for more information about each field.
+See the documentation on [Content API authentication](/api/content/#authentication) for more explanation.
 
 ## Endpoints
 
@@ -88,6 +87,10 @@ api.pages.read({slug: 'something'}, {fields: ['title']});
 api.settings.browse();
 ```
 
+For all resources except settings, the `browse()` method will return an array of objects, and the `read()` method will return a single object. The `settings.browse()` endpoint always returns a single object with all the available key-value pairs.
+
+See the documentation on [Content API resources](/api/content/#resources) for a full description of the response for each resource.
+
 ## Installation
 
 `yarn add @tryghost/content-api`
@@ -123,4 +126,4 @@ In the browser:
 </script>
 ```
 
-Visit https://unpkg.com/@tryghost/content-api to get the [latest version](https://unpkg.com/@tryghost/content-api).
+Get the [latest version](https://unpkg.com/@tryghost/content-api) from https://unpkg.com.
