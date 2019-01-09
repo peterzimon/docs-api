@@ -400,7 +400,7 @@ E.g. for posts `&fields=title,url` would return:
 
 By default, only `html` is returned, however each post and page in Ghost has 3 available formats: `html`, `plaintext` and `mobiledoc`.
 
-You can request additional formats when needed, E.g. `&formats=html,plaintext`.
+- `&formats=html,plaintext` will additionally return the plaintext format
 
 
 ### Filter
@@ -422,7 +422,9 @@ By default, only 15 records are returned at once.
 
 (Browse requests only)
 
-By default, the first 15 records are returned. `&page=2` will return the second set of 15 records.
+By default, the first 15 records are returned.
+
+- `&page=2` will return the second set of 15 records.
 
 ### Order
 
@@ -435,9 +437,9 @@ Different resources have a different default sort order:
 - Tags: `name ASC` (alphabetically by name)
 - Authors: `name ASC` (alphabetically by name)
 
-The syntax for modifying this follows SQL order by syntax, but must be url encoded:
+The syntax for modifying this follows SQL order by syntax:
 
-E.g. `?order=published_at%20asc` would return posts with the most recently published being last rather than first.
+- `?order=published_at%20asc` would return posts with the newest post last
 
 ## Filtering
 
@@ -472,16 +474,7 @@ The `message` field is designed to provide clarity on what exactly has gone wron
 }]}
 ```
 
-## Changelog
-
-<!--
-This is the only section where I break the rule of not talking about past/present.
-This felt like the most natural way to present some timeline type information
--->
-
-#### Ghost v2.10.0
-
-_(8th Jan 2019)_
+## Versioning
 
 The v2 Content API is **stable** as of **Ghost 2.10.0**. See the [stability index](/faq/api-versioning/) for full details of the API versions.
 You can disable the v0.1 Public API in the labs section of your admin panel.
