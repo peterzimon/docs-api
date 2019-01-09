@@ -359,6 +359,8 @@ The settings endpoint is a special case. You will receive a single object, rathe
 
 Query parameters provide fine-grained control over responses. All endpoints accept `include` and `fields`. Browse endpoints additionally accept `filter`, `limit`, `page` and `order`.
 
+The values provided as query parameters MUST be url encoded when used directly. The [client library](/api/javascript/) will handle this for you.
+
 ### Include
 
 Tells the API to return additional data related to the resource you have requested. The following includes are available:
@@ -378,30 +380,64 @@ For authors and tags:
 
 - `&include=count.posts` will add `"count": {"posts": 7}` to the response.
 
-
 ### Fields
+
+Limit the fields returned in the response object. Useful for optimising queries, but does not play well with include.
+
+E.g. for posts `&fields=title,url` would return:
+
+```json
+{"posts": [{
+    "id": "5b7ada404f87d200b5b1f9c8",
+    "title": "Welcome to Ghost",
+    "url": "https://demo.ghost.io/welcome/"
+}]}
+```
 
 ### Formats
 
 (Posts and Pages only)
 
+By default, only `html` is returned, however each post and page in Ghost has 3 available formats: `html`, `plaintext` and `mobiledoc`.
+
+You can request additional formats when needed, E.g. `&formats=html,plaintext`.
+
+
 ### Filter
 
 (Browse requests only)
+
+
 
 ### Limit
 
 (Browse requests only)
 
+By default, only 15 records are returned at once.
+
+- `&limit=5` would return only 5 records
+- `&limit=all` will return all records - use carefully!
 
 ### Page
 
 (Browse requests only)
 
+By default, the first 15 records are returned. `&page=2` will return the second set of 15 records.
 
 ### Order
 
 (Browse requests only)
+
+Different resources have a different default sort order:
+
+- Posts: `published_at DESC` (newest post first)
+- Pages: `title ASC` (alphabetically by title)
+- Tags: `name ASC` (alphabetically by name)
+- Authors: `name ASC` (alphabetically by name)
+
+The syntax for modifying this follows SQL order by syntax, but must be url encoded:
+
+E.g. `?order=published_at%20asc` would return posts with the most recently published being last rather than first.
 
 ## Filtering
 
