@@ -1,9 +1,14 @@
 ---
 title: "Javascript"
+date: "2019-01-09"
+meta_title: "Javascript Content API Client Libarary – Ghost"
+meta_description: "Ghost provides a flexible promise-based JavaScript library for accessing the Content API which can be used in any JavaScript project. Read more on Ghost Docs 👉"
 keywords:
-    - javascript
-    - api
+    - "headless cms"
+    - "javascript"   
+    - "ghost api"
 ---
+
 
 Content API Client Library
 
@@ -126,4 +131,4 @@ In the browser:
 </script>
 ```
 
-Get the [latest version](https://unpkg.com/@tryghost/content-api) from https://unpkg.com.
+Get the [latest version](https://unpkg.com/@tryghost/content-api) from [unpkg.com](https://unpkg.com).

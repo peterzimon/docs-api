@@ -1,17 +1,20 @@
 ---
 title: "Helpers"
-date: "2019-01-07"
-meta_title: ""
-meta_description: ""
+date: "2019-01-09"
+meta_title: "Vanilla Javascript SDK – Ghost Helpers"
+meta_description: "When you're working with the data returned from Ghost's API, there are some common repetitive tasks that can be simplified. Read more about Ghost Helpers 👉"
 keywords:
-    - "javascript"
-    - helpers
-    - "ghost api"
+    - "vanilla"
+    - "javascript"   
+    - "helpers"
+    - "sdk"
 ---
+
+
 
  JavaScript SDK
 
-When you're working with the data returned from Ghost's API, there are some common repetitive tasks that we want to make easier.
+When you're working with the data returned from Ghost's API, there are some common repetitive tasks that can be simplified.
 
 To achieve this, we're in the process of abstracting out Ghost's [handlebars helpers](/api/handlebars-themes/) and other useful tools for working with our API into an SDK full of useful vanilla JS helpers.
 

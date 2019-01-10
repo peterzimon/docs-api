@@ -1,9 +1,12 @@
 ---
 title: "Content API"
+date: "2019-01-09"
+meta_title: "Ghost Content API Documentation"
+meta_description: "Ghost's RESTful Content API delivers published content to the world and can be accessed by any client to render a website. Read more on Ghost Docs."
 keywords:
-    - content
-    - api
-
+    - "headless cms"
+    - "javascript"   
+    - "ghost api"
 ---
 
 Ghost's RESTful Content API delivers published content to the world and can be accessed in a read-only manner by any client to render in a website, app or other embedded media.
