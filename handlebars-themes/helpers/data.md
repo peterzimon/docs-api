@@ -11,21 +11,21 @@ keywords:
 sidebar: "handlebars"
 ---
 
-Data helpers are used to output data from your site. Use this reference list to discover what each handlebars helper can when for building a custom Ghost theme. 
+Data helpers are used to output data from your site. Use this reference list to discover what each handlebars helper can when for building a custom Ghost theme.
 
 ## Available data helpers
 
-* @config
-* @blog
-* navigation
-* post
-* url
-* title
-* img_url
-* excerpt
-* content
-* date
-* tags
-* authors
-* twitter
-* facebook
+* [@config](/api/handlebars-themes/helpers/config/)
+* [@site](/api/handlebars-themes/helpers/site/)
+* [navigation](/api/handlebars-themes/helpers/navigation/)
+* [post](/api/handlebars-themes/helpers/post/)
+* [url](/api/handlebars-themes/helpers/url/)
+* [title](/api/handlebars-themes/helpers/title/)
+* [img_url](/api/handlebars-themes/helpers/img_url/)
+* [excerpt](/api/handlebars-themes/helpers/excerpt/)
+* [content](/api/handlebars-themes/helpers/content/)
+* [date](/api/handlebars-themes/helpers/date/)
+* [tags](/api/handlebars-themes/helpers/tags/)
+* [authors](/api/handlebars-themes/helpers/authors/)
+* [twitter](/api/handlebars-themes/helpers/twitter/)
+* [facebook](/api/handlebars-themes/helpers/facebook/)
