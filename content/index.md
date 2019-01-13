@@ -311,7 +311,7 @@ Tags that are not associated with a post are not returned. You can supply `inclu
 
 ### Authors
 
-Authors that are not associated with a post are not returned. Only You can supply `includes=count.posts` to retrieve the number of posts associated with a tag.
+Authors that are not associated with a post are not returned. You can supply `includes=count.posts` to retrieve the number of posts associated with a tag.
 
 ```json
 {"authors":[{

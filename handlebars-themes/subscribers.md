@@ -12,7 +12,7 @@ sidebar: "handlebars"
 ---
 
 
-The subscribers tool that is built into Ghost admin allows you to enable a subscribe page and collect emails from your readers directly from your site!
+Collect emails from your readers directly from your site using the Subscribers feature in Ghost admin
 
 
 ## Overview
@@ -23,14 +23,15 @@ When the subscribers feature is enabled in the settings within Ghost admin, the 
 * A new `{{subscribe_form}}` helper is registered to use within your theme
 * The API gets a new `/subscribers/` endpoint
 
-The new page rendered at `/subscribe/` uses the default template, which can be updated to suit your needs. The subscribe form helper can be used across your site content with some adjustments to your theme.
-
 The subscribers view in Ghost admin allows you to see your subscriber list, add subscribers manually and import or export CSV files. Ghost does not automatically send emails to your subscribers by default, but you can integrate with your favourite email tools to get the job done (such as Mailchimp or Active Campaign).
 
+## Subscribe page template
+
+The new page rendered at `/subscribe/` uses the default template, which can be updated to suit your needs or overriden using a correctly named template in your theme. The subscribe form helper can be used across your site content with some adjustments to your theme.
 
 ## Subscribe form helper
 
-This helper wraps all of the internals of the form used for submitting emails to the subscriber list. It is a template driven helper just like [navigation](/api/handlebars-themes/helpers/navigation/). This means the template can be overridden by including a correctly named template in the partials folder of your theme.
+The helper `{{subscribe_form}}` helper wraps all of the internals of the form used for submitting emails to the subscriber list. It is a template driven helper just like [navigation](/api/handlebars-themes/helpers/navigation/). This template can be overridden by including a correctly named template in the `partials` folder of your theme.
 
 #### Attributes
 
@@ -95,8 +96,10 @@ The default template for the `{{subscribe_form}}` helper is shown below:
 
 This form is passed a set of **required** attributes: `action`, `hidden` and `script`. Once the form is submitted, the template is provided with the `{{error}}`, `{{success}}` and `{{email}}` fields.
 
-> If overriding this form by including a `subsribe_form.hbs` template in your `partials/` directory, ensure it functions correctly, and be mindful of updates to functionality.
+## Overriding the default templates
 
+It’s possible to override the default [`subscribe.hbs`](https://github.com/TryGhost/Ghost/blob/master/core/server/apps/subscribers/lib/views/subscribe.hbs) and [`subscribe_form.hbs`](https://github.com/TryGhost/Ghost/blob/master/core/server/helpers/tpl/subscribe_form.hbs) templates by creating files in your theme with the same name. It’s useful to copy/paste the file contents to provide a starting point.
+Be mindful of updates to functionality when using custom templates. 
 
 ## Summary
 
