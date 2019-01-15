@@ -4,8 +4,8 @@ date: "2019-01-09"
 meta_title: "Ghost Webhooks"
 meta_description: "Trigger events when something happens in Ghost using webhooks configured through the Ghost Admin user interface. Find out more on Ghost Docs 👉"
 keywords:
-    - "webhooks
-    - "api"   
+    - "webhooks"
+    - "api"
     - "ghost"
     - "events"
 ---
