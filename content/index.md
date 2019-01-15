@@ -5,7 +5,7 @@ meta_title: "Ghost Content API Documentation"
 meta_description: "Ghost's RESTful Content API delivers published content to the world and can be accessed by any client to render a website. Read more on Ghost Docs."
 keywords:
     - "headless cms"
-    - "javascript"   
+    - "javascript"
     - "ghost api"
 ---
 
@@ -340,14 +340,14 @@ The settings endpoint is a special case. You will receive a single object, rathe
   "title": "Ghost",
   "description": "The professional publishing platform",
   "logo": "https://static.ghost.org/v1.0.0/images/ghost-logo.svg",
-  "icon": "",
+  "icon": "https://static.ghost.org/favicon.ico",
   "cover_image": "https://static.ghost.org/v1.0.0/images/blog-cover.jpg",
   "facebook": "ghost",
   "twitter": "tryghost",
   "lang": "en",
   "timezone": "Etc/UTC",
-  "ghost_head": "",
-  "ghost_foot": "",
+  "codeinjection_head": null,
+  "codeinjection_foot": null,
   "navigation": [
      { "label": "Home", "url": "/" },
      { "label": "Tag", "url": "/tag/getting-started/" },
