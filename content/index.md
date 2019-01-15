@@ -23,7 +23,7 @@ The client is an advanced wrapper on top of our REST API - everything that can b
 
 ### Handlebars
 
-You can upgrade your Ghost theme to use the v2 Content API by specifying the `ghost-api` version in the `engines` field of your package.json. See the [handlebars reference](http://localhost:8000/api/handlebars-themes/packagejson/) for an example.
+You can upgrade your Ghost theme to use the v2 Content API by specifying the `ghost-api` version in the `engines` field of your package.json. See the [handlebars reference](/api/handlebars-themes/packagejson/) for an example.
 
 ## Authentication
 

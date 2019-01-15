@@ -19,7 +19,7 @@ Optimise the performance of your site by outputting images at different sizes de
 
 So you upload glorious 2000px feature images to all your posts to appear in the giant hero/header on individual articles and things look great. On your home page, though, you're displaying those feature images as 250px thumbnails for every single post. And there are a lot of them. Suddenly, those big beautiful 2000px jpgs are no longer ideal and your site performance slows right down.
 
-Ghost's dynamic image sizes feature solves this, by allowing you to use scaled down images or build out responsive image srcsets for your theme. 
+Ghost's dynamic image sizes feature solves this, by allowing you to use scaled down images or build out responsive image srcsets for your theme.
 
 
 ## Configuration
@@ -82,4 +82,4 @@ Here's an [example from Ghost default Casper theme](https://github.com/TryGhost/
 
 Ghost image sizes will be automatically generated for all images uploaded directly _to_ Ghost, and will regenerated as needed automatically whenever you change an image, a list of sizes, or the theme being used. Unlike other platforms, there's no manual work needed to manage image sizes, it's all done in the background for you.
 
-Dynamic image sizes are _not_ compatible with externally hosted images. If you insert images from [Unsplash](https://docs.ghost.org/integrations/unsplash/) or you store your image files on a [third party storage adapter](https://docs.ghost.org/integrations/storage/) then the image url returned will be determined by the external source.
+Dynamic image sizes are _not_ compatible with externally hosted images. If you insert images from [Unsplash](/integrations/unsplash/) or you store your image files on a [third party storage adapter](/integrations/storage/) then the image url returned will be determined by the external source.
