@@ -18,7 +18,7 @@ Access control is managed via an API key, and even the most complex filters are 
 
 ### JavaScript Client Library
 
-We've developed an API client for JavaScript, that will allow you to quickly and easily interact with the Content API.
+We've developed an [API client for JavaScript](https://docs.ghost.org/api/javascript/), that will allow you to quickly and easily interact with the Content API.
 The client is an advanced wrapper on top of our REST API - everything that can be done with the Content API can be done using the client, with no need to deal with the details of authentication or the request & response format.
 
 ### Handlebars
