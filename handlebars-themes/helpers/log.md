@@ -29,3 +29,4 @@ Or, to log each post in the loop:
 {{/foreach}}
 ```
 
+If you're developing a theme and running an install [using Ghost-CLI](/install/local/), you must use `NODE_ENV=development ghost run` to make debug output visible in the console.
