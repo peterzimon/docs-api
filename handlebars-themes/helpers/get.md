@@ -58,11 +58,11 @@ The `{{#get}}` helper has many more options than most helpers, the following sec
 
 ## Parameters
 
-The first parameter passed in is the name of the resource that you want to query. This can be either `"posts"`, `"tags"` or `"users"` (authors).
+The first parameter passed in is the name of the resource that you want to query. This can be either `"posts"`, `"tags"` or `"authors"`.
 
 **posts** - only published posts can be retrieved
-**tags** - currently all tags can be retrieved
-**users** - only active users can be retrieved
+**tags** - any tag that has a post associated with it
+**authors** - any author who has a post associated with it
 
 Example:
 
@@ -184,7 +184,7 @@ A Resource may have additional related data that can be included to expand your 
 Base Resource data:
 * **Post**
 * **Tag**
-* **User**
+* **Author**
 
 There can be multiple *includes* separated by a comma.
 
@@ -192,9 +192,9 @@ The *Post* resource by default has a tags and authors array. These can be expand
 
 Include options for *Post*: "authors" - expands authors, "tags" - expands tags.
 
-The *User* and *Tag* resources can be expanded to include the post count for each resource.
+The *Author* and *Tag* resources can be expanded to include the post count for each resource.
 
-Include options for *User* and *Tag*: "count.posts"
+Include options for *Author* and *Tag*: "count.posts"
 
 Note: If you include count.posts you can use it to **order** your collection.
 
