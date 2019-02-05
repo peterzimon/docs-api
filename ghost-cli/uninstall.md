@@ -16,7 +16,7 @@ sidebar: "ghost-cli"
 
 Securely removes a Ghost installation and all related configuration and data.
 
-**Use with caution** - this command ompletely removes a Ghost install along with all of its related data and config. There is no recovery from this if you have no backups. 
+**Use with caution** - this command completely removes a Ghost install along with all of its related data and config. There is no recovery from this if you have no backups. 
 
 The command `ghost uninstall` must be executed in the directory containing the Ghost install that you would like to remove. 
 
