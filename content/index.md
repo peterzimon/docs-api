@@ -45,7 +45,7 @@ Each API is prefixed with the same path, followed by a specific version. Version
 
 `?key={key}`.
 
-The Content API only ever returns public data. Content API keys can be obtained from the Integrations screen in Ghost Admin. The key is provided to the API as a query parameter.
+Content API keys can be obtained by creating a new `Custom Integration` under the **Integrations** screen in Ghost Admin. The key is provided to the API as a query parameter, and the Content API will only ever return public data. 
 
 ### Working Example
 
