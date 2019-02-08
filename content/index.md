@@ -66,69 +66,69 @@ The Content API provides access to Posts, Pages, Tags, Authors and Settings. All
   <th>Method</th>
 </tr>
 <tr>
-  <td width="74"><p>GET</p></td>
-  <td width="400"><p>/posts/</p></td>
-  <td><p>Browse posts</p></td>
+  <td>GET</td>
+  <td width="300">/posts/</td>
+  <td>Browse posts</td>
 </tr>
 <tr>
-  <td width="74"><p>GET</p></td>
-  <td width="400"><p>/posts/{id}/</p></td>
-  <td><p>Read a post by ID</p></td>
+  <td>GET</td>
+  <td width="300">/posts/{id}/</td>
+  <td>Read a post by ID</td>
 </tr>
 <tr>
-  <td width="74"><p>GET</p></td>
-  <td width="400"><p>/posts/slug/{slug}/</p></td>
-  <td><p>Read a post by slug</p></td>
+  <td>GET</td>
+  <td width="300">/posts/slug/{slug}/</td>
+  <td>Read a post by slug</td>
 </tr>
 <tr>
-  <td width="74"><p>GET</p></td>
-  <td width="400"><p>/authors/</p></td>
-  <td><p>Browse authors</p></td>
+  <td>GET</td>
+  <td width="300">/authors/</td>
+  <td>Browse authors</td>
 </tr>
 <tr>
-  <td width="74"><p>GET</p></td>
-  <td width="400"><p>/authors/{id}/</p></td>
-  <td><p>Read an author by ID</p></td>
+  <td>GET</td>
+  <td width="300">/authors/{id}/</td>
+  <td>Read an author by ID</td>
 </tr>
 <tr>
-  <td width="74"><p>GET</p></td>
-  <td width="400"><p>/authors/slug/{slug}/</p></td>
-  <td><p>Read a author by slug</p></td>
+  <td>GET</td>
+  <td width="300">/authors/slug/{slug}/</td>
+  <td>Read a author by slug</td>
 </tr>
 <tr>
-  <td width="74"><p>GET</p></td>
-  <td width="400"><p>/tags/</p></td>
-  <td><p>Browse tags</p></td>
+  <td>GET</td>
+  <td width="300">/tags/</td>
+  <td>Browse tags</td>
 </tr>
 <tr>
-  <td width="74"><p>GET</p></td>
-  <td width="400"><p>/tags/{id}/</p></td>
-  <td><p>Read a tag by ID</p></td>
+  <td>GET</td>
+  <td width="300">/tags/{id}/</td>
+  <td>Read a tag by ID</td>
 </tr>
 <tr>
-  <td width="74"><p>GET</p></td>
-  <td width="400"><p>/tags/slug/{slug}/</p></td>
-  <td><p>Read a tag by slug</p></td>
+  <td>GET</td>
+  <td width="300">/tags/slug/{slug}/</td>
+  <td>Read a tag by slug</td>
 </tr>
 <tr>
-  <td width="74"><p>GET</p></td>
-  <td width="400"><p>/pages/</p></td>
-  <td><p>Browse pages</p></td>
+  <td>GET</td>
+  <td width="300">/pages/</td>
+  <td>Browse pages</td>
 </tr>
 <tr>
-  <td width="74"><p>GET</p></td>
-  <td width="400"><p>/pages/{id}/</p></td>
-  <td><p>Read a page by ID</p></td>
+  <td>GET</td>
+  <td width="300">/pages/{id}/</td>
+  <td>Read a page by ID</td>
 </tr>
 <tr>
-  <td width="74"><p>GET</p></td>
-  <td width="400"><p>/pages/slug/{slug}/</p></td>
-  <td><p>Read a page by slug</p></td>
+  <td>GET</td>
+  <td width="300">/pages/slug/{slug}/</td>
+  <td>Read a page by slug</td>
 </tr>
 <tr>
-  <td width="74"><p>GET</p></td>
-  <td width="400"><p>/settings/</p></td>
-  <td><p>Browse settings</p></td>
+  <td>GET</td>
+  <td width="300">/settings/</td>
+  <td>Browse settings</td>
 </tr>
 </tbody>
 </table>
