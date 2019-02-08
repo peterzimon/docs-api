@@ -37,7 +37,7 @@ routes:
     filter: tag:[iphone,ipad,mac]
   /editors-column/:
     controller: channel
-    filter: tag:column+author:cameron
+    filter: tag:column+primary_author:cameron
 ```
 
 In this example there are two channels. The first is a channel which will return any posts tagged `iPhone`, `iPad` or `Mac` on a custom route of `site.com/apple-news/`.
