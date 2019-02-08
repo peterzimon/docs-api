@@ -20,6 +20,8 @@ Routing is the system which maps URL patterns to data and templates within Ghost
 
 All of Ghost's routing configuration is defined in `content/settings/routes.yaml` - which you can edit directly, but you can also upload/download this file from within your Ghost admin panel under `Settings » Labs`.
 
+If you edit the file manually, you'll need to restart Ghost to see the changes, but if you upload the file in admin then your routes will automatically be updated right away. 
+
 
 ## Base configuration
 
@@ -43,16 +45,16 @@ For most publications and use-cases, this structure is exactly what's needed and
 
 ## What's YAML?
 
-YAML stands for **Y**et **A**nother **M**arkup **L**anguage - because aren't enough unfunny acronyms in computer science. You can think of it loosely like JSON without all the brackets and commas. In short, it's a document format used to store nested `key:value` pairs, commonly used for simple/readable configuration.
+YAML stands for **Y**et **A**nother **M**arkup **L**anguage - because there aren't enough unfunny acronyms in computer science. You can think of it loosely like JSON without all the brackets and commas. In short, it's a document format used to store nested `key:value` pairs, commonly used for simple/readable configuration.
 
 The most important thing to know when working with YAML is that it uses indentation to denote structure. That means the **only** type of nesting which works is **2 spaces**.
 
-The most common reason for YAML files not working is when you accidentally uses the wrong type or quantity of spacing for indentation. So keep a close eye on that!
+The most common reason for YAML files not working is when you accidentally use the wrong type or quantity of spacing for indentation. So keep a close eye on that!
 
 
 ## When to use dynamic routing
 
-Maybe you want your homepage to simple landing page, while all of your posts appear on `site.com/writing/`. Maybe you actually want to split your site into two main collections of content, like `/blog/` and `/podcast/`. Maybe you just want to change the URL of your archives from `/tag/news/` to `/archive/news/`.
+Maybe you want your homepage to be a simple landing page, while all of your posts appear on `site.com/writing/`. Maybe you actually want to split your site into two main collections of content, like `/blog/` and `/podcast/`. Maybe you just want to change the URL of your archives from `/tag/news/` to `/archive/news/`.
 
 If you're looking to create an alternative site structure to the one described above, then dynamic routing is what you need in order to achieve all your hopes and dreams.
 

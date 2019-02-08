@@ -18,17 +18,17 @@ sidebar: "handlebars"
 
 If you want something more flexible than tags, but less rigid than collections, then channels might be for you.
 
-A channel is a custom stream of content paginated content matching a specific filter. This allows you to create subsets and supersets of content by combining or dividing existing posts into content hubs.
+A channel is a custom stream of paginated content matching a specific filter. This allows you to create subsets and supersets of content by combining or dividing existing posts into content hubs.
 
 Unlike [collections](/api/handlebars-themes/routing/collections/), channels have no influence over a post's URL or location within the site, so posts can belong to any number of channels.
 
-**The best way to think of channels is as a set of permanent search results.** It's a filtered view of a slice of content from across your site, without modifying the content itself.
+**The best way to think of channels is as a set of permanent search results.** It's a filtered slice of content from across your site, without modifying the content itself.
 
 ---
 
 ## Creating a channel
 
-Channels are defined as a [custom route](/api/handlebars-themes/routing/routes/), with a custom `controller` property called `channel`, and a filter to determine what posts to return.
+Channels are defined as a [custom route](/api/handlebars-themes/routing/routes/), with a custom `controller` property called `channel`, and a filter to determine which posts to return.
 
 ```yaml
 routes:
@@ -78,4 +78,4 @@ _eg. quickly creating/destroying new sections of a site without any risk_
 
 <br>
 
-If you're still not sure which would be the best fit, drop by the [Ghost Forums](https://forum.ghost.org) and share what structure you're hoping to accomplish. There's a large community of Ghost developers around to help. 
+If you're still not sure which is the best fit for you, drop by the [Ghost Forums](https://forum.ghost.org) and share what structure you're hoping to accomplish. There's a large community of Ghost developers around to help. 

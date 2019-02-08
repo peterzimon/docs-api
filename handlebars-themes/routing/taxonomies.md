@@ -18,7 +18,7 @@ keywords:
 sidebar: "handlebars"
 ---
 
-Taxonomies are groupings of post based on a common relation. In Ghost, this is always defined by the post's author or tag
+Taxonomies are groupings of posts based on a common relation. In Ghost, this is always defined by the post's author or tag
 
 Using taxonomies, Ghost will automatically generate post archives for tags and authors like `/tag/getting-started/` which will render a list of associated content. 
 
@@ -38,7 +38,7 @@ If a post by `Cameron` is tagged with `News` then it will be included in archive
 - `site.com/author/cameron`
 - `site.com/tag/news/`
 
-and each of these places also come with their own automatically generated RSS feeds which can always be accessed by adding `/rss/` to the end of the URL.
+Each of these come with their own automatically generated RSS feeds which are accessed by adding /rss/ to the end of the URL.
 
 ---
 
@@ -52,7 +52,7 @@ taxonomies:
   author: /host/{slug}/
 ```
 
-If you don't like the prefixes for taxonomies, you can customise them to something else which suits your site and your content better. If you're running a publication which is primarily a podcast, for example, you might prefer `author` and `topic`.
+If you don't like the prefixes for taxonomies, you can customise them to something else which suits your site and your content better. If you're running a publication which is primarily a podcast, for example, you might prefer `host` and `topic`.
 
 ---
 
