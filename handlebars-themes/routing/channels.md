@@ -16,7 +16,7 @@ keywords:
 sidebar: "handlebars"
 ---
 
-If you want something more flexible than tags, but less rigid than collections, then channels might be for you.
+If you want something more flexible than taxonomies, but less rigid than collections, then channels might be for you.
 
 A channel is a custom stream of paginated content matching a specific filter. This allows you to create subsets and supersets of content by combining or dividing existing posts into content hubs.
 
