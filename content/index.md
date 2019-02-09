@@ -59,6 +59,7 @@ Content API keys can be obtained by creating a new `Custom Integration` under th
 ### Working Example
 
 ```bash:title=cURL example
+# Real endpoint - copy and paste to see!
 curl "https://demo.ghost.io/ghost/api/v2/content/posts/?key=22444f78447824223cefc48062"
 ```
 
@@ -211,6 +212,7 @@ Posts allow you to include `authors` and `tags` using `?include=authors,tags`, w
 #### Working Example
 
 ```bash:title=cURL example
+# Real endpoint - copy and paste to see!
 curl "https://demo.ghost.io/ghost/api/v2/content/posts/?key=22444f78447824223cefc48062&include=tags,authors"
 ```
 
