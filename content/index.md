@@ -14,6 +14,9 @@ Ghost's RESTful Content API delivers published content to the world and can be a
 Access control is managed via an API key, and even the most complex filters are made simple with our SDK. The Content API is designed to be fully cachable, meaning you can fetch data as often as you like without limitation.
 
 
+---
+
+
 ## API Clients
 
 ### JavaScript Client Library
@@ -25,11 +28,15 @@ The client is an advanced wrapper on top of our REST API - everything that can b
 
 You can upgrade your Ghost theme to use the v2 Content API by specifying the `ghost-api` version in the `engines` field of your package.json. See the [handlebars reference](/api/handlebars-themes/packagejson/) for an example.
 
+
+---
+
+
 ## Authentication
 
 ### Host
 
-`https://{admin_domain}`.
+`https://{admin_domain}`
 
 Your admin domain can be different to your main domain.
 Using the correct domain and protocol are critical to getting consistent behaviour, particularly when dealing with CORS in the browser.
@@ -43,9 +50,11 @@ Each API is prefixed with the same path, followed by a specific version. Version
 
 ### Key
 
-`?key={key}`.
+`?key={key}`
 
 Content API keys can be obtained by creating a new `Custom Integration` under the **Integrations** screen in Ghost Admin. The key is provided to the API as a query parameter, and the Content API will only ever return public data. 
+
+![Get a Ghost Content API key](/images/apikey.png)
 
 ### Working Example
 
@@ -53,6 +62,7 @@ Content API keys can be obtained by creating a new `Custom Integration` under th
 curl "https://demo.ghost.io/ghost/api/v2/content/posts/?key=22444f78447824223cefc48062"
 ```
 
+---
 
 ## Endpoints
 
@@ -135,6 +145,10 @@ The Content API provides access to Posts, Pages, Tags, Authors and Settings. All
 
 The Content API supports two types of request: Browse and Read.
 Browse endpoints allow you to fetch lists of resources, whereas Read endpoints allow you to fetch a single resource.
+
+
+---
+
 
 ## Resources
 
@@ -358,6 +372,10 @@ The settings endpoint is a special case. You will receive a single object, rathe
 
 ```
 
+
+---
+
+
 ## Parameters
 
 Query parameters provide fine-grained control over responses. All endpoints accept `include` and `fields`. Browse endpoints additionally accept `filter`, `limit`, `page` and `order`.
@@ -449,6 +467,10 @@ The syntax for modifying this follows SQL order by syntax:
 
 - `&order=published_at%20asc` would return posts with the newest post last
 
+
+---
+
+
 ## Filtering
 
 Ghost uses a query language called NQL to perform filters on the API.
@@ -527,6 +549,8 @@ If you filter based on slugs, slugs are always compatible with literals.
 However, in some cases you may need to use a string that contains one of the other characters used in the filter syntax, e.g. dates & times contain`:`. Use single-quotes for these.
 
 
+---
+
 
 ## Pagination
 
@@ -545,6 +569,10 @@ All browse endpoints are paginated, returning 15 records by default. You can use
   }
 ```
 
+
+---
+
+
 ## Errors
 
 Errors are also presented in JSON, as an array of error objects.
@@ -558,6 +586,10 @@ The `message` field is designed to provide clarity on what exactly has gone wron
     "errorType": "UnauthorizedError"
 }]}
 ```
+
+
+---
+
 
 ## Versioning
 
