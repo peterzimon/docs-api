@@ -114,7 +114,7 @@ If you want to output your tags completely differently, you can fully customise 
 
 ## primary_tag
 
-To output just the singular, first tag, use the `{{primary_tag}}` helper to output a simple link. You can also access all the same attributes as above if you need more custom output.
+To output just the singular, first tag, use the `{{primary_tag.name}}`. You can also access all the same attributes in the object as above if you need more custom output.
 
 ```handlebars
 {{#primary_tag}}
