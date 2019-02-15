@@ -309,7 +309,7 @@ Pages are structured identically to posts. The response object will look the sam
 
 By default, internal tags are always included, use `filter=visibility:"public"` to limit the response directly or use the [tags helper](/api/helpers/#tags) to handle filtering and outputting the response.
 
-Tags that are not associated with a post are not returned. You can supply `includes=count.posts` to retrieve the number of posts associated with a tag.
+Tags that are not associated with a post are not returned. You can supply `include=count.posts` to retrieve the number of posts associated with a tag.
 
 ```json
 {"tags": [{
@@ -327,7 +327,7 @@ Tags that are not associated with a post are not returned. You can supply `inclu
 
 ### Authors
 
-Authors that are not associated with a post are not returned. You can supply `includes=count.posts` to retrieve the number of posts associated with a tag.
+Authors that are not associated with a post are not returned. You can supply `include=count.posts` to retrieve the number of posts associated with an author.
 
 ```json
 {"authors":[{
