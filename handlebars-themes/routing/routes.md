@@ -65,7 +65,7 @@ routes:
 
 This will assign all of the data from a Ghost **page** with a slug of `team` to the new route, and it will also automatically redirect the original URL of the content to the new one.
 
-Now, the data which previously appeared on `site.com/team` will appear in a custom `team.hbs` template on `site.com/about/team/` and the old URL will redirect to the new one, to prevent the content being duplicated in two places.
+Now, the data from `site.com/team` will be available inside the `{{#page}}` block helper in a custom `team.hbs` template on `site.com/about/team/` and the old URL will redirect to the new one, to prevent the content being duplicated in two places.
 
 ---
 
