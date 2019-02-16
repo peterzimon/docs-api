@@ -134,7 +134,7 @@ Any plain text in your theme must be wrapped in the `{{t}}` translation helper, 
 Look for any plain text in all of your theme's `.hbs` template files and ensure the translation helper is present.
 
 #### 6. Declare language in HTML
-It's advisable to add the HTML lang attribute to the <html> tag at the start of the theme's default.hbs template, using Ghost's {{lang}} helper: `<html lang="{{lang}}">`. `{{lang}}` will automatically be replaced on the site with the corresponding language locale tag set in Ghost admin.
+It's advisable to add the HTML lang attribute to the <html> tag at the start of the theme's default.hbs template, using Ghost's {{@site.lang}} helper: `<html lang="{{@site.lang}}">`. `{{@site.lang}}` will automatically be replaced on the site with the corresponding language locale tag set in Ghost admin.
 
 #### 7. Reactivate the theme
 To make the new changes effective, run `restart ghost`.
@@ -207,4 +207,3 @@ And in the theme template `post.hbs`:
 ```handlebars
 {{reading_time minute=(t "1 min read") minutes=(t "% min read")}}
 ```
-

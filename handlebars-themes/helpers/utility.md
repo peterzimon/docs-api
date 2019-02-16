@@ -23,7 +23,6 @@ Utility helpers are used to perform minor, optional tasks. Use this reference li
 * [pagination](/api/handlebars-themes/helpers/pagination/)
 * [prev/next_post](/api/handlebars-themes/helpers/prev_next_post/)
 * [plural](/api/handlebars-themes/helpers/plural/)
-* [lang](/api/handlebars-themes/helpers/lang/)
 * [translate](/api/handlebars-themes/helpers/translate/)
 * [encode](/api/handlebars-themes/helpers/encode/)
 * [log](/api/handlebars-themes/helpers/log/)
