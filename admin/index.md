@@ -27,7 +27,7 @@ It's good, you should use it :D Unless you're not using JavaScript...
 
 Most applications integrating with the Ghost Admin API should use token authentication. User authentications is only useful if you're building a fully-fledge client where you expect different users to login and interact with your app.
 
-### Token Authentication
+### Integrations
 
 Uses the `Authorization` HTTP header.
 
@@ -35,12 +35,58 @@ Uses the `Authorization` HTTP header.
 
 Uses cookies. Nom nom.
 
+Authenticating as a user provides access to all API endpoints and actions according to the role of the user.
 
 ## Endpoints
 
-Each endpoint is declared either stable or experimental: stable endpoints are safe to depend on in production, experimental endpoints are useful for developer tooling where breakages won't impact live sites.
+The following endpoints are the ones available to integrations, there are far more endpoints available when authenticating as a user, but most endpoints are still considered unstable.
+
+Each listed endpoint is declared either stable or experimental: stable endpoints are safe to depend on in production, experimental endpoints are useful for developer tooling where breakages won't impact live sites.
+
+<table class="table">
+<tbody>
+<tr>
+  <th>Verb</th>
+  <th>Path</th>
+  <th>Method</th>
+</tr>
+<tr>
+  <td>GET</td>
+  <td width="300">/posts/</td>
+  <td>Browse posts</td>
+</tr>
+</tbody>
+</table>
 
 [BIG TABLE?!]
+
+// @NOTE: integrations have limited access for now
+const whitelisted = {
+    // @NOTE: stable
+    posts: ['GET', 'PUT', 'DELETE', 'POST'],
+    tags: ['GET', 'PUT', 'DELETE', 'POST'],
+    images: ['POST'],
+    // @NOTE: experimental
+    users: ['GET'],
+    themes: ['POST'],
+    subscribers: ['GET', 'PUT', 'DELETE', 'POST'],
+    configuration: ['GET'],
+    actions: ['GET'],
+    webhooks: ['POST', 'DELETE']
+};
+
+<table class="table">
+<tbody>
+<tr>
+  <th>Verb</th>
+  <th>Path</th>
+  <th>Method</th>
+</tr>
+<tr>
+  <td>GET</td>
+  <td width="300">/posts/</td>
+  <td>Browse posts</td>
+</tr>
 
 ## Request & Response Format
 
