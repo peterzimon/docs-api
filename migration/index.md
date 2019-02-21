@@ -17,7 +17,9 @@ keywords:
 
 Migrations between platforms are difficult, so we've compiled a list of resources about migrating to Ghost
 
-Ghost imports from existing blogs via a custom JSON data format, described below. The import and export tools can be found on the 'labs' page in Ghost settings. The importer will accept a JSON file, markdown file, an image, or a zip file containing a combination of either JSON or markdown files along with accompanying images.
+Ghost imports from existing blogs via a custom JSON data format, described below. The import and export tools can be found on the 'labs' page in Ghost settings. The importer will accept either a JSON file, or a zip file containing a JSON file and the related images.
+
+
 
 ## Existing Plugins
 
@@ -34,6 +36,7 @@ Ghost imports from existing blogs via a custom JSON data format, described below
 * **Brave people** can try [Medium to Ghost](https://github.com/ageitgey/medium_to_ghost)
 
 ### Importing the JSON
+
 Once you've generated the JSON go to the Labs Menu (`/ghost/settings/labs/`) on your blog to access the import form.
 
 ### Importing Images
@@ -62,18 +65,16 @@ The file structure can optionally be wrapped in:
 
 Both with and without are valid Ghost JSON files. But you must include a `meta` and a `data` object.
 
-IDs inside the file are usually relative to the file only, so if you have a `post` with `id: 1` and a `posts_tags` object which references `post_id: 1`, then those two things will be linked, but they do not relate to the `post` with `id: 1` in your database.
-
 ### The meta object
 
 ```json
 "meta": {
     "exported_on":1408552443891,
-    "version":"003"
+    "version":"2.14.0"
 }
 ```
 
-The `meta` block expects two keys, `exported_on` and `version`. `exported_on` should be an epoch timestamp in milliseconds, version should be the data version the import is valid for. Currently Ghost is on data version 003, see [version info](https://github.com/TryGhost/Ghost/wiki/Version-Info) for more details.
+The `meta` block expects two keys, `exported_on` and `version`. `exported_on` should be an epoch timestamp in milliseconds, version should be the Ghost version the import is valid for.
 
 ### The data block
 
@@ -81,37 +82,48 @@ The `meta` block expects two keys, `exported_on` and `version`. `exported_on` sh
 "data": {
   "posts": [{...}, ...],
   "tags": [],
-  "posts_tags": [],
   "users": [],
+  "posts_tags": [],
+  "posts_authors": [],
   "roles_users": []
 }
 ```
 
-The data block contains all of the posts, tags, and users that you want to import into your blog, as well as relationships between posts and tags and users and roles. Each item that you include should be an array of objects.
+The data block contains all of the individual post, tag, and user resources that you want to import into your site, as well as the relationships between all of these resources. Each item that you include should be an array of objects.
+
+Relationships can be defined between posts and tags, posts and users (authors) and between users and their roles.
+
+IDs inside the file are relative to the file only, so if you have a `post` with `id: 1` and a `posts_tags` object which references `post_id: 1`, then those two things will be linked, but they do not relate to the `post` with `id: 1` in your database.
+
 
 ### Users
 
-With 0.5 comes the ability to import multiple users into your blog. Any user in the file who has an email address which matches the email address of a user already in your database will be ignored. Any user with a new email address will be imported and their account set to locked so that they must reset their password to login.
+Your import file must include both any users that you want to import and any users that you need to reference in the import file in relation to other resources.
+
+
+Users with an email address that matches the email address of a existing user will not be duplicated or updated. Users with an unmatched email address will be imported, but their account will be locked so that they must reset their password to login.
 
 #### Linking objects to users
 
-If you want to link your posts, tags, etc to the user they were authored/created/published by you can do so by specifying a user id relative to a user's id in the import file. So, if you have a user with `id: 2` in your file, and a post with `author_id: 2` that post will be set to be authored by that user.
+To link your resources to a user, you would specify a user id relative to the user's id in the import file. So, if you have a user with `id: 2` in your file, and a post with `published_by: 2` that post will be set to be published by that user.
 
-All new users (i.e. users with email addresses that aren't yet present in the db) are imported first. Then the importer matches the ids from `created_by`, `author_id` etc with users in the `users: []` object, and finally maps them to the right user in the database via their email address. Therefore if you want to link objects to a user that is already in the database you can specify the bare minimum information for that user so that it can be mapped correctly:
+All users with unmatched email addresses are imported first. Once this is complete, the importer uses the relative ID from the import file to look up which user to link, and then uses the email address to find the correct user in the database. Therefore if you want to link objects to a user that is already in the database you can specify the bare minimum information for that user so that it can be mapped correctly:
 
 ```json
 "users": [{
-   id: ObjectId,
+   id: 35,
    name: "A User",
    email: "user@example.com"
 }]
 ```
 
-**Note:** None existent referenced user id's fallback to the owner id.
+If the importer is unable to find a reference for the user inside the import file, it will default to the Owner.
 
 #### User Roles
 
-All users are given the role of `author` by default. If you want to specify different roles, you can do so by providing a `roles_users` object, much like the `posts_tags` object. Please note that Ghost doesn't yet support importing roles, so in this case the `role_id` is always relative to the `id` in the database, rather than in the file. This will change to match the other objects in the near future.
+All users are given the role of `author` by default. If you want to specify different roles, you can do so by providing a `roles_users` object, much like the `posts_tags` object. Please note that Ghost doesn't yet support importing roles, so in this case the `role_id` is always relative to the `id` in the database, rather than in the file.
+
+## Example
 
 ```json
 {
