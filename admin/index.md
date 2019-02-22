@@ -27,7 +27,7 @@ It's good, you should use it :D Unless you're not using JavaScript...
 
 Most applications integrating with the Ghost Admin API should use token authentication. User authentications is only useful if you're building a fully-fledge client where you expect different users to login and interact with your app.
 
-### Integrations
+### Token Authentication (Integrations)
 
 Uses the `Authorization` HTTP header.
 
