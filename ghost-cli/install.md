@@ -18,7 +18,7 @@ The `ghost install` command is your one-stop-shop to get a running production in
 
 This command includes the necessary mysql, nginx and systemd configuration to get your publication online, and provides a series of setup questions to configure your new publication. The end result is a fully installed and configured instance ✨
 
-> If you're not ready for production yet? `ghost install local` installs ghost in development mode using sqlite3 and a local process manager. Read more about [local installs](/install/local/). 
+> Not ready for production yet? `ghost install local` installs ghost in development mode using sqlite3 and a local process manager. Read more about [local installs](/install/local/). 
 
 
 ## How it works
