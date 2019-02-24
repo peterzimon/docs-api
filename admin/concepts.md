@@ -22,7 +22,7 @@ Cover the main use case, how to publish content.
 
 ## Filtering
 
-Sam
+Same as the content API
 
 ## Pagination
 
