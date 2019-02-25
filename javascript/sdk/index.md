@@ -1,5 +1,5 @@
 ---
-title: "Helpers"
+title: "JavaScript SDK"
 date: "2019-01-09"
 meta_title: "Vanilla Javascript SDK – Ghost Helpers"
 meta_description: "When you're working with the data returned from Ghost's API, there are some common repetitive tasks that can be simplified. Read more about Ghost Helpers 👉"
@@ -10,13 +10,17 @@ keywords:
     - "sdk"
 ---
 
-JavaScript SDK
 
-When you're working with the data returned from Ghost's API, there are some common repetitive tasks that can be simplified.
+Ghost is written in 100% JavaScript. Where there are shared or common tasks for working with Ghost's API, we aim to publish reusable packages that do as much of the work as possible. This means our SDK is an ever-growing library of tiny tools for working with Ghost.
 
-To achieve this, we maintain a library of shared JavaScript helpers designed to work in any environment. Each one performs a Ghost-specific data formatting or processing task. These are the underlying tools that power our [handlebars](/api/handlebars-themes/) and [gatsby](/api/gatsby/#custom-helpers) helpers.
+## Helpers
 
-## Tags
+- Package: `@tryghost/helpers`
+- Builds: CJS, ES, UMD
+
+The shared helpers are designed for performing data formatting tasks, usually when creating custom frontends. These are the underlying tools that power our [handlebars](/api/handlebars-themes/) and [gatsby](/api/gatsby/#custom-helpers) helpers.
+
+### Tags
 
 Filters and outputs tags. By default, the helper will output a comma separated list of tag names, excluding any internal tags.
 
@@ -31,7 +35,7 @@ posts.forEach((post) => {
 
 The first argument must be a post object, or any object that has a `tags` array.
 
-### Options
+#### Options
 
 The tag helper supports multiple options so that you can control exactly what is output, without having to write any logic.
 
@@ -45,7 +49,7 @@ The tag helper supports multiple options so that you can control exactly what is
  * `fallback` {object} - a fallback tag to output if there are none
  * `fn` {function} - function to call on each tag, default returns tag.name
 
-## Reading Time
+### Reading Time
 
 Calculates the estimated reading time based on the HTML for a post & available images.
 
@@ -60,7 +64,7 @@ posts.forEach((post) => {
 
 The first argument must be a post object, or any object that has an `html` string. If a `feature_image` is present, this is taken into account.
 
-### Options
+#### Options
 
 The output of the reading time helper can be customised through format strings.
 
@@ -68,7 +72,7 @@ The output of the reading time helper can be customised through format strings.
 * `minutes` {string, default:"% min read"} - format for reading times > 1 minute
 
 
-## Installation
+### Installation
 
 `yarn add @tryghost/helpers`
 
@@ -78,7 +82,7 @@ You can also use the standalone UMD build:
 
 `https://unpkg.com/@tryghost/helpers@{version}/umd/helpers.min.js`
 
-### Usage
+#### Usage
 
 ES modules:
 
@@ -102,3 +106,47 @@ In the browser:
 ```
 
 Get the [latest version](https://unpkg.com/@tryghost/helpers) from https://unpkg.com.
+
+## String
+
+- Package: `@tryghost/string`
+- Builds: CJS
+
+Utilities for processing strings.
+
+### Slugify
+
+The function Ghost uses to turn a post title or tag name into a slug for use in URLs.
+
+```javascript
+const {slugify} = require('@tryghost/string');
+const slug = slugify('你好 👋!'); // slug === "ni-hao"
+```
+
+The first argument is the string to transform. The second argument is an optional options object.
+
+#### Options
+
+The output can be customised by passing options
+
+ * `requiredChangesOnly` {boolean, default:false} - don't perform optional cleanup, e.g. removing extra dashes
+
+ ### Installation
+
+`yarn add @tryghost/string`
+
+`npm install @tryghost/string`
+
+#### Usage
+
+Node.js:
+
+```javascript
+const {slugify} = require('@tryghost/string');
+```
+
+
+
+## Contributing
+
+Our individual SDK packages are maintained together in the [Ghost SDK](https://github.com/TryGhost/Ghost-SDK) repository, and this documentation is published from our [API docs](https://github.com/TryGhost/docs-api). We welcome contributions both to existing packages and of new packages, as well as updates to the documentation.

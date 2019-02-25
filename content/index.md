@@ -52,9 +52,11 @@ Each API is prefixed with the same path, followed by a specific version. Version
 
 `?key={key}`
 
-Content API keys can be obtained by creating a new `Custom Integration` under the **Integrations** screen in Ghost Admin. The key is provided to the API as a query parameter, and the Content API will only ever return public data. 
+Content API keys can be obtained by creating a new `Custom Integration` under the **Integrations** screen in Ghost Admin. The key is provided to the API as a query parameter, and the Content API will only ever return public data.
 
 ![Get a Ghost Content API key](/images/apikey.png)
+
+Content API keys are safe for use in browsers and other insecure environments, as they purely provide access to public data. Sites in private mode should consider where they share any keys they create.
 
 ### Working Example
 
@@ -382,7 +384,7 @@ The settings endpoint is a special case. You will receive a single object, rathe
 
 Query parameters provide fine-grained control over responses. All endpoints accept `include` and `fields`. Browse endpoints additionally accept `filter`, `limit`, `page` and `order`.
 
-The values provided as query parameters MUST be url encoded when used directly. The [client library](/api/javascript/) will handle this for you.
+The values provided as query parameters MUST be url encoded when used directly. The [client libraries](/api/javascript/) will handle this for you.
 
 ### Include
 
@@ -430,7 +432,7 @@ By default, only `html` is returned, however each post and page in Ghost has 3 a
 
 (Browse requests only)
 
-Aply fine-grained filters to target specific data
+Apply fine-grained filters to target specific data.
 
 - `&filter=featured:true` on posts, would return only those marked featured.
 - `&filter=tag:getting-started` on posts, would return those with the tag slug that matches `getting-started`.
@@ -475,22 +477,11 @@ The syntax for modifying this follows SQL order by syntax:
 
 ## Filtering
 
-Ghost uses a query language called NQL to perform filters on the API.
+Ghost uses a query language called NQL to allow filtering API results. You can filter any field or included field using matches, greater/less than or negation, as well as combining with and/or. NQL doesn't yet support 'like' or partial matches.
 
-NQL can filter on any field or included field, using matches, greater/less than or negation, as well as combining with and/or. NQL doesn't yet support 'like' or partial matches.
-
-Filter strings must be URL encoded. When using the [{{get}}](/api/handlebars-themes/helpers/get/) helper or a [api client](/api/javascript) this complexity is handled for you.
+Filter strings must be URL encoded. The [{{get}}](/api/handlebars-themes/helpers/get/) helper and [client libraries](/api/javascript) handle this for you.
 
 At it's most simple, filtering works the same as in GMail, GitHub or Slack - you provide a field and a value, separated by a colon.
-
-### Quick Examples
-
-- `featured:true` - all resources with a field `featured` that is set to `true`.
-- `featured:true+feature_image:null` - looks for featured posts which don't have a feature image setby using `+` (and).
-- `tag:hash-noimg` - `tag` is an alias for `tags.slug` and `hash-noimg` would be the slug for an internal tag called `#NoImg`. This filter would allow us to find any post that has this internal tag.
-- `tags:[photo, video, audio]` - filters posts which have any one of the listed tags, `[]` (grouping) is more efficient than using or when quering the same field.
-- `primary_author:my-author` - `primary_author` is an alias for the first author, allowing for filtering based on the first author.
-- `published_at:>'2017-06-03 23:43:12'` - looks for posts published after a date, using a date string wrapped in single quotes and the `>` operator
 
 ### Syntax Reference
 
@@ -577,7 +568,14 @@ All browse endpoints are paginated, returning 15 records by default. You can use
 
 ## Errors
 
-Errors are also presented in JSON, as an array of error objects.
+The Content API will generate errors for the following cases:
+
+- Status 400: Badly formed queries e.g. filter parameters that are not correctly encoded
+- Status 401: Authentication failures e.g. unrecognised keys
+- Status 404: Unknown resources e.g. data which is not public
+- Status 500: Server errors e.g. where something has gone
+
+Errors are also formatted in JSON, as an array of error objects.
 The HTTP status code of the response along with the `errorType` property indicate the type of error.
 
 The `message` field is designed to provide clarity on what exactly has gone wrong.
@@ -588,7 +586,6 @@ The `message` field is designed to provide clarity on what exactly has gone wron
     "errorType": "UnauthorizedError"
 }]}
 ```
-
 
 ---
 
