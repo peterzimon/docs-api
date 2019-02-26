@@ -122,8 +122,6 @@ There are a myriad of [libraries](https://jwt.io/#libraries) available for gener
 
 JSON Web Tokens are made up of a header, a payload and the decoded secret. The values needed for the header and payload are:
 
-JSON Web Tokens are made up of a header, a payload and the decoded secret. The values needed for the header and payload are:
-
 Header:
 ```json
 {

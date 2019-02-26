@@ -34,7 +34,7 @@ You can upgrade your Ghost theme to use the v2 Content API by specifying the `gh
 
 ## Authentication
 
-### Host
+### Url
 
 `https://{admin_domain}`
 
@@ -52,11 +52,12 @@ Each API is prefixed with the same path, followed by a specific version. Version
 
 `?key={key}`
 
-Content API keys can be obtained by creating a new `Custom Integration` under the **Integrations** screen in Ghost Admin. The key is provided to the API as a query parameter, and the Content API will only ever return public data.
+Content API keys are provided via a query parameter in the url. These keys are safe for use in browsers and other insecure environments, as they only ever provide access to public data. Sites in private mode should consider where they share any keys they create. 
+
+The Content API URL and key can be obtained by creating a new `Custom Integration` under the **Integrations** screen in Ghost Admin. 
 
 ![Get a Ghost Content API key](/images/apikey.png)
 
-Content API keys are safe for use in browsers and other insecure environments, as they purely provide access to public data. Sites in private mode should consider where they share any keys they create.
 
 ### Working Example
 

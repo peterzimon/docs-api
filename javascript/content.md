@@ -39,6 +39,10 @@ api.posts
 
 The client requires the host address of your Ghost API, a Content API key, and a version string in order to authenticate.
 
+The Content API URL and key can be obtained by creating a new `Custom Integration` under the **Integrations** screen in Ghost Admin. 
+
+![Get a Ghost Content API key](/images/apikey.png)
+
 - `host` - API domain, must not end in a trailing slash.
 - `key` - hex string copied from the "Integrations" screen in Ghost Admin
 - `version` - should be set to 'v2'
