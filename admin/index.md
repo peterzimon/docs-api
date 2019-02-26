@@ -103,7 +103,7 @@ The admin API key must be kept private and therefore token authentication is not
 
 Admin API keys can be obtained by creating a new `Custom Integration` under the Integrations screen in Ghost Admin.
 
-![Get a Ghost Content API key](/images/apikey.png)
+![Get a Ghost Admin API key](/images/apikey.png)
 
 Admin API keys are made up of an id and secret, separated by a colon. These values are used separately to get a signed JWT token, which is used in the Authorization header of the request:
 

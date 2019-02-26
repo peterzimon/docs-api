@@ -10,15 +10,13 @@ keywords:
 sidebar: "javascript"
 ---
 
-# Admin API
-
 Admin API keys should remain secret, and therefore this promise-based JavaScript library is designed for server-side usage only. This library handles all the details of generating correctly formed urls and tokens, authenticating and making requests.
 
 ## Working Example
 
 ```javascript
 const api = new GhostAdminPI({
-  host: 'https://demo.ghost.io',
+  url: 'https://demo.ghost.io',
   key: 'secret_id:with_secret_key',
   version: 'v2'
 });
@@ -30,9 +28,13 @@ const api = new GhostAdminPI({
 
 The client requires the host address of your Ghost API, an Admin API key, and a version string in order to authenticate.
 
-- `host` - API domain, must not end in a trailing slash.
+- `url` - API domain, must not end in a trailing slash.
 - `key` - string copied from the "Integrations" screen in Ghost Admin
 - `version` - should be set to 'v2'
+
+The `url` and `key` values can be obtained by creating a new `Custom Integration` under the Integrations screen in Ghost Admin.
+
+![Get Ghost Admin API credentials](/images/apikey.png)
 
 See the documentation on [Admin API authentication](/api/admin/#authentication) for more explanation.
 
