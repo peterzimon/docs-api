@@ -276,6 +276,6 @@ POST /admin/images/upload/
 
 ## Versioning
 
-The v2 Admin API introduced several **stable** endpoints as of **Ghost 2.18.0**. 
+The v2 Admin API introduced several **stable** endpoints as of **Ghost 2.16.0**. 
 See the [endpoints table](#endpoints) for details of which endpoints are considered stable.
 See the [stability index](/faq/api-versioning/) for full details of the API versions.
