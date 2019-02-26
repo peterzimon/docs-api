@@ -19,7 +19,7 @@ The Admin API is used by Ghost Admin, meaning that everything that Ghost Admin c
 
 ### JavaScript Client Library
 
-We've developed an [API client for JavaScript](/api/javascript-admin/), that simplifies authenticating with the Admin API, and makes reading and writing data a breeze. The client is design for use with integrations and currently only supports token authentication and the endpoints available to integrations.
+We've developed an [API client for JavaScript](/api/javascript/#admin-api), that simplifies authenticating with the Admin API, and makes reading and writing data a breeze. The client is design for use with integrations and currently only supports token authentication and the endpoints available to integrations.
 
 
 ## Structure

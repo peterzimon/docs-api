@@ -17,11 +17,14 @@ Admin API keys should remain secret, and therefore this promise-based JavaScript
 ```javascript
 const api = new GhostAdminPI({
   url: 'https://demo.ghost.io',
-  key: 'secret_id:with_secret_key',
+  key: '{AdminAPIKey}',
   version: 'v2'
 });
 
-...
+api.posts.add({
+    title: 'My first draft API post',
+    mobiledoc: '{\"version\":\"0.3.1\",\"atoms\":[],\"cards\":[],\"markups\":[],\"sections\":[[1,\"p\",[[0,[],0,\"My post content. Work in progress...\"]]]]}'
+});
 ```
 
 ## Authentication
@@ -99,11 +102,7 @@ function processImagesInHTML(html) {
     return Promise
         .all(imagePromises)
         .then(images => {
-            images.forEach((image) => {
-                // Now replace 
-                html = html.replace(image.ref, image.url);
-            });
-            
+            images.forEach(image => html = html.replace(image.ref, image.url));        
             return html;            
         });
 }
@@ -113,8 +112,7 @@ let html = '<p>My test post content.</p><figure><img src="/path/to/my/image.jpg"
 
 return processImagesInHTML(html)
     .then(html => {        
-        return api.posts
-            
+        return api.posts        
             .add(
                 {title: 'My Test Post', html},             
                 {source: 'html'} // Tell the API to use HTML as the content source, instead of mobiledoc
