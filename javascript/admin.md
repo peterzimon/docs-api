@@ -15,7 +15,7 @@ Admin API keys should remain secret, and therefore this promise-based JavaScript
 ## Working Example
 
 ```javascript
-const api = new GhostAdminPI({
+const api = new GhostAdminAPI({
   url: 'https://demo.ghost.io',
   key: '{AdminAPIKey}',
   version: 'v2'
