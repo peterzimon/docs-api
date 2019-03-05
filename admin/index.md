@@ -158,7 +158,7 @@ POST /sessions/
 
 To create a new session, send a username and password to the sessions endpoint, in this format:
 
-```json
+```json:title=POST /admin/sessions/
 {
     "username": "{email address}",
     "password": "{password}"
@@ -184,6 +184,8 @@ Authenticating as a user with the Owner or Admin role will give access to the fu
 
 ## Endpoints
 
+These are the endpoints & methods currently available to integrations. More endpoints are available through user authentication. Each endpoint has a stability index, see [versioning](#versioning) for more information.
+
 <table class="table">
 <tbody>
 <tr>
@@ -192,10 +194,6 @@ Authenticating as a user with the Owner or Admin role will give access to the fu
   <th>Stability</th>
 </tr>
 <tr>
-<td><a href="/api/admin/#site">/site/</a></td>
-  <td>Read</td>
-  <td>Stable</td>
-</tr>
 <tr>
   <td><a href="/api/admin/#posts">/posts/</a></td>
   <td>Browse, Read, Edit, Add, Delete</td>
@@ -226,6 +224,10 @@ Authenticating as a user with the Owner or Admin role will give access to the fu
   <td>Upload</td>
   <td>Experimental</td>
 </tr>
+<td><a href="/api/admin/#site">/site/</a></td>
+  <td>Read</td>
+  <td>Stable</td>
+</tr>
 <tr>
   <td>/webhooks/</td>
   <td>Add, Delete</td>
@@ -239,14 +241,12 @@ Authenticating as a user with the Owner or Admin role will give access to the fu
 </tbody>
 </table>
 
-## Site
-
-```JavaScript
-GET /admin/site/
-```
-
 
 ## Posts
+
+Posts are the [primary resource](/concepts/posts/) in a Ghost site, providing means for publishing, managing and displaying content. 
+At the heart of every post is a mobiledoc field, containing a standardised JSON-based representation of your content, which can be rendered in multiple formats.
+
 
 ```JavaScript
 GET /admin/posts/
@@ -257,7 +257,209 @@ PUT /admin/posts/{id}/
 DELETE /admin/posts/{id}/
 ```
 
+### The Post Object
+
+Whenever you fetch posts, or create or edit a post, the API will respond with an array of one or more post objects. These objects will include all related tags, authors, and author roles.
+
+By default, the API expects and returns content in the mobiledoc format only. To include html in the response use the `formats` parameter:
+
+```json:title=GET /admin/posts/?formats%3Dhtml,mobiledoc
+{
+    "posts": [{
+        "id": "5b7ada404f87d200b5b1f9c8",
+        "uuid": "22af052d-2bc1-4306-96d1-667584c797c7",
+        "title": "Welcome to Ghost",
+        "slug": "welcome",
+        "mobiledoc": "{\"version\":\"0.3.1\",\"atoms\":[],\"cards\":[],\"markups\":[],\"sections\":[[1,\"p\",[[0,[],0,\"👋 Welcome, it's great to have you here.\"]]]]}",
+        "html": "<p>👋 Welcome, it's great to have you here.</p>",
+        "comment_id": "5b7ada404f87d200b5b1f9c8",
+        "feature_image": "https://casper.ghost.org/v2.0.0/images/welcome-to-ghost.jpg",
+        "featured": false,
+        "status": "published",
+        "meta_title": null,
+        "meta_description": null,
+        "created_at": "2018-08-20T15:12:00.000Z",
+        "updated_at": "2018-08-20T15:12:00.000Z",
+        "published_at": "2018-08-20T15:12:06.000Z",
+        "custom_excerpt": "Welcome, it's great to have you here.",
+        "codeinjection_head": null,
+        "codeinjection_foot": null,
+        "og_image": null,
+        "og_title": null,
+        "og_description": null,
+        "twitter_image": null,
+        "twitter_title": null,
+        "twitter_description": null,
+        "custom_template": null,
+        "tags": [
+            {
+                "id": "59799bbd6ebb2f00243a33db",
+                "name": "Getting Started",
+                "slug": "getting-started",
+                "description": null,
+                "feature_image": null,
+                "visibility": "public",
+                "meta_title": null,
+                "meta_description": null,
+                "created_at": "2017-07-27T07:52:29.000Z",
+                "updated_at": "2017-07-27T07:52:29.000Z",
+                "url": "https://demo.ghost.io/tag/getting-started/"
+            }
+        ],
+        "authors": [
+            {
+                "id": "5951f5fca366002ebd5dbef7",
+                "name": "Ghost",
+                "slug": "ghost",
+                "profile_image": "https://demo.ghost.io/content/images/2017/07/ghost-icon.png",
+                "cover_image": null,
+                "bio": "The professional publishing platform",
+                "website": "https://ghost.org",
+                "location": null,
+                "facebook": "ghost",
+                "twitter": "@tryghost",
+                "accessibility": null,
+                "status": "active",
+                "meta_title": null,
+                "meta_description": null,
+                "tour": null,
+                "last_seen": null,
+                "created_at": "2017-07-27T07:52:31.000Z",
+                "updated_at": "2017-07-27T08:28:34.000Z",
+                "roles": [
+                    {
+                        "id": "59799bbe6ebb2f00243a33e1",
+                        "name": "Author",
+                        "description": "Authors",
+                        "created_at": "2017-07-27T07:52:30.000Z",
+                        "updated_at": "2017-07-27T07:52:30.000Z"
+                    }
+                ],
+                "url": "https://demo.ghost.io/author/ghost/"
+            }
+        ],
+        "primary_author": {
+            "id": "5951f5fca366002ebd5dbef7",
+            "name": "Ghost",
+            "slug": "ghost",
+            "profile_image": "https://demo.ghost.io/content/images/2017/07/ghost-icon.png",
+            "cover_image": null,
+            "bio": "The professional publishing platform",
+            "website": "https://ghost.org",
+            "location": null,
+            "facebook": "ghost",
+            "twitter": "@tryghost",
+            "accessibility": null,
+            "status": "active",
+            "meta_title": null,
+            "meta_description": null,
+            "tour": null,
+            "last_seen": null,
+            "created_at": "2017-07-27T07:52:31.000Z",
+            "updated_at": "2017-07-27T08:28:34.000Z",
+            "roles": [
+                {
+                    "id": "59799bbe6ebb2f00243a33e1",
+                    "name": "Author",
+                    "description": "Authors",
+                    "created_at": "2017-07-27T07:52:30.000Z",
+                    "updated_at": "2017-07-27T07:52:30.000Z"
+                }
+            ],
+            "url": "https://demo.ghost.io/author/ghost/"
+        },
+        "primary_tag": {
+            "id": "59799bbd6ebb2f00243a33db",
+            "name": "Getting Started",
+            "slug": "getting-started",
+            "description": null,
+            "feature_image": null,
+            "visibility": "public",
+            "meta_title": null,
+            "meta_description": null,
+            "created_at": "2017-07-27T07:52:29.000Z",
+            "updated_at": "2017-07-27T07:52:29.000Z",
+            "url": "https://demo.ghost.io/tag/getting-started/"
+        },
+        "url": "https://demo.ghost.io/welcome/",
+        "excerpt": "Welcome, it's great to have you here."
+    }
+]}
+```
+
+#### Parameters
+
+When retrieving posts from the Admin API, it is possible to use the `include`, `formats`, `filter`, `limit`, `page` and `order` parameters as documented for the [Content API](/api/content/#parameters).
+Some defaults are different between the two APIs, however the behaviour and availabililty of the parameters remains the same.
+
+### Creating a Post
+
+To create a new post, the only required field is `title`. All other fields can either be empty, or have a default. A post must always have at least one author. This will default to the staff user with the owner role. Below is a minimal example for creating a published post with content:
+
+
+```json:title=POST /admin/posts/
+{
+    "post": [{
+        "title": "My test post",
+        "mobiledoc": "{\"version\":\"0.3.1\",\"atoms\":[],\"cards\":[],\"markups\":[],\"sections\":[[1,\"p\",[[0,[],0,\"My post content. Work in progress...\"]]]]}",
+        "status": "published"
+    }]
+}
+```
+
+#### Source HTML
+
+The post creation endpoint is also able to convert HTML into mobiledoc. The conversion generates the best available mobiledoc representation, meaning this operation is lossy and the HTML rendered by Ghost may be different from the source HTML.
+For lossless HTML conversion, you can wrap your HTML in a single mobiledoc card, [as demonstrated here](/api/migration/#mobiledoc-html-card).
+
+To use HTML as the source for your content instead of mobiledoc, use the `source` parameter:
+
+
+```json:title=POST /admin/posts/?source%3Dhtml
+{
+    "post": [{
+        "title": "My test post",
+        "html": "<p>My post content. Work in progress...</p>",
+        "status": "published"
+    }]
+}
+```
+
+#### Tags and Authors
+
+You can link tags and authors to any post you create in the same request body, using either short or long form to identify linked resources.
+
+Short form uses a single string to identify a tag or author resource. Tags are identified by name and authors are identified by email address:
+
+```json:title=POST /admin/posts/
+{
+    "post": [{
+        "title": "My test post",
+        "tags": ["Getting Started", "Tag Example"],
+        "authors" ["example@ghost.org", "test@ghost.org"],
+        "mobiledoc": "{\"version\":\"0.3.1\",\"atoms\":[],\"cards\":[],\"markups\":[],\"sections\":[[1,\"p\",[[0,[],0,\"My post content. Work in progress...\"]]]]}",
+        "status": "published"
+    }]
+}
+```
+
+Long form requires an object with at least one identifying key-value pair:
+
+```json:title=POST /admin/posts/
+{
+    "post": [{
+        "title": "My test post",
+        "tags": [{"name": "my tag", "description": "a very useful tag"}, {"name": "#hidden}],
+        "authors": [{"id": "5c739b7c8a59a6c8ddc164a1"}, {"id": "5c739b7c8a59a6c8ddc162c5"}, {"id": "5c739b7c8a59a6c8ddc167d9"}]        
+    }]
+}
+```
+
+Tags that cannot be matched are automatically created. If no author can be matched, Ghost will fallback to using the staff user with the owner role.
+
 ## Pages
+
+Pages are [static resources](/concepts/pages/) that are not included in channels or collections on the Ghost frontend. They are identical to posts in terms of request and response structure when working with the APIs.
 
 ```JavaScript
 GET /admin/pages/
@@ -270,9 +472,83 @@ DELETE /admin/pages/{id}/
 
 ## Images
 
+Sending images to Ghost via the API allows you to upload images one at a time, and store them with a [storage adapter](/concepts/storage-adapters/). The default adapter stores files locally in /content/images/ without making any modifications, except for sanitising the filename.
+
+
 ```JavaScript
 POST /admin/images/upload/
 ```
+
+### The Image Object
+
+Images can be uploaded to, and fetched from storage. 
+When an image is uploaded, the response is an image object that contains the new URL for the image - the location from which the image can be fetched.
+
+`url`: _URI_  
+The newly created URL for the image. 
+
+`ref`: _String (optional)_  
+The reference for the image, if one was provided with the upload.
+
+```json:title=POST /admin/images/upload/
+{ 
+    images: [{ 
+      url: "https://demo.ghost.io/content/images/2019/02/ghost-logo.png", 
+      ref: "ghost-logo.png"  
+    }] 
+}
+```
+
+### Uploading an Image
+
+To upload an image, send a multipart formdata request, by providing the `'Content-Type': 'multipart/form-data;'` header, along with the following fields encoded as [FormData](https://developer.mozilla.org/en-US/docs/Web/API/FormData/FormData):
+
+`file`: _[Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) or [File](https://developer.mozilla.org/en-US/docs/Web/API/File)_  
+The image data that you want to upload.
+
+`purpose`: _String (default: `image`)_  
+Intended use for the image, changes the validations performed. Can be one of `image` , `profile_image` or `icon`.  The supported formats for `image` and `profile_image` are JPEG, GIF, PNG and SVG. Supported formats for `icon` are ICO and PNG. `profile_image` must be square.
+
+`ref`: _String (optional)_      
+A reference or identifier for the image, e.g. the original filename and path. Will be returned as-is in the API response, making it useful for finding & replacing local image paths after uploads.
+
+```bash
+curl -X POST -F 'file=@/path/to/images/my-image.jpg' -F 'ref=path/to/images/my-image.jpg' -H "Authorization: 'Ghost $token'" https://{admin_domain}/ghost/api/{version}/admin/images/upload/
+```
+
+
+## Site
+
+Site is a special unauthenticated, read-only endpoint for retrieving basic information about a site. 
+This information is useful for integrations and clients that need to show some details of a site before providing authentication.
+
+```JavaScript
+GET /admin/site/
+```
+### The Site Object
+
+The site endpoint returns a single object, rather than an array.
+
+`title`: _String_  
+The title of the site, same as the title returned from the `settings` endpoint.
+
+`url`: _URI_  
+The frontend URL for the site, which can be different to the admin / api URL. This comes from the configuration JSON file.
+
+`version`: _Semver String (major.minor)_  
+The current version of the Ghost site. Use this to check the minimum version is high enough for compatibility with integrations.
+
+
+```GET json:title=/admin/site/
+{
+    "site": {
+        "title": "Ghost",
+        "url": "https://demo.ghost.io/",
+        "version": "2.16"
+    }
+}
+```
+
 
 ## Versioning
 

@@ -239,9 +239,11 @@ You can then use Ghost's standalone migration tool to convert the `html` field t
 
 This should work well for most semantic HTML, and result in a series of populated cards in the editor, making it easy to update your content in future.
 
+#### Mobiledoc HTML card
+
 If your html consists of tables or other non-semantic markdown, you may have a better experience wrapping the HTML in a single HTML card:
 
-```
+```JavaScript
 mobiledoc = JSON.stringify({
     version: '0.3.1',
     markups: [],
@@ -258,7 +260,7 @@ There are two approaches for converting markdown to mobiledoc. The first is to c
 
  The second is to wrap your markdown content in a single markdown card:
 
-```
+```JavaScript
 mobiledoc = JSON.stringify({
     version: '0.3.1',
     markups: [],
