@@ -17,7 +17,7 @@ Ghost provides a flexible promise-based JavaScript library for accessing the Con
 
 ```javascript
 const api = new GhostContentAPI({
-  host: 'https://demo.ghost.io',
+  url: 'https://demo.ghost.io',
   key: '22444f78447824223cefc48062',
   version: 'v2'
 });
@@ -43,7 +43,7 @@ The Content API URL and key can be obtained by creating a new `Custom Integratio
 
 ![Get a Ghost Content API key](/images/apikey.png)
 
-- `host` - API domain, must not end in a trailing slash.
+- `url` - API domain, must not end in a trailing slash.
 - `key` - hex string copied from the "Integrations" screen in Ghost Admin
 - `version` - should be set to 'v2'
 
