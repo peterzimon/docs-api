@@ -9,17 +9,17 @@ keywords:
     - "ghost api"
 ---
 
-Ghost allows full creation and management of content with the Admin API. Secure authentication is available either as a User with role-based permissions, or as an integration with a single standard set of permissions designed to support common workflows.
+It's possible to create and manage your content using the Ghost Admin API. Our content management interface, Ghost Admin, uses the Admin API - which means that everything Ghost Admin can do is also possible with the API, and a whole lot more!
 
-The API is RESTful, with predictable resource URLs and standard HTTP verbs, response codes and authentication used throughout. Requests and responses are JSON-encoded with consistent patterns & inline relations. Responses are customisable using powerful query parameters.
+Secure authentication is available either as a User with role-based permissions, or as an integration with a single standard set of permissions designed to support common publishing workflows.
 
-The Admin API is used by Ghost Admin, meaning that everything that Ghost Admin can do is possible with the API, and a whole lot more.
+The API is RESTful with predictable resource URLs, standard HTTP verbs, response codes and authentication used throughout. Requests and responses are JSON-encoded with consistent patterns and inline relations and responses are customisable using powerful query parameters.
 
 ## API Clients
 
 ### JavaScript Client Library
 
-We've developed an [API client for JavaScript](/api/javascript/#admin-api), that simplifies authenticating with the Admin API, and makes reading and writing data a breeze. The client is design for use with integrations and currently only supports token authentication and the endpoints available to integrations.
+We've developed an [API client for JavaScript](/api/javascript/#admin-api), that simplifies authenticating with the Admin API, and makes reading and writing data a breeze. The client is designed for use with integrations, supporting token authentication and the endpoints available to integrations.
 
 
 ## Structure
@@ -52,7 +52,7 @@ The API uses a consistent JSON structure for all requests and responses:
 }
 ```
 
-The resource_type will always match the resource name in the URL. All resources are returned wrapped in an array, with the exception of specific singular resources returned from e.g. `/site/` or `/settings/`. 
+The `resource_type` will always match the resource name in the URL. All resources are returned wrapped in an array, with the exception of specific singular resources returned from `/site/` or `/settings/`. 
 
 The meta object contains [pagination](/api/content/#pagination) information for browse requests.
 
@@ -91,13 +91,13 @@ There are two methods for authenticating with the Admin API: token authenticatio
 
 Most applications integrating with the Ghost Admin API should use token authentication. User authentication is intended for fully-fledged clients where different users login and manage various resources as themselves. Token authentication is intended for integrations that handle common workflows, such as publishing new content, or sharing content to other platforms.
 
-The JavaScript Admin API Client currently only supports token authentication.
+The JavaScript Admin API Client supports token authentication.
 
 ### Token Authentication (Integrations)
 
 Token authentication is a simple, secure authentication mechanism using JSON Web Tokens (JWTs). Each integration is issued with an admin API key, which is used to generate a JWT token and then provided to the API via the standard HTTP Authorization header.
 
-The admin API key must be kept private and therefore token authentication is not suitable for browsers or other insecure environments, unlike the Content API key.
+The Admin API key must be kept private, therefore token authentication is not suitable for browsers or other insecure environments, unlike the Content API key.
 
 #### Key
 
@@ -410,6 +410,7 @@ To create a new post, the only required field is `title`. All other fields can e
 #### Source HTML
 
 The post creation endpoint is also able to convert HTML into mobiledoc. The conversion generates the best available mobiledoc representation, meaning this operation is lossy and the HTML rendered by Ghost may be different from the source HTML.
+
 For lossless HTML conversion, you can wrap your HTML in a single mobiledoc card, [as demonstrated here](/api/migration/#mobiledoc-html-card).
 
 To use HTML as the source for your content instead of mobiledoc, use the `source` parameter:
@@ -459,7 +460,7 @@ Tags that cannot be matched are automatically created. If no author can be match
 
 ## Pages
 
-Pages are [static resources](/concepts/pages/) that are not included in channels or collections on the Ghost frontend. They are identical to posts in terms of request and response structure when working with the APIs.
+Pages are [static resources](/concepts/pages/) that are not included in channels or collections on the Ghost front-end. They are identical to posts in terms of request and response structure when working with the APIs.
 
 ```JavaScript
 GET /admin/pages/
@@ -501,7 +502,7 @@ The reference for the image, if one was provided with the upload.
 
 ### Uploading an Image
 
-To upload an image, send a multipart formdata request, by providing the `'Content-Type': 'multipart/form-data;'` header, along with the following fields encoded as [FormData](https://developer.mozilla.org/en-US/docs/Web/API/FormData/FormData):
+To upload an image, send a multipart formdata request by providing the `'Content-Type': 'multipart/form-data;'` header, along with the following fields encoded as [FormData](https://developer.mozilla.org/en-US/docs/Web/API/FormData/FormData):
 
 `file`: _[Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) or [File](https://developer.mozilla.org/en-US/docs/Web/API/File)_  
 The image data that you want to upload.
