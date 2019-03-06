@@ -14,15 +14,15 @@ Ghost provides promise-based JavaScript client libraries, which handle the detai
 
 ## Content API Client Library
 
-The [Content API client library](/api/javascript/content/) is a tiny tool, available for both the browser and Node.js.
+The [Content API client library](/api/javascript/content/) is a lightweight tool, available for both the browser and Node.js.
 
-The Content API is designed for any situation in which you want to fetch data from your Ghost install and supports use cases from creating a latest posts widget on your main site to generating a fully static Gatsby site.
+The Content API is designed for any situation in which you want to fetch data from your Ghost install. It supports a wide range of use cases, such as creating a latest posts widget on your site or generating a fully static [Gatsby](/api/gatsby/) site.
 
 ## Admin API Client Library
 
 The [Admin API client library](/api/javascript/admin/) is designed for integrations that use private API keys, and is for Node.js only.
 
-The Admin API supports publishing workflows where you want to integrate Ghost with other tools, such as publishing content from a desktop editor, sharing content to social media on publish, or syncing data to and from email campaign software.
+The Admin API supports publishing workflows where you want to integrate Ghost with other tools, such as publishing content from a desktop editor, automatically sharing content to social media, or syncing data to and from email campaign software.
 
 ## JavaScript SDK
 
