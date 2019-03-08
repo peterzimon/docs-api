@@ -116,104 +116,69 @@ The Admin API JavaScript client handles all the technical details of generating 
 
 #### Token Generation
 
-If you're using a language other than JavaScript, you'll need to generate the tokens yourself. It is not safe to swap keys for tokens in the browser, or in any other insecure environment.
+If you're using a language other than JavaScript, or are not using our client library, you'll need to generate the tokens yourself. It is not safe to swap keys for tokens in the browser, or in any other insecure environment.
 
-There are a myriad of [libraries](https://jwt.io/#libraries) available for generating JWTs in different environments. Regardless of language, you first need to split the API key by the `:` into an id and a secret and then decode the hexadecimal secret into a byte array, before passing these values to your JWT library of choice. Most libraries will allow you to specify the algorithm for the signature, this _must_ match the `alg` key in the header.
+There are a myriad of [libraries](https://jwt.io/#libraries) available for generating JWTs in different environments. 
 
-JSON Web Tokens are made up of a header, a payload and the decoded secret. The values needed for the header and payload are:
+JSON Web Tokens are made up of a header, a payload and a secret. The values needed for the header and payload are:
 
-Header:
-```json
+```json:title=Header:
 {
     "alg": "HS256",
     "kid": {id}, // ID from your API key
     "typ": "JWT"
 }
 ```
+  
+<br>
 
-Payload:
-```json
+  
+```json:title=Payload:
 {
     // Timestamps are seconds sine the unix epoch, not milliseconds
-    "exp": {timestamp}, // No more than 5 minutes from now
-    "iat": {timestamp}, // Now (must not be more than 5 minutes before `exp`)
+    "exp": {timestamp}, // Max 5 minutes after 'now'
+    "iat": {timestamp}, // 'now' (max 5 minutes after 'exp')
     "aud": "/{version}/admin/"
 }
 ```
-Different JWT libraries take slightly different arguments, but all of them should allow you to specify the above required values. Where possible, the API will provide specific error messages when required values are missing or incorrect.
+
+The libraries on https://jtw.io all work slighly differently, but all of them allow you to specify the above required values, including setting the signing algorith to the required HS-256. Where possible, the API will provide specific error messages when required values are missing or incorrect.
+
+Regardless of language, you'll need to: 
+
+1. Split the API key by the `:` into an `id` and a `secret`
+2. Decode the hexadecimal secret into the original binary byte array
+3. Pass these values to your JWT library of choice, ensuring that the header and payload are correct.
 
 #### Token Generation Examples
+
+These examples show how to generate a valid JWT in various languages & JWT libraries. The bash example shows step-by-step how to create a token without using a library.
+
 <div class="code-tabs">
-    <input name="tabs" type="radio" id="tab-1" checked="checked"/>
-    <label for="tab-1">Bash</label>
+    <input name="tabs" type="radio" id="tab-bash" checked="checked"/>
+    <label for="tab-bash">Bash</label>
     <div class="panel">
-        <pre class="language-javascript"><code class="language-javascript">#!/usr/bin/env bash
-</>
-# Read key from script arguments
-KEY=${1:-$(</dev/stdin)}
-</>
-</>
-# Split the key into ID and SECRET
-TMPIFS=$IFS
-IFS=':' read ID SECRET <<< "$KEY"
-IFS=$TMPIFS
-</>
-# Prepare header and payload
-NOW=$(date +'%s')
-FIVE_MINS=$(($NOW + 300))
-HEADER="{\"alg\": \"HS256\",\"typ\": \"JWT\", \"kid\": \"$ID\"}"
-PAYLOAD="{\"iat\":$NOW,\"exp\":$FIVE_MINS,\"aud\": \"/v2/admin/\"}"
-</>
-# Helper function for perfoming base64 URL encoding
-base64_url_encode() {
-    declare input=${1:-$(&lt;/dev/stdin)}
-    # Use `tr` to URL encode the output from base64.
-    printf '%s' "${input}" | base64 | tr -d '=' | tr '+' '-' |  tr '/' '_'
-}
-</>
-# Prepare the token body
-header_base64=$(base64_url_encode "$HEADER")
-payload_base64=$(base64_url_encode "$PAYLOAD")
-</>
-header_payload="${header_base64}.${payload_base64}"
-</>
-# Create the signature
-signature=$(printf '%s' "${header_payload}" | openssl dgst -binary -sha256 -mac HMAC -macopt hexkey:$SECRET | base64_url_encode)
-</>
-# Finally, a JWT token
-TOKEN="${header_payload}.${signature}"
-</>
-curl -H "Authorization: Ghost $TOKEN" "http://localhost:2368/ghost/api/v2/admin/posts/?limit=1"</code></pre>
-    </div>
-    <input name="tabs" type="radio" id="tab-2"/>
-    <label for="tab-2">Ruby</label>
+
+
+`embed:admin-jwt/auth.sh`
+
+</div>
+ <input name="tabs" type="radio" id="tab-js"/>
+    <label for="tab-js">JavaScript</label>
     <div class="panel">
-        <pre class="language-javascript"><code class="language-javascript">require 'httparty'
-require 'jwt'
-</>
-api_key = ARGV[0]
-kid, secret = api_key.split(':')
-</>
-iat = Time.now.to_i
-</>
-header = {alg: 'HS256', typ: 'JWT', kid: kid}
-payload = {
-    iat: iat,
-    exp: iat + 5 * 3600,
-    aud: '/v2/admin/'
-}
-</>
-token = JWT.encode payload, [secret].pack('H*'), 'HS256', header
-</>
-url = 'http://localhost:2368/ghost/api/v2/admin/posts/?limit=1'
-headers = {Authorization: "Ghost #{token}"}
-puts HTTParty.get(url, headers: headers)</code></pre>
-    </div>
-    <input name="tabs" type="radio" id="tab-3"/>
-    <label for="tab-3">JavaScript</label>
+
+
+`embed:admin-jwt/auth.js`
+
+</div>
+    <input name="tabs" type="radio" id="tab-ruby"/>
+    <label for="tab-ruby">Ruby</label>
     <div class="panel">
-        <pre class="language-javascript"><code class="language-javascript">...</code></pre>
-    </div>
+    
+
+`embed:admin-jwt/auth.ruby`    
+    
+</div>
 </div>
 
 ### User Authentication
