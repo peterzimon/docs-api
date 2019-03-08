@@ -142,6 +142,80 @@ Payload:
 ```
 Different JWT libraries take slightly different arguments, but all of them should allow you to specify the above required values. Where possible, the API will provide specific error messages when required values are missing or incorrect.
 
+#### Token Generation Examples
+<div class="code-tabs">
+    <input name="tabs" type="radio" id="tab-1" checked="checked"/>
+    <label for="tab-1">Bash</label>
+    <div class="panel">
+        <pre class="language-javascript"><code class="language-javascript">#!/usr/bin/env bash
+</>
+# Read key from script arguments
+KEY=${1:-$(</dev/stdin)}
+</>
+</>
+# Split the key into ID and SECRET
+TMPIFS=$IFS
+IFS=':' read ID SECRET <<< "$KEY"
+IFS=$TMPIFS
+</>
+# Prepare header and payload
+NOW=$(date +'%s')
+FIVE_MINS=$(($NOW + 300))
+HEADER="{\"alg\": \"HS256\",\"typ\": \"JWT\", \"kid\": \"$ID\"}"
+PAYLOAD="{\"iat\":$NOW,\"exp\":$FIVE_MINS,\"aud\": \"/v2/admin/\"}"
+</>
+# Helper function for perfoming base64 URL encoding
+base64_url_encode() {
+    declare input=${1:-$(&lt;/dev/stdin)}
+    # Use `tr` to URL encode the output from base64.
+    printf '%s' "${input}" | base64 | tr -d '=' | tr '+' '-' |  tr '/' '_'
+}
+</>
+# Prepare the token body
+header_base64=$(base64_url_encode "$HEADER")
+payload_base64=$(base64_url_encode "$PAYLOAD")
+</>
+header_payload="${header_base64}.${payload_base64}"
+</>
+# Create the signature
+signature=$(printf '%s' "${header_payload}" | openssl dgst -binary -sha256 -mac HMAC -macopt hexkey:$SECRET | base64_url_encode)
+</>
+# Finally, a JWT token
+TOKEN="${header_payload}.${signature}"
+</>
+curl -H "Authorization: Ghost $TOKEN" "http://localhost:2368/ghost/api/v2/admin/posts/?limit=1"</code></pre>
+    </div>
+    <input name="tabs" type="radio" id="tab-2"/>
+    <label for="tab-2">Ruby</label>
+    <div class="panel">
+        <pre class="language-javascript"><code class="language-javascript">require 'httparty'
+require 'jwt'
+</>
+api_key = ARGV[0]
+kid, secret = api_key.split(':')
+</>
+iat = Time.now.to_i
+</>
+header = {alg: 'HS256', typ: 'JWT', kid: kid}
+payload = {
+    iat: iat,
+    exp: iat + 5 * 3600,
+    aud: '/v2/admin/'
+}
+</>
+token = JWT.encode payload, [secret].pack('H*'), 'HS256', header
+</>
+url = 'http://localhost:2368/ghost/api/v2/admin/posts/?limit=1'
+headers = {Authorization: "Ghost #{token}"}
+puts HTTParty.get(url, headers: headers)</code></pre>
+    </div>
+    <input name="tabs" type="radio" id="tab-3"/>
+    <label for="tab-3">JavaScript</label>
+    <div class="panel">
+        <pre class="language-javascript"><code class="language-javascript">...</code></pre>
+    </div>
+</div>
+
 ### User Authentication
 
 User Authentication is an advanced, session-based authentication method that provides access to all API endpoints and actions according to the role of the user being authenticated.
